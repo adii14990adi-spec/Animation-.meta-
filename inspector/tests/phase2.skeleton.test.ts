@@ -95,7 +95,11 @@ describe('Phase 2 — FBX skeleton extraction (real assets)', () => {
     expect(slots.leftThumb).toBe('mixamorigLeftHandThumb1');
   });
 
-  it('parses every real animation and reports the two genuinely malformed files', () => {
+  it('parses every real animation successfully (74/74, no footer casualties)', () => {
+    // History: this test previously expected 72 ok / 2 failed, based on the belief
+    // that `death from the back.fbx` and `reloading.fbx` were malformed. They are
+    // not — they are valid files whose footer is 177 bytes instead of the 176 that
+    // three.js's endOfContent() hardcodes. See engine/fbxLoaderTolerant.ts.
     const names = animationFileNames();
     expect(names.length).toBe(74);
 
@@ -103,11 +107,16 @@ describe('Phase 2 — FBX skeleton extraction (real assets)', () => {
     const ok = results.filter((r) => r.status === 'ok');
     const failed = results.filter((r) => r.status !== 'ok');
 
-    expect(ok.length).toBe(72);
-    expect(failed.map((f) => f.fileName).sort()).toEqual(['death from the back.fbx', 'reloading.fbx']);
-    for (const f of failed) {
-      expect(f.error).toBeTruthy();
-      expect(f.skeleton).toBeNull();
+    expect(failed.map((f) => `${f.fileName}: ${f.error ?? ''}`)).toEqual([]);
+    expect(ok.length).toBe(74);
+
+    // The two formerly-rejected assets now produce real skeletons and clips.
+    for (const file of ['death from the back.fbx', 'reloading.fbx']) {
+      const r = results.find((x) => x.fileName === file)!;
+      expect(r.status).toBe('ok');
+      expect(r.skeleton!.boneCount).toBe(65);
+      expect(r.clips.length).toBe(1);
+      expect(r.warnings.some((w) => /footer tolerance applied/i.test(w))).toBe(true);
     }
     // Every parsed animation has exactly one clip and 65 bones.
     for (const r of ok) {

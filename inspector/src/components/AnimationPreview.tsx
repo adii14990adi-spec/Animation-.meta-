@@ -214,7 +214,11 @@ export default function AnimationPreview({
     action.paused = true;
     actionRef.current = action;
     setDuration(clip.clip.duration);
-  }, [clip, loop, speed]);
+    // Intentionally depends on `clip` only. Speed and loop are applied by the
+    // dedicated live-update effects below; depending on them here would call
+    // action.reset() and restart the animation from time 0 on every change.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clip]);
 
   // live-update speed / loop without restarting
   useEffect(() => {

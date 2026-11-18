@@ -63,9 +63,14 @@ describe('Phase 2 — report generation', () => {
     expect(idle.sha256).toMatch(/^[0-9a-f]{64}$/);
     expect(Object.keys(idle.detectedHumanoidSlots).length).toBeGreaterThan(20);
 
-    const bad = report.assets.find((a) => a.fileName === 'reloading.fbx')!;
-    expect(bad.status).toBe('failed');
-    expect(bad.error).toBeTruthy();
+    // `reloading.fbx` is a VALID asset that three.js's hardcoded 176-byte footer
+    // budget used to reject (see engine/fbxLoaderTolerant.ts). It now parses, and
+    // the report records the workaround instead of a bogus parse failure.
+    const recovered = report.assets.find((a) => a.fileName === 'reloading.fbx')!;
+    expect(recovered.status).toBe('ok');
+    expect(recovered.boneCount).toBe(65);
+    expect(recovered.clips.length).toBe(1);
+    expect(recovered.warnings.join(' ')).toMatch(/footer tolerance applied/i);
   }, 60000);
 
   it('character-compatibility.json contains a report per character with required fields', async () => {
@@ -102,7 +107,8 @@ describe('Phase 2 — report generation', () => {
     const report = buildBoneMappingsReport(run.bundle);
 
     expect(report.report).toBe('bone-mappings');
-    expect(report.profiles.length).toBe(2 * 2); // idle + walk, per character
+    // all three selected assets now parse, so 3 assets x 2 characters
+    expect(report.profiles.length).toBe(3 * 2);
 
     for (const profile of report.profiles) {
       expect(profile.id).toContain('::');
@@ -146,8 +152,9 @@ describe('Phase 2 — report generation', () => {
 
     expect(report.totals.discovered).toBe(74);
     expect(report.totals.processed).toBe(3);
-    expect(report.totals.parsedOk).toBe(2);
-    expect(report.totals.failed).toBe(1);
+    // All three parse: `reloading.fbx` is no longer a false-negative.
+    expect(report.totals.parsedOk).toBe(3);
+    expect(report.totals.failed).toBe(0);
   }, 60000);
 
   it('the validation report fails loudly when the expected count is wrong', () => {

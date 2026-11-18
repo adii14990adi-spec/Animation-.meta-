@@ -172,8 +172,11 @@ describe('Phase 2 — full pipeline over all 74 animations', () => {
 
     expect(result.bundle.discovery.animationFiles).toBe(74);
     expect(result.bundle.animations.length).toBe(74);
-    expect(result.ok).toBe(72);
-    expect(result.failed).toBe(2);
+    // 74/74: the two assets three.js used to reject were valid all along — they
+    // merely carry a 177-byte footer against a hardcoded 176-byte budget.
+    // See engine/fbxLoaderTolerant.ts and tests/phase2.fbxTolerance.test.ts.
+    expect(result.ok).toBe(74);
+    expect(result.failed).toBe(0);
 
     // One report per animation per character.
     expect(result.bundle.compatibility.length).toBe(74 * 2);
@@ -181,20 +184,15 @@ describe('Phase 2 — full pipeline over all 74 animations', () => {
     expect(result.bundle.compatibility.filter((c) => c.characterSlot === 'female').length).toBe(74);
 
     // Mapping profiles for every parsed animation, per character.
-    expect(result.bundle.mappings.length).toBe(72 * 2);
+    expect(result.bundle.mappings.length).toBe(74 * 2);
 
-    // The two malformed files must be PROCESSING_FAILED, never silently dropped.
+    // Nothing is silently dropped and nothing is wrongly failed.
     const failedReports = result.bundle.compatibility.filter((c) => c.status === 'PROCESSING_FAILED');
-    expect(failedReports.length).toBe(4); // 2 files × 2 characters
-    expect(new Set(failedReports.map((r) => r.fileName))).toEqual(
-      new Set(['death from the back.fbx', 'reloading.fbx']),
-    );
+    expect(failedReports).toEqual([]);
 
-    // Every parsed animation must be retarget-ready on both characters.
-    const ready = result.bundle.compatibility.filter(
-      (c) => c.status !== 'PROCESSING_FAILED' && c.retargetReadiness !== 'not_ready',
-    );
-    expect(ready.length).toBe(72 * 2);
+    // Every animation must be retarget-ready on both characters.
+    const ready = result.bundle.compatibility.filter((c) => c.retargetReadiness !== 'not_ready');
+    expect(ready.length).toBe(74 * 2);
   }, 120000);
 
   it('automatically selects a real Idle/Walk for the first end-to-end test', () => {

@@ -9,7 +9,7 @@
  */
 
 import * as THREE from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { parseFbx, STOCK_FOOTER_BUDGET } from './fbxLoaderTolerant';
 import type {
   AnimationClipSummary,
   NormalizedBone,
@@ -190,8 +190,18 @@ export function parseFbxAnimation(
 
   let root: THREE.Group;
   try {
-    const loader = new FBXLoader();
-    root = loader.parse(buffer, '');
+    // `parseFbx` applies the documented footer-tolerance workaround; see
+    // engine/fbxLoaderTolerant.ts. Assets the stock loader already accepts are
+    // passed through byte-for-byte unchanged.
+    const parsed = parseFbx(buffer, '');
+    root = parsed.object as THREE.Group;
+    if (parsed.trimmed && parsed.analysis.trailingBytes !== null) {
+      warnings.push(
+        `FBX footer tolerance applied: trimmed ${parsed.analysis.trimBytes} trailing byte(s) ` +
+          `(content ended at ${parsed.analysis.contentEnd}; file has ${parsed.analysis.trailingBytes} ` +
+          `footer bytes, three.js budget is ${STOCK_FOOTER_BUDGET}).`,
+      );
+    }
   } catch (err) {
     return {
       assetId: options.assetId,

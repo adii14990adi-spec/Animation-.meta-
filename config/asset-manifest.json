@@ -1,0 +1,872 @@
+{
+  "description": "SHA-256 manifest of the original, unmodified Unity assets. CI verifies these on every pull request so neither the 74 FBX files, their .fbx.meta files, nor the character bundles can be altered silently.",
+  "generatedFrom": "git ls-tree of main @ 558c895 (pre-Phase-2 baseline)",
+  "fileCount": 173,
+  "files": [
+    {
+      "path": "Character/Female/. gitkeep",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "Character/Female/License_Standard(1).txt",
+      "bytes": 806,
+      "sha256": "0f4beaf0fe360a7732e58bbe3dbf60a2422367fbea60cb9ea4add968f383268e"
+    },
+    {
+      "path": "Character/Female/Superhero_Female_FullBody.bin",
+      "bytes": 990808,
+      "sha256": "3a8220a485b33d05d879115a50697728b45a151781106033afb8b8c243fca208"
+    },
+    {
+      "path": "Character/Female/Superhero_Female_FullBody.gltf",
+      "bytes": 31656,
+      "sha256": "adedf28000a0716f689b009a70314506fc62f827498f77ba852acb5610f3f3f4"
+    },
+    {
+      "path": "Character/Female/T_Eye_Brown.png",
+      "bytes": 35958,
+      "sha256": "d08e3356a83211bc6ca21fe3a8e39f4b5c1a3b8f85457fc2c0fb57be09935025"
+    },
+    {
+      "path": "Character/Female/T_Eye_Normal.png",
+      "bytes": 15099,
+      "sha256": "9ed61f7726a54fe346a78b9e5a18905d8e2b88f86235d97f53cd207a26f3f8c7"
+    },
+    {
+      "path": "Character/Female/T_Hair_2_BaseColor.png",
+      "bytes": 1729467,
+      "sha256": "f9f4f2fb3eeeefb0b6f0fdef38b0770fd6607640c1c680b8139dd76697e9f9b3"
+    },
+    {
+      "path": "Character/Female/T_Hair_2_BaseColor_png.png",
+      "bytes": 1729467,
+      "sha256": "f9f4f2fb3eeeefb0b6f0fdef38b0770fd6607640c1c680b8139dd76697e9f9b3"
+    },
+    {
+      "path": "Character/Female/T_Hair_2_Normal.png",
+      "bytes": 4710013,
+      "sha256": "172f230aae0d4366c3cfc0402b2e6d1811b11f8487344bff28605eeacac1558d"
+    },
+    {
+      "path": "Character/Female/T_Superhero_Female_Dark_BaseColor.png",
+      "bytes": 1319410,
+      "sha256": "d366843ee7d9e9f37ec87a0e1c98c7f2e45573c08eeb80a51a6d9344e68cf288"
+    },
+    {
+      "path": "Character/Female/T_Superhero_Female_Normal.png",
+      "bytes": 3940537,
+      "sha256": "cf922460b43ccd31e983e34db05514c9d451dd2f9cdd01a843978e797719f859"
+    },
+    {
+      "path": "Character/Female/T_Superhero_Female_Roughness.png",
+      "bytes": 3277022,
+      "sha256": "d2beabf2bd0313e32c68dcdbb80dca371a6e994fabf96efa97128bf9f14fa57b"
+    },
+    {
+      "path": "Character/Male/License_Standard.txt",
+      "bytes": 806,
+      "sha256": "0f4beaf0fe360a7732e58bbe3dbf60a2422367fbea60cb9ea4add968f383268e"
+    },
+    {
+      "path": "Character/Male/Superhero_Male_FullBody.bin",
+      "bytes": 720076,
+      "sha256": "459003f9745853ae562a85506a2b94dd56515c1f37728f9fa3d2ce1a3e4cd92f"
+    },
+    {
+      "path": "Character/Male/Superhero_Male_FullBody.gltf",
+      "bytes": 30989,
+      "sha256": "e7fcea214ecf8855afbf910b50de6f9c7d1decfb71ca28bad8a4481452dafeb4"
+    },
+    {
+      "path": "Character/Male/T_Eye_Brown.png",
+      "bytes": 35958,
+      "sha256": "d08e3356a83211bc6ca21fe3a8e39f4b5c1a3b8f85457fc2c0fb57be09935025"
+    },
+    {
+      "path": "Character/Male/T_Eye_Normal.png",
+      "bytes": 15099,
+      "sha256": "9ed61f7726a54fe346a78b9e5a18905d8e2b88f86235d97f53cd207a26f3f8c7"
+    },
+    {
+      "path": "Character/Male/T_Hair_1_BaseColor.png",
+      "bytes": 1570376,
+      "sha256": "bc7aa863bd22ab0a995cd838cceb4d3a5186ee54ee2fb0108fad85d20c057e6e"
+    },
+    {
+      "path": "Character/Male/T_Hair_1_BaseColor_png.png",
+      "bytes": 1570376,
+      "sha256": "bc7aa863bd22ab0a995cd838cceb4d3a5186ee54ee2fb0108fad85d20c057e6e"
+    },
+    {
+      "path": "Character/Male/T_Hair_1_Normal.png",
+      "bytes": 4326126,
+      "sha256": "57fd0ad8c96a4d01b38769637e066cecaa285b456f6e48ce00863754a457affb"
+    },
+    {
+      "path": "Character/Male/T_Superhero_Male_Dark.png",
+      "bytes": 1384380,
+      "sha256": "df680cbc1967a61e85998bfafb8f7bc0a36dd604bb3266486c4b06b1a184bb45"
+    },
+    {
+      "path": "Character/Male/T_Superhero_Male_Normal.png",
+      "bytes": 4252937,
+      "sha256": "9b25cf9200216eb754b79cf4c63b5380c419780788322f3c57cdd2b3e02679a6"
+    },
+    {
+      "path": "Character/Male/T_Superhero_Male_Roughness.png",
+      "bytes": 3152049,
+      "sha256": "c70dabf48574cda55644d556beae1ee7cf1bdcf68a50d259d20f2f2358f27991"
+    },
+    {
+      "path": "animations/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "animations/Crouch Walking.fbx",
+      "bytes": 356528,
+      "sha256": "0d87522372c5de90b94108359846ff2ea38cd4bd249d3597ebc00500f95d3af3"
+    },
+    {
+      "path": "animations/Crouch Walking.fbx.meta",
+      "bytes": 3532,
+      "sha256": "f2598cb6c177ff4ad17b8e871085d015eecbf8e56782701524e16390cb8f2bb6"
+    },
+    {
+      "path": "animations/Dive Roll.fbx",
+      "bytes": 530656,
+      "sha256": "af17cd9f3a66dc4972ab8080cd01e8b99326bd66690c33b925aef2b10684d785"
+    },
+    {
+      "path": "animations/Dive Roll.fbx.meta",
+      "bytes": 3527,
+      "sha256": "f58e4743ee0988223fc1e79bd9716fade86cab7de31c86b2feb7290c79c1bc9d"
+    },
+    {
+      "path": "animations/Dying.fbx",
+      "bytes": 563104,
+      "sha256": "7c1283b8e22a36fe34cce97e42c02819ff68bf3c0279ca18d6f0e5793a99518a"
+    },
+    {
+      "path": "animations/Dying.fbx.meta",
+      "bytes": 3524,
+      "sha256": "dca3069ff5ee8722db46c29f9183dda9c0cf7752ca49ce04d11351911a1b1efd"
+    },
+    {
+      "path": "animations/Grab And Put Back Rifle.fbx",
+      "bytes": 929872,
+      "sha256": "8cced05d846c61d71c31a41833d496625e6675aae0555475a7fa5a775b594c83"
+    },
+    {
+      "path": "animations/Grab And Put Back Rifle.fbx.meta",
+      "bytes": 3542,
+      "sha256": "e87a59eb2bf363fb02eddbd322b4c2fc9ead9ac787a74b011e25905a269727b6"
+    },
+    {
+      "path": "animations/Prone Idle.fbx",
+      "bytes": 705088,
+      "sha256": "8d4e72559bbe46c29639002536e8e242dca7d792f8e38fd42204f85b59a09c0d"
+    },
+    {
+      "path": "animations/Prone Idle.fbx.meta",
+      "bytes": 3529,
+      "sha256": "02d564b411ee132d39d97eedcf9ea96e41ce07559ff68798bbf4aa677eb83a46"
+    },
+    {
+      "path": "animations/Running To Stop.fbx",
+      "bytes": 449328,
+      "sha256": "3b2f7dc865bd237af4ed2ffd462ce66966d138255e4f246dc47daa1c2267df31"
+    },
+    {
+      "path": "animations/Running To Stop.fbx.meta",
+      "bytes": 3533,
+      "sha256": "cfe8318aca6baf59594752770d944859f2b4003ba947c22c3340291cd86afacc"
+    },
+    {
+      "path": "animations/Running.fbx",
+      "bytes": 332720,
+      "sha256": "60f972c57711fb7d1b81432d8a029d761f4919b607e8107fa0621d2cd6375b2b"
+    },
+    {
+      "path": "animations/Running.fbx.meta",
+      "bytes": 3525,
+      "sha256": "07e65fcda892303dbfac98f89f57f1f82c1a9282a1ba370fc1320f9087b14dd6"
+    },
+    {
+      "path": "animations/Skateboarding.fbx",
+      "bytes": 366096,
+      "sha256": "e9a3446f8548fb80a7562d98f557345b874841f663c899f8b2699e847d7a31a6"
+    },
+    {
+      "path": "animations/Skateboarding.fbx.meta",
+      "bytes": 3531,
+      "sha256": "8c1fed69c4ad3cc5cefc1e1ed56ad5dccbabce84b24599c165f41056b3d8efc0"
+    },
+    {
+      "path": "animations/Swimming.fbx",
+      "bytes": 663424,
+      "sha256": "1964e2957ccd10cd9ab5c3e0de4e676ef5a0832ad636b2b020782d6bc49e17f3"
+    },
+    {
+      "path": "animations/Swimming.fbx.meta",
+      "bytes": 3527,
+      "sha256": "0aaaff7ce2cfafe687ea91a2510ba3c667c0b1a632e546bd7690dad8cafb54e2"
+    },
+    {
+      "path": "animations/crouching turn 90 left.fbx",
+      "bytes": 364801,
+      "sha256": "a67f490ea39d1088344d2658e0956390034ac7a16436f7b661ca3aec779a3bd8"
+    },
+    {
+      "path": "animations/crouching turn 90 left.fbx.meta",
+      "bytes": 3540,
+      "sha256": "064c6fc59585207fa02d3f8f4a6052f14cff6f1ff602c859862bbbd91cc8c6bb"
+    },
+    {
+      "path": "animations/crouching turn 90 right.fbx",
+      "bytes": 364625,
+      "sha256": "a242f468a03333ad11fc32cf719b452f6d3d6f6d34eeb8330a335c7689cc582a"
+    },
+    {
+      "path": "animations/crouching turn 90 right.fbx.meta",
+      "bytes": 3541,
+      "sha256": "2e479bf0e19e75a805abe9bbc129ca9cfee9de516001b57080de7ec9d0e9a3fb"
+    },
+    {
+      "path": "animations/death crouching headshot front.fbx",
+      "bytes": 445553,
+      "sha256": "3207e59c131e6a56fd21022fcbc947c55932a70eca230cbe4184e2299ce88215"
+    },
+    {
+      "path": "animations/death crouching headshot front.fbx.meta",
+      "bytes": 3548,
+      "sha256": "fd03f9a2bec141a73084e2e98d1747a0f28b3e6269801285b7501fcbf443bc6f"
+    },
+    {
+      "path": "animations/death from back headshot.fbx",
+      "bytes": 618465,
+      "sha256": "991d2eeec2ec3c3a6e4661dc2acc01379130c04dbe06dc5dd50d4babe26657a4"
+    },
+    {
+      "path": "animations/death from back headshot.fbx.meta",
+      "bytes": 3543,
+      "sha256": "5d56ab9d7f23f58c492a389f29dab8545d918d7b2d696d4e7b42e42d4c3c3f58"
+    },
+    {
+      "path": "animations/death from front headshot.fbx",
+      "bytes": 537601,
+      "sha256": "ede1bb020760d4b89604f86cb921380953665d78c9b642ef542d8d7fab64077c"
+    },
+    {
+      "path": "animations/death from front headshot.fbx.meta",
+      "bytes": 3543,
+      "sha256": "e07d71e13b38b785e09e764a2e464cd827b38974f38d1ce3b4f372841064f82e"
+    },
+    {
+      "path": "animations/death from right.fbx",
+      "bytes": 583089,
+      "sha256": "d5ca837ba7f86a47122c03e5d45512a0e81b4f7448f7c64c6606e95ca9c97fcc"
+    },
+    {
+      "path": "animations/death from right.fbx.meta",
+      "bytes": 3534,
+      "sha256": "a96c318c68ce95553fc7c094a68576bfcc87b1257c881781a28a7414209f045f"
+    },
+    {
+      "path": "animations/death from the back.fbx",
+      "bytes": 554337,
+      "sha256": "42d708475b8e97b84ff9fbf09ff014e172d303e138e9981f70bdd15148575630"
+    },
+    {
+      "path": "animations/death from the back.fbx.meta",
+      "bytes": 3537,
+      "sha256": "46505b20a8a0f7d7743339ce12ef069523982747f4dfc6795e6fc64e6eb1c2b6"
+    },
+    {
+      "path": "animations/death from the front.fbx",
+      "bytes": 589265,
+      "sha256": "ebccbc925f233b8d04657872febf924c339b453cf3592f8975809d2493883ee0"
+    },
+    {
+      "path": "animations/death from the front.fbx.meta",
+      "bytes": 3539,
+      "sha256": "3665f73815e23e40c5910dc1c3d3c368cd61431ab8242285511aad95d098fd07"
+    },
+    {
+      "path": "animations/firing rifle.fbx",
+      "bytes": 340177,
+      "sha256": "06ad7bfd88ab4c7f76d0fa8c0b0125274c714f618a724e20b5e22763dc49a56f"
+    },
+    {
+      "path": "animations/firing rifle.fbx.meta",
+      "bytes": 3529,
+      "sha256": "7525df33c1ee854ea07137c07fe487324a8f54b4a6fa288691c40dc1a0d71bfd"
+    },
+    {
+      "path": "animations/hit reaction.fbx",
+      "bytes": 385281,
+      "sha256": "98351e467b20dcab3271371534c5d88fe4c6f5e4672d795752f9ca7edda9d524"
+    },
+    {
+      "path": "animations/hit reaction.fbx.meta",
+      "bytes": 3530,
+      "sha256": "8ecfa7157a491fc19f4f058a7437c80c445144907c73afbf9b6b74f9578402c5"
+    },
+    {
+      "path": "animations/idle aiming.fbx",
+      "bytes": 425329,
+      "sha256": "ec2c00509a1ec4dd844029151ad7d1b0fb80c959aee4fa3186e771fe34ed9edc"
+    },
+    {
+      "path": "animations/idle aiming.fbx.meta",
+      "bytes": 3529,
+      "sha256": "923e80ae6226b69680930fc63314ef82d8c52f11064a54f41fbf0c0c311146d8"
+    },
+    {
+      "path": "animations/idle crouching aiming.fbx",
+      "bytes": 427585,
+      "sha256": "d1a03cdc96ab85c0b8b8bfe5020a2e7646d64dcd63b88a8cb9f43d3402d6a358"
+    },
+    {
+      "path": "animations/idle crouching aiming.fbx.meta",
+      "bytes": 3539,
+      "sha256": "475691c8fa901f593a0280c71325df41bb14746a4f93980b08e248e636b3c512"
+    },
+    {
+      "path": "animations/idle crouching.fbx",
+      "bytes": 427585,
+      "sha256": "3fa48f6816e3a5d097db32cba323adbc21e9b42befb148cd2db1f7ccd70598a0"
+    },
+    {
+      "path": "animations/idle crouching.fbx.meta",
+      "bytes": 3532,
+      "sha256": "ec03a6f99e5d7ce0cecd25298905803aacd555622ff04b93b74392e1a10ceef8"
+    },
+    {
+      "path": "animations/idle.fbx",
+      "bytes": 427585,
+      "sha256": "be59ae588e2b8fd194803c76e241d3d19a9754b239ae184f774c46f8762129bb"
+    },
+    {
+      "path": "animations/idle.fbx.meta",
+      "bytes": 3522,
+      "sha256": "24d62ec782556c9c361618fb5e424d04909304c83b7ed3dfe9b529f31e23c0fe"
+    },
+    {
+      "path": "animations/jump down.fbx",
+      "bytes": 316273,
+      "sha256": "34d5ff7b181bbc85e6591033408eff5ef75f759ae13eea862b2a9f023815232c"
+    },
+    {
+      "path": "animations/jump down.fbx.meta",
+      "bytes": 3527,
+      "sha256": "f6ada2870621c4303522ae9c796405c9f4e31e302984d0142717a43f033e02eb"
+    },
+    {
+      "path": "animations/jump loop.fbx",
+      "bytes": 338705,
+      "sha256": "ba7494d6e1bc0d882f016bedfc7a67fe2b6c5773f034e3e10beb17f5d57cc09c"
+    },
+    {
+      "path": "animations/jump loop.fbx.meta",
+      "bytes": 3527,
+      "sha256": "ced555db3f92f6c5440122050eba2a12571e36f79d02fb650a7abbf46c593b4a"
+    },
+    {
+      "path": "animations/jump up.fbx",
+      "bytes": 305521,
+      "sha256": "7f9788dfdfa2d4f437b43936ee98c752bad7e1a1a0cdfdf48945d5804f68bbde"
+    },
+    {
+      "path": "animations/jump up.fbx.meta",
+      "bytes": 3525,
+      "sha256": "7777b0cd61146750de8bb08ef05cb4ceadebe4a8bcaa8550cb3de73050f7fdc6"
+    },
+    {
+      "path": "animations/reloading.fbx",
+      "bytes": 639313,
+      "sha256": "6311db6d661b896c394d52496a5a24b009fa6d5cf9e8d048cdbab573b12aa4ce"
+    },
+    {
+      "path": "animations/reloading.fbx.meta",
+      "bytes": 3527,
+      "sha256": "1c65fbb192ac773002cd422d0f87fbf6d2e79f400a073babe514e41fdc8bdc3b"
+    },
+    {
+      "path": "animations/rifle aiming idle.fbx",
+      "bytes": 597217,
+      "sha256": "3f531eb4baf440ea5bc47e65d839fc16411fe9108d8cf54694e01fd1b58b9b5f"
+    },
+    {
+      "path": "animations/rifle aiming idle.fbx.meta",
+      "bytes": 3535,
+      "sha256": "d07df511f4b9507be2ad962f452dc44d7038e709912e98c239d094710bc7c88f"
+    },
+    {
+      "path": "animations/rifle jump.fbx",
+      "bytes": 324881,
+      "sha256": "4fe89287af79755102a7e1e2bfb177be3e1cb919be7a7b557764b23b53fcb1e1"
+    },
+    {
+      "path": "animations/rifle jump.fbx.meta",
+      "bytes": 3528,
+      "sha256": "195bb68e33a0cd4a55d02d5f95320ea47896db5cd0f41eb02a9fbd73a225dd03"
+    },
+    {
+      "path": "animations/rifle run.fbx",
+      "bytes": 342401,
+      "sha256": "062490d940703638761496d1e43e4e0aa86782df945341d9e06253cc65139fad"
+    },
+    {
+      "path": "animations/rifle run.fbx.meta",
+      "bytes": 3527,
+      "sha256": "0679b5cc442757c1e4859401afad671c22d2279c9dbcf3be49a3d904f9a57828"
+    },
+    {
+      "path": "animations/run backward left.fbx",
+      "bytes": 382593,
+      "sha256": "b969946b0b00cf3b09d7b5a368d1baab08d0cd6c9ae73aedcc961edd5a1db84c"
+    },
+    {
+      "path": "animations/run backward left.fbx.meta",
+      "bytes": 3535,
+      "sha256": "b9ebf8f3bfcfb4b1ecd5d514b174a5c246c5b2b0306c8faf0c59fb416acf2cc1"
+    },
+    {
+      "path": "animations/run backward right.fbx",
+      "bytes": 383521,
+      "sha256": "4b44788aec2773b15cd392e024100683ffc58b3ce660f6fbe1f99339f859b544"
+    },
+    {
+      "path": "animations/run backward right.fbx.meta",
+      "bytes": 3536,
+      "sha256": "93029b03ed4f589264a8b8f065fe468fff731d79fc5d2da7b7fa368bb06a7aed"
+    },
+    {
+      "path": "animations/run backward.fbx",
+      "bytes": 380977,
+      "sha256": "1f6802ab6e5bfeda1b1ac7064557bb511c2be2f31aa6778902189bb844d7ab66"
+    },
+    {
+      "path": "animations/run backward.fbx.meta",
+      "bytes": 3530,
+      "sha256": "7d360f7ef707f9e254de265efe023a5523c2e4fabc598f6a1e1d7e992e22aa11"
+    },
+    {
+      "path": "animations/run backwards.fbx",
+      "bytes": 319505,
+      "sha256": "491866c7fdf119ae5b4ae1c7adc4166149890502925fb4d33a828128f8e0cf04"
+    },
+    {
+      "path": "animations/run backwards.fbx.meta",
+      "bytes": 3531,
+      "sha256": "c02aeb66596ddfd980e46ab547aeedf3d4bc3950530968b6d9d10f4cc7d33192"
+    },
+    {
+      "path": "animations/run forward left.fbx",
+      "bytes": 383521,
+      "sha256": "00a959a918ae8c01000850a156a580e24fe027d335eba897ccb48025300fc4a4"
+    },
+    {
+      "path": "animations/run forward left.fbx.meta",
+      "bytes": 3534,
+      "sha256": "8ab316ec10a0b63b459059ef75f6fbb43e5270d5d4961c3d7e682dde300c4b41"
+    },
+    {
+      "path": "animations/run forward right.fbx",
+      "bytes": 382737,
+      "sha256": "82e3ba3179cd6a45ad9184de3c62b284120cc68c69687538fae1c3dcb0687636"
+    },
+    {
+      "path": "animations/run forward right.fbx.meta",
+      "bytes": 3535,
+      "sha256": "d0d624ccfd74905854300405fc09d445b093540019da8d8df0b60332b54ce878"
+    },
+    {
+      "path": "animations/run forward.fbx",
+      "bytes": 382881,
+      "sha256": "e5d1d950335091e6f9847204b3ea7c24cf6a66ed4c63ddd4da74d2cef4d7f49d"
+    },
+    {
+      "path": "animations/run forward.fbx.meta",
+      "bytes": 3529,
+      "sha256": "50c12357ef1e6c24adb189c65c3f690ba58940c7ce87a7c5f7431a900acb2ea3"
+    },
+    {
+      "path": "animations/run left.fbx",
+      "bytes": 383521,
+      "sha256": "d2bcbaa3278edc9bd689f21ec9245c437d4e52a89e8742c2f554c876dbc85ea7"
+    },
+    {
+      "path": "animations/run left.fbx.meta",
+      "bytes": 3526,
+      "sha256": "80eb978b0b9c316fe2711a0aed0b01abccace46c52965b72ef98fbc87c6e7532"
+    },
+    {
+      "path": "animations/run right.fbx",
+      "bytes": 382513,
+      "sha256": "8f5d5943c9dfa6adf919a4b660fa18af9119467e8a555acb715a72b3bd45d81b"
+    },
+    {
+      "path": "animations/run right.fbx.meta",
+      "bytes": 3527,
+      "sha256": "199ab351e996dd1922daac65e1e25b35adf2d88083b81200286fb020da77eda1"
+    },
+    {
+      "path": "animations/showcase_all.glb",
+      "bytes": 74056,
+      "sha256": "2c1f789572704e8ec7a24b50d6fb8e6d6619efaa46de78ecd52ef3a695c78c98"
+    },
+    {
+      "path": "animations/sprint backward left.fbx",
+      "bytes": 383521,
+      "sha256": "c4ab47014900823cd564b1f0226f197150a99786300fc66a6218996c6f7a0849"
+    },
+    {
+      "path": "animations/sprint backward left.fbx.meta",
+      "bytes": 3538,
+      "sha256": "f9da1f8b04ed038a6209e70581f8531a029cf1f74ed14cba2c5e54692aea0d28"
+    },
+    {
+      "path": "animations/sprint backward right.fbx",
+      "bytes": 382993,
+      "sha256": "7d810e6b1526035407c0ed6303cc6ab0cc6156efa62a0ece877ab07a7df544c5"
+    },
+    {
+      "path": "animations/sprint backward right.fbx.meta",
+      "bytes": 3539,
+      "sha256": "472bb254aaa369177f488435f7d7cc961f300934662c00a353f147416055c59b"
+    },
+    {
+      "path": "animations/sprint backward.fbx",
+      "bytes": 383521,
+      "sha256": "e453e85538e7ed01bfe8dedf02b5a95837b276d05d3dc8c7e462fc5ce1c99748"
+    },
+    {
+      "path": "animations/sprint backward.fbx.meta",
+      "bytes": 3533,
+      "sha256": "6fb74029a390afadc17f702841758ee695701f9cbc204f0f6036162bdb763e72"
+    },
+    {
+      "path": "animations/sprint forward left.fbx",
+      "bytes": 383521,
+      "sha256": "79fe68e4038b35298ff07086c9e8f02d9aa11f47c89cd4d114919e70eaa33dbb"
+    },
+    {
+      "path": "animations/sprint forward left.fbx.meta",
+      "bytes": 3537,
+      "sha256": "1daae7a0603a3672a1cb968751b45e60d36184f7743d74ce8e2eb27d2eded2f7"
+    },
+    {
+      "path": "animations/sprint forward right.fbx",
+      "bytes": 382881,
+      "sha256": "461bff160cd56aa77406c645c197f1a46515f5962a601d2a57c6a3bf7f9eb6e7"
+    },
+    {
+      "path": "animations/sprint forward right.fbx.meta",
+      "bytes": 3538,
+      "sha256": "003adb00f12e88639b848a43c2f5ae4552cba9f235c75314e01318f2d1e095dc"
+    },
+    {
+      "path": "animations/sprint forward.fbx",
+      "bytes": 385729,
+      "sha256": "627a44c17dc089cdec368f2c286df5baf1e617096752f1877345632bc1c5890a"
+    },
+    {
+      "path": "animations/sprint forward.fbx.meta",
+      "bytes": 3532,
+      "sha256": "1257d5186fe9b86861d72601bb0b0511102c34c2c2c360bffec95c1983b7966e"
+    },
+    {
+      "path": "animations/sprint left.fbx",
+      "bytes": 383201,
+      "sha256": "820b103bc8705d8e6bb1f176587451a144b13c4ec62a52d17ad60800eaa61588"
+    },
+    {
+      "path": "animations/sprint left.fbx.meta",
+      "bytes": 3529,
+      "sha256": "115e923155c714edb7ada2f80bfacf6ff8ecd1bba62be46c98a35d5b96e05e9f"
+    },
+    {
+      "path": "animations/sprint right.fbx",
+      "bytes": 383809,
+      "sha256": "79f1b6b0709f7de2a10005a52c2ded0f96db0c98994927eb028c01549f835a9f"
+    },
+    {
+      "path": "animations/sprint right.fbx.meta",
+      "bytes": 3530,
+      "sha256": "d712cfbd3b42f976f92d43dbca5989c4480c20c75c6b01fe1bd69a056c081c8f"
+    },
+    {
+      "path": "animations/strafe (2).fbx",
+      "bytes": 313105,
+      "sha256": "a6a3cf6ea12100daff74e2fd9414c48ee4895ef723fe6b932cf6bbe870b61bae"
+    },
+    {
+      "path": "animations/strafe (2).fbx.meta",
+      "bytes": 3528,
+      "sha256": "5d5148e4cde5bbc9d8d831593da2c01d7ab9042795273dd222baabe48733512d"
+    },
+    {
+      "path": "animations/strafe left.fbx",
+      "bytes": 379601,
+      "sha256": "46d042b2966a71dc0533f821c86bd4bd49678a101d90a9f959c0a5306885ea7c"
+    },
+    {
+      "path": "animations/strafe left.fbx.meta",
+      "bytes": 3529,
+      "sha256": "581fca6c8b62c1e8869b0564a6c91fc80224adfa3605aa41d6b9685eeb1d6580"
+    },
+    {
+      "path": "animations/strafe right.fbx",
+      "bytes": 423409,
+      "sha256": "b40340274d197dc11d3c0ba766c419b5649194efe7fd10667aa4a313cdb6835c"
+    },
+    {
+      "path": "animations/strafe right.fbx.meta",
+      "bytes": 3530,
+      "sha256": "93370a833c251b5f9757b217850c9031c9a58b5bd95dbc0d52524d21aa6f8f80"
+    },
+    {
+      "path": "animations/strafe.fbx",
+      "bytes": 316417,
+      "sha256": "234aa22d4475afc2f88b45cd1a57d6afb6e4a26c44d143075a0ab9ca78a90b4e"
+    },
+    {
+      "path": "animations/strafe.fbx.meta",
+      "bytes": 3524,
+      "sha256": "845ed5322e45ac67bc1eac1593c83af87e5865a1d9ff94e4bcb9e3da49bb72bd"
+    },
+    {
+      "path": "animations/toss grenade.fbx",
+      "bytes": 619041,
+      "sha256": "758d4b34b08e4f20abed68f231c2ce6e854b51e0de62144f6dc60b2f08ac3559"
+    },
+    {
+      "path": "animations/toss grenade.fbx.meta",
+      "bytes": 3530,
+      "sha256": "d6c17b568143e28ce7203a2ea1024b8ef0da256f1b018250854641eba16df7a6"
+    },
+    {
+      "path": "animations/turn 90 left.fbx",
+      "bytes": 343025,
+      "sha256": "d7ae8da4e9cd93c311612fb1cff503e9698b6dd79f9c1c9d48bf267e06191d93"
+    },
+    {
+      "path": "animations/turn 90 left.fbx.meta",
+      "bytes": 3530,
+      "sha256": "9abd7db7a429a9a5d15742844f77c1078e7f1d05c7c8f5b4bb55b01e12bd9568"
+    },
+    {
+      "path": "animations/turn 90 right.fbx",
+      "bytes": 344001,
+      "sha256": "2bcba44ec0d3dc3edf57a67f60f65a51b1b55231fccc6624c2c5ca24d5425b2e"
+    },
+    {
+      "path": "animations/turn 90 right.fbx.meta",
+      "bytes": 3531,
+      "sha256": "b63a5ecc11988d81b20e7707d4e53ad60445e2300d3b39481d709e7b7f0f0c00"
+    },
+    {
+      "path": "animations/turn left.fbx",
+      "bytes": 368257,
+      "sha256": "d4f077928b195bab1d9777899d606710f196178ef74f74c08642c507989597a4"
+    },
+    {
+      "path": "animations/turn left.fbx.meta",
+      "bytes": 3527,
+      "sha256": "705d459612b2688e2e431ab83ffd4f8c3cf7a44bd3b55e4e0d34d2e671f2e4c8"
+    },
+    {
+      "path": "animations/turning right 45 degrees.fbx",
+      "bytes": 373649,
+      "sha256": "9488183925d3247bb4f1c1eb73af0d7fc1ac934a60bda06ed624e87660000d48"
+    },
+    {
+      "path": "animations/turning right 45 degrees.fbx.meta",
+      "bytes": 3542,
+      "sha256": "490f4c3000ba68e5600c65556770f72baf6f9b824f2b41d22c610d8daad06b43"
+    },
+    {
+      "path": "animations/walk backward left.fbx",
+      "bytes": 343025,
+      "sha256": "0c1e29088dc84c0a315957b0da3831a4b7379667d2a2801b72f4ac501ea8a7bc"
+    },
+    {
+      "path": "animations/walk backward left.fbx.meta",
+      "bytes": 3536,
+      "sha256": "b053bc1bb906fd1fee99dfdaaf7b1009585faf8f1ba074e2d55a6c5f2e857d21"
+    },
+    {
+      "path": "animations/walk backward right.fbx",
+      "bytes": 343025,
+      "sha256": "7f55abf2c334e2c3a580ef700cc1c9e9cbda6cec16756a6af4646819d77c78aa"
+    },
+    {
+      "path": "animations/walk backward right.fbx.meta",
+      "bytes": 3537,
+      "sha256": "637ffe8c3bd6a57318af0ed65af4f68005083ee18a8791616aa9efd9e883cf51"
+    },
+    {
+      "path": "animations/walk backward.fbx",
+      "bytes": 343025,
+      "sha256": "bf08ba7c42c712d6207c4a604a16be9400227bb960d28c7162c9708d11ce1e95"
+    },
+    {
+      "path": "animations/walk backward.fbx.meta",
+      "bytes": 3531,
+      "sha256": "efda5bd52c87a6e585fa829ea584f20915cea7394f8aca1cde3072eeb1ed5b8a"
+    },
+    {
+      "path": "animations/walk crouching backward left.fbx",
+      "bytes": 343025,
+      "sha256": "c0aa537e54a726591d062a41eaefaaa1c894ec839e4446a17b022e083a1ff9eb"
+    },
+    {
+      "path": "animations/walk crouching backward left.fbx.meta",
+      "bytes": 3546,
+      "sha256": "75252c322be3c638419eb5a03cd8e1d849c104e477b06e8e0e2b8a3b9cf392b4"
+    },
+    {
+      "path": "animations/walk crouching backward right.fbx",
+      "bytes": 343313,
+      "sha256": "0dd9bd16c0c47f1c42de5958f3111f6cc26c58798ee989055b937f171aebc275"
+    },
+    {
+      "path": "animations/walk crouching backward right.fbx.meta",
+      "bytes": 3547,
+      "sha256": "07b8689b1fd9a6d21acf6cbd2b19627c415dd30df731cd2090b53faac0526af1"
+    },
+    {
+      "path": "animations/walk crouching backward.fbx",
+      "bytes": 343201,
+      "sha256": "789eaf0693fca8c1dd493f3f2aea680f5cf8ef082310d650327bdffca4809681"
+    },
+    {
+      "path": "animations/walk crouching backward.fbx.meta",
+      "bytes": 3541,
+      "sha256": "ccb61a123c8ac27f4864b805bf5a74430babd8307e8321c81653aca36db46393"
+    },
+    {
+      "path": "animations/walk crouching forward left.fbx",
+      "bytes": 343313,
+      "sha256": "5b49e026f54e6c2ea6c036a21a4ad8b37eac085d06a50cc53b6420f5a13cb50a"
+    },
+    {
+      "path": "animations/walk crouching forward left.fbx.meta",
+      "bytes": 3545,
+      "sha256": "b349a1f0173f3283725a25ace044b2d61f795e8ef0f00f62ffcdfa37c36583f8"
+    },
+    {
+      "path": "animations/walk crouching forward right.fbx",
+      "bytes": 343025,
+      "sha256": "d307b439dd232e05d8c0fe4090758781076796d7b2ba032c32419bea7d555911"
+    },
+    {
+      "path": "animations/walk crouching forward right.fbx.meta",
+      "bytes": 3546,
+      "sha256": "a4ef976deab19ea7942bc33173014b8365c061ea883c678bd99d619c2fd20233"
+    },
+    {
+      "path": "animations/walk crouching forward.fbx",
+      "bytes": 343249,
+      "sha256": "36c22dbde2d21cedfe977dcad3e70b1f1dafa7a1e3962d5f5320bd35b3cad591"
+    },
+    {
+      "path": "animations/walk crouching forward.fbx.meta",
+      "bytes": 3540,
+      "sha256": "71aee8fc86c92f9ff0cb9e56f1158e26fc08de478058860bebba00a921e19941"
+    },
+    {
+      "path": "animations/walk crouching left.fbx",
+      "bytes": 343169,
+      "sha256": "364e4b00f5b1da93263ec346a2f47a1b3b94a9b3b41443964d36c62776b5b91c"
+    },
+    {
+      "path": "animations/walk crouching left.fbx.meta",
+      "bytes": 3537,
+      "sha256": "46f587a8629af94b42cd29c798af57e13111388d3e39e597bb8b848b6f56ce72"
+    },
+    {
+      "path": "animations/walk crouching right.fbx",
+      "bytes": 343249,
+      "sha256": "b9194416c4bf39fc9a8ef8589ff474835816940005f8f6af4c11845ec4ab0d0f"
+    },
+    {
+      "path": "animations/walk crouching right.fbx.meta",
+      "bytes": 3538,
+      "sha256": "78f4f5d79d4e2520dfe236d65d69aeddc672edd5d9aa14642c2614c3ff5b84ec"
+    },
+    {
+      "path": "animations/walk forward left.fbx",
+      "bytes": 343025,
+      "sha256": "1b57bc04255a145dced77b437736ae5376dcaa38432d632b882956e2760fad87"
+    },
+    {
+      "path": "animations/walk forward left.fbx.meta",
+      "bytes": 3535,
+      "sha256": "1103788c9d7e085825979d5c7e722e3ab62ab0b2eb6618196888505be615c426"
+    },
+    {
+      "path": "animations/walk forward right.fbx",
+      "bytes": 343025,
+      "sha256": "f2100c65fdc0e7d38f0a1124de4c2def0b7c8fd056214345e6a0123e43445e0a"
+    },
+    {
+      "path": "animations/walk forward right.fbx.meta",
+      "bytes": 3536,
+      "sha256": "bc87c80284cd8c85b74d8e2bb8a9cf6c7eb05fca4453711d2c87de8eefd1ba89"
+    },
+    {
+      "path": "animations/walk forward.fbx",
+      "bytes": 343537,
+      "sha256": "69ad6c226afd5e83949025c4eb017b5f3a148143c2ea8260eb7f2e97a7932113"
+    },
+    {
+      "path": "animations/walk forward.fbx.meta",
+      "bytes": 3530,
+      "sha256": "8a49fffb7a0ef36d66cc842e602a51872b2d204b1a40cb77449bc63fb1219088"
+    },
+    {
+      "path": "animations/walk left.fbx",
+      "bytes": 343169,
+      "sha256": "ff6acc1406d9cb3fc70facde5f22badd028ab28045f2912dad363837740956a0"
+    },
+    {
+      "path": "animations/walk left.fbx.meta",
+      "bytes": 3527,
+      "sha256": "fc5ad18c9affb0610ecde62d21d3fdf30144e0cf4160345f219bcce15acc09bc"
+    },
+    {
+      "path": "animations/walk right.fbx",
+      "bytes": 343169,
+      "sha256": "0f81706e90f257064faf6aa7eb940d594721c812201a94b4db1bf6e346f8b93e"
+    },
+    {
+      "path": "animations/walk right.fbx.meta",
+      "bytes": 3528,
+      "sha256": "81c4f88239641d5f007bcd593c3332bb2aee1da57c51355cb8f3a3a7df9d2b38"
+    },
+    {
+      "path": "animations/walking backwards.fbx",
+      "bytes": 419665,
+      "sha256": "b8d1162420c5f270af48565cae10c53bac1fefbb4c0a368075559bd6d33cea34"
+    },
+    {
+      "path": "animations/walking backwards.fbx.meta",
+      "bytes": 3535,
+      "sha256": "011523c8fed95bf74b02ee7bf96be63532d6f8008e515df60332978ce90ec0c3"
+    },
+    {
+      "path": "animations/walking.fbx",
+      "bytes": 371633,
+      "sha256": "da8f3d6dac9601e2cabf3ff69ad88a8cdd574487797d0d27642596031843c314"
+    },
+    {
+      "path": "animations/walking.fbx.meta",
+      "bytes": 3525,
+      "sha256": "9d2845b8c8ad4827230fcd35e1646ae522ade15f3c140e6d4d10b8ecab9f5b33"
+    }
+  ]
+}

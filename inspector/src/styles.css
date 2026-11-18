@@ -166,6 +166,7 @@ th { color: var(--muted); background: var(--panel-2); }
   border: 1px solid var(--border); background: var(--panel); overflow-wrap: anywhere;
 }
 .banner-info { border-left: 4px solid var(--accent); }
+.banner-ok { border-left: 4px solid #2f9e44; }
 .banner-error { border-left: 4px solid var(--bad-fg); background: #2a0b12; color: #fecdd3; }
 .banner.small { font-size: 0.8rem; }
 

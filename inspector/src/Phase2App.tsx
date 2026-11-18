@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
+import { parseFbx } from './engine/fbxLoaderTolerant';
 import type {
   AnimationAssetEntry,
   AnimationDiscoveryReport,
@@ -110,6 +110,15 @@ function usePreviewCharacter(slot: 'male' | 'female' | null) {
   return state;
 }
 
+const FIRST_TEST_LABELS: Record<string, string> = {
+  preparing: 'preparing',
+  discovering: 'discovering animations',
+  selecting: 'choosing an Idle/Walk clip',
+  analysing: 'analysing the clip',
+  preview: 'building the retarget preview',
+  done: 'complete',
+};
+
 export default function Phase2App() {
   const { maleRig, femaleRig, error: rigError } = useRigs();
 
@@ -134,9 +143,19 @@ export default function Phase2App() {
   const [inPlace, setInPlace] = useState(true);
   const [showSkeleton, setShowSkeleton] = useState(false);
   const [firstTestId, setFirstTestId] = useState<string | null>(null);
+  const [firstTestStage, setFirstTestStage] = useState<
+    'idle' | 'preparing' | 'discovering' | 'selecting' | 'analysing' | 'preview' | 'done' | 'error'
+  >('idle');
+  const [firstTestError, setFirstTestError] = useState<string | null>(null);
+  const [firstTestBusy, setFirstTestBusy] = useState(false);
   const fbxCacheRef = useRef(new Map<string, THREE.Group>());
 
   const preview = usePreviewCharacter(characterSlot);
+
+  // Latest rigs, mirrored into a ref so `runFirstTest` can wait for them instead
+  // of failing when the user presses the button during the initial load.
+  const rigsRef = useRef({ maleRig, femaleRig });
+  rigsRef.current = { maleRig, femaleRig };
 
   const processingIds = useMemo(() => {
     if (!progress || progress.phase !== 'parsing') return new Set<string>();
@@ -158,9 +177,13 @@ export default function Phase2App() {
       setDiscovery(result.report);
       setBuffers(result.buffers);
       setProgress(null);
+      // Returned so callers (e.g. First test) can continue in the same tick
+      // instead of racing React state.
+      return result;
     } catch (err) {
       setDiscoveryError(err instanceof Error ? err.message : String(err));
       setProgress(null);
+      return null;
     } finally {
       setDiscovering(false);
     }
@@ -168,16 +191,30 @@ export default function Phase2App() {
 
   // ---- full pipeline --------------------------------------------------------
   const runAnalysis = useCallback(
-    async (only?: string[]) => {
-      if (!discovery || !maleRig || !femaleRig) return;
+    async (
+      only?: string[],
+      explicit?: { discovery: AnimationDiscoveryReport; buffers: Map<string, ArrayBuffer> },
+    ) => {
+      const activeDiscovery = explicit?.discovery ?? discovery;
+      const activeBuffers = explicit?.buffers ?? buffers;
+      // Read rigs from the ref: during the first render they are still null in
+      // this closure even after `runFirstTest` has awaited their arrival.
+      const { maleRig: liveMaleRig, femaleRig: liveFemaleRig } = rigsRef.current;
+      if (!activeDiscovery || !liveMaleRig || !liveFemaleRig) {
+        throw new Error(
+          `Analysis cannot start yet: ${
+            !activeDiscovery ? 'animation discovery has not completed' : 'character rigs are still loading'
+          }.`,
+        );
+      }
       setRunning(true);
       setRetargetError(null);
       try {
         const result = await runPhase2({
-          discovery,
-          buffers,
-          maleRig,
-          femaleRig,
+          discovery: activeDiscovery,
+          buffers: activeBuffers,
+          maleRig: liveMaleRig,
+          femaleRig: liveFemaleRig,
           cache: cacheRef.current,
           only,
           onProgress: setProgress,
@@ -198,13 +235,17 @@ export default function Phase2App() {
           ms: result.elapsedMs,
           worker: result.workerUsed,
         });
+        return result;
       } catch (err) {
         setDiscoveryError(err instanceof Error ? err.message : String(err));
+        // Re-throw so callers (First test) can report the failure instead of
+        // silently concluding that nothing happened.
+        throw err;
       } finally {
         setRunning(false);
       }
     },
-    [discovery, buffers, maleRig, femaleRig],
+    [discovery, buffers],
   );
 
   // Selecting an animation that has not been analysed used to do nothing at all:
@@ -217,21 +258,105 @@ export default function Phase2App() {
     if (animations.some((a) => a.assetId === selectedAsset.id)) return;
     if (running || runningId === selectedAsset.id) return;
     setPendingSelectId(selectedAsset.id);
-    void runAnalysis([selectedAsset.id]).finally(() => setPendingSelectId(null));
+    void runAnalysis([selectedAsset.id])
+      .catch(() => undefined)
+      .finally(() => setPendingSelectId(null));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAsset, animations, running]);
 
   const runningId = pendingSelectId;
 
   /** The required "first animation test": one Idle/Walk, full pipeline, both characters. */
+  /**
+   * First test — the required "validate one Idle/Walk before the batch" step.
+   *
+   * Previously this was a silent no-op unless Discovery had already completed:
+   * `if (!discovery) return;` produced no feedback whatsoever. It now drives the
+   * whole sequence itself and reports every step, so the button always does
+   * something observable:
+   *
+   *   1. discover animations (if not already done)
+   *   2. pick a suitable Idle/Walk (via selectFirstTestAnimation)
+   *   3. parse + score that one asset for BOTH characters
+   *   4. select it so the retarget preview builds
+   *
+   * Each stage surfaces a status string and any failure surfaces an error banner.
+   */
   const runFirstTest = useCallback(async () => {
-    if (!discovery || !maleRig || !femaleRig) return;
-    const candidate = selectFirstTestAnimation(discovery.assets, compat) ?? discovery.assets[0];
-    if (!candidate) return;
-    setFirstTestId(candidate.id);
-    setSelectedAsset(candidate);
-    await runAnalysis([candidate.id]);
-  }, [discovery, compat, maleRig, femaleRig, runAnalysis]);
+    if (firstTestBusy) return;
+    setFirstTestError(null);
+    setFirstTestStage('preparing');
+    setFirstTestBusy(true);
+
+    try {
+      // --- 0. wait for the character rigs instead of failing instantly --------
+      if (!rigsRef.current.maleRig || !rigsRef.current.femaleRig) {
+        setFirstTestStage('preparing');
+        const deadline = Date.now() + 30000;
+        while ((!rigsRef.current.maleRig || !rigsRef.current.femaleRig) && Date.now() < deadline) {
+          await new Promise((r) => setTimeout(r, 200));
+        }
+        if (!rigsRef.current.maleRig || !rigsRef.current.femaleRig) {
+          throw new Error(
+            'Character rigs did not finish loading within 30 s. Reload the page and try again.',
+          );
+        }
+      }
+
+      // --- 1. discovery, if needed -------------------------------------------
+      let activeDiscovery = discovery;
+      let activeBuffers = buffers;
+      if (!activeDiscovery || activeDiscovery.assets.length === 0) {
+        setFirstTestStage('discovering');
+        const discovered = await runDiscovery();
+        if (!discovered) {
+          throw new Error('Animation discovery failed. See the error banner above.');
+        }
+        activeDiscovery = discovered.report;
+        activeBuffers = discovered.buffers;
+        if (activeDiscovery.assets.length === 0) {
+          throw new Error('Discovery found no animation assets in animations/.');
+        }
+      }
+
+      // --- 2. choose a suitable Idle/Walk ------------------------------------
+      setFirstTestStage('selecting');
+      const candidate =
+        selectFirstTestAnimation(activeDiscovery.assets, compat) ?? activeDiscovery.assets[0];
+      if (!candidate) {
+        throw new Error('No suitable Idle or Walk animation was found to test.');
+      }
+      setFirstTestId(candidate.id);
+      setSelectedAsset(candidate);
+
+      // --- 3. analyse just that asset, for both characters -------------------
+      setFirstTestStage('analysing');
+      const result = await runAnalysis([candidate.id], {
+        discovery: activeDiscovery,
+        buffers: activeBuffers,
+      });
+      if (!result) {
+        throw new Error('Analysis did not complete. See the error banner above.');
+      }
+
+      const reports = result.bundle.compatibility.filter((c) => c.assetId === candidate.id);
+      const usable = reports.filter((c) => c.status !== 'PROCESSING_FAILED');
+      if (usable.length === 0) {
+        const detail = reports[0]?.issues?.[0]?.message ?? 'the file could not be parsed';
+        throw new Error(`${candidate.fileName} could not be prepared for preview: ${detail}`);
+      }
+
+      // --- 4. hand over to the preview ---------------------------------------
+      setFirstTestStage('preview');
+      // Give the retarget effect a beat, then report honestly what happened.
+      setTimeout(() => setFirstTestStage('done'), 1200);
+    } catch (err) {
+      setFirstTestStage('error');
+      setFirstTestError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setFirstTestBusy(false);
+    }
+  }, [discovery, buffers, compat, maleRig, femaleRig, runDiscovery, runAnalysis, firstTestBusy]);
 
   // Auto-select the first test animation once analysis data exists.
   useEffect(() => {
@@ -283,7 +408,8 @@ export default function Phase2App() {
       if (cached) return cached;
       const buffer = buffers.get(asset.sourcePath);
       if (!buffer) return null;
-      const obj = new FBXLoader().parse(buffer.slice(0), '');
+      // Footer-tolerant parse; see engine/fbxLoaderTolerant.ts.
+      const obj = parseFbx(buffer.slice(0), '').object as THREE.Group;
       fbxCacheRef.current.set(asset.id, obj);
       return obj;
     },
@@ -438,6 +564,18 @@ export default function Phase2App() {
         verification. Original FBX and <code>.fbx.meta</code> files are never modified.
       </div>
 
+      {firstTestStage !== 'idle' && firstTestStage !== 'error' && (
+        <div className={`banner ${firstTestStage === 'done' ? 'banner-ok' : 'banner-info'}`} data-testid="first-test-status">
+          {firstTestStage === 'done'
+            ? '✅ First test complete — preview is ready. Use “Analyse all animations” to score the whole library.'
+            : `⏳ First test — ${FIRST_TEST_LABELS[firstTestStage] ?? 'working'}…`}
+        </div>
+      )}
+      {firstTestError && (
+        <div className="banner banner-error" data-testid="first-test-error">
+          ❌ First test failed: {firstTestError}
+        </div>
+      )}
       {(rigError || discoveryError) && (
         <div className="banner banner-error">{rigError ?? discoveryError}</div>
       )}
@@ -446,13 +584,20 @@ export default function Phase2App() {
         <button type="button" className="btn btn-primary" onClick={() => void runDiscovery()} disabled={discovering || running}>
           {discovering ? '⏳ Scanning animations…' : '📂 Discover animations'}
         </button>
-        <button type="button" className="btn" onClick={() => void runFirstTest()} disabled={!ready || running || discovering}>
-          🧪 First test (1 Idle/Walk)
+        <button
+          type="button"
+          className="btn"
+          onClick={() => void runFirstTest()}
+          disabled={firstTestBusy || (running && firstTestStage !== 'analysing')}
+          data-testid="first-test-btn"
+          aria-busy={firstTestBusy}
+        >
+          {firstTestBusy ? `⏳ ${FIRST_TEST_LABELS[firstTestStage] ?? 'Working…'}` : '🧪 First test (1 Idle/Walk)'}
         </button>
-        <button type="button" className="btn" onClick={() => void runAnalysis()} disabled={!ready || running || discovering}>
+        <button type="button" className="btn" onClick={() => void runAnalysis().catch(() => undefined)} disabled={!ready || running || discovering}>
           {running ? '⏳ Processing…' : '⚙️ Analyse all animations'}
         </button>
-        <button type="button" className="btn" onClick={() => void runAnalysis([...failedIds])} disabled={failedIds.size === 0 || running}>
+        <button type="button" className="btn" onClick={() => void runAnalysis([...failedIds]).catch(() => undefined)} disabled={failedIds.size === 0 || running}>
           ♻️ Retry failed ({failedIds.size})
         </button>
         <button type="button" className="btn" onClick={exportAll} disabled={!discovery || animations.length === 0}>

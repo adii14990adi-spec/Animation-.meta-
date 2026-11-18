@@ -3,7 +3,7 @@ import { parseFbxAnimation } from '../src/engine/fbxSkeleton';
 import { buildCharacterRigFromGltf, type CharacterRig } from '../src/engine/characterRig';
 import { analyzeCompatibility, buildMappings } from '../src/engine/compatibility';
 import type { CompatibilityReport, ParsedAnimationResult } from '../src/engine/animationTypes';
-import { readAnimationBuffer, readGltfJson } from './phase2Fixtures';
+import { malformedFbxBuffer, readAnimationBuffer, readGltfJson } from './phase2Fixtures';
 
 const maleRig: CharacterRig = buildCharacterRigFromGltf(readGltfJson('Male') as never);
 const femaleRig: CharacterRig = buildCharacterRigFromGltf(readGltfJson('Female') as never);
@@ -70,12 +70,35 @@ describe('Phase 2 — compatibility scoring (real animations)', () => {
     expect(male.scoring.requiredSlotsMapped).toBe(female.scoring.requiredSlotsMapped);
   });
 
-  it('reports PROCESSING_FAILED for a genuinely malformed FBX', () => {
-    const r = report('reloading.fbx', 'male');
-    expect(r.status).toBe('PROCESSING_FAILED');
-    expect(r.retargetReadiness).toBe('not_ready');
-    expect(r.issues[0].code).toBe('ANIMATION_PARSE_FAILED');
-    expect(r.scoring.ruleTrace.join(' ')).toMatch(/could not be parsed/i);
+  it('reports PROCESSING_FAILED for a genuinely malformed FBX (synthetic fixture)', () => {
+    // NOTE: `reloading.fbx` used to be asserted here. It turned out to be a VALID
+    // asset that three.js's hardcoded 176-byte footer budget rejected — see
+    // engine/fbxLoaderTolerant.ts and tests/phase2.fbxTolerance.test.ts. Genuine
+    // parse failure is now covered with a deliberately corrupt buffer instead.
+    const corrupt = parseFbxAnimation(malformedFbxBuffer(), {
+      assetId: 'corrupt',
+      sourcePath: 'animations/corrupt.fbx',
+      fileName: 'corrupt.fbx',
+      sha256: 'x',
+    });
+    expect(corrupt.status).toBe('failed');
+
+    const failedReport = analyzeCompatibility({
+      animation: corrupt,
+      characterSlot: 'male',
+      characterSkeleton: maleRig.skeleton,
+    });
+    expect(failedReport.status).toBe('PROCESSING_FAILED');
+    expect(failedReport.retargetReadiness).toBe('not_ready');
+    expect(failedReport.issues[0].code).toBe('ANIMATION_PARSE_FAILED');
+  });
+
+  it('scores the two previously-rejected assets as usable (footer-tolerance regression)', () => {
+    for (const file of ['death from the back.fbx', 'reloading.fbx']) {
+      const r = report(file, 'male');
+      expect(r.status).not.toBe('PROCESSING_FAILED');
+      expect(r.retargetReadiness).not.toBe('not_ready');
+    }
   });
 
   it('exposes a transparent rule trace rather than an opaque score', () => {
