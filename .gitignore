@@ -29,3 +29,12 @@ reports/*
 Thumbs.db
 *~
 *.swp
+
+# Character Skeleton Inspector (Phase 1 web app) build & dependencies
+node_modules/
+inspector/node_modules/
+inspector/dist/
+inspector/.vite/
+
+
+inspector/tsconfig.tsbuildinfo

@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Female Character — Skeleton Inspection Report</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 24px 16px 48px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0b0f17;
+      color: #e2e8f0;
+      line-height: 1.55;
+    }
+    .container { max-width: 1080px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin: 0 0 6px; color: #f8fafc; }
+    h2 { font-size: 1.125rem; margin: 28px 0 12px; color: #f1f5f9; border-bottom: 1px solid #1e293b; padding-bottom: 6px; }
+    h3 { font-size: 1rem; margin: 0 0 8px; color: #f8fafc; }
+    .meta { color: #94a3b8; font-size: 0.875rem; margin-bottom: 16px; }
+    .classification-banner {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 700;
+      font-size: 1rem;
+      background: #064e3b;
+      color: #6ee7b7;
+      border: 1px solid #059669;
+      margin-bottom: 16px;
+    }
+    .notice {
+      background: #111827;
+      border: 1px solid #334155;
+      border-left: 4px solid #38bdf8;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #1e293b; vertical-align: top; }
+    th { color: #94a3b8; font-weight: 600; background: #0f172a; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; color: #7dd3fc; }
+    .muted { color: #94a3b8; font-size: 0.85rem; }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .pill-good { background: #064e3b; color: #6ee7b7; }
+    .pill-warn { background: #451a03; color: #fcd34d; }
+    .pill-bad { background: #4c0519; color: #fda4af; }
+    .pill-info { background: #0c4a6e; color: #7dd3fc; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin-bottom: 6px; font-size: 0.875rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Female Character — GLTF + BIN Skeleton Inspection Report</h1>
+    <div class="meta">
+      Primary GLTF: <code>Superhero_Female_FullBody.gltf</code> ·
+      Inspected: 2026-11-18T09:49:29.694Z ·
+      Phase 1 — Browser Structural Inspection Only
+    </div>
+
+    <div class="classification-banner">
+      Final Classification: RIGGED_AND_SKINNED
+    </div>
+
+    <div class="notice">
+      <strong>Important Technical Scope:</strong>
+      <ul>
+        <li>Phase 1 Browser Structural Inspection Only: animation playback, retargeting, and auto-rigging are intentionally out of scope.</li><li>This web application is NOT the Unity Editor and does NOT run Unity AvatarBuilder, Mecanim muscle setup, or Unity runtime verification.</li><li>Humanoid bone matches (&quot;Found&quot;, &quot;Possible match&quot;, &quot;Ambiguous&quot;, &quot;Missing&quot;) are heuristic analyses of bone names and hierarchy, not a guarantee of Unity Humanoid compatibility.</li><li>All uploaded files (.gltf, .bin, textures, licence.txt) are inspected locally in browser memory and are never modified, committed, or sent to external servers.</li>
+      </ul>
+    </div>
+
+    <h2>Status Summary</h2>
+    <div class="card table-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Skeleton</strong></td><td><span class="pill pill-good">Present</span></td></tr>
+<tr><td><strong>Skinned Mesh</strong></td><td><span class="pill pill-good">Present</span></td></tr>
+<tr><td><strong>Bone Weights</strong></td><td><span class="pill pill-good">Valid</span></td></tr>
+<tr><td><strong>Bone Hierarchy</strong></td><td><span class="pill pill-good">Valid</span></td></tr>
+<tr><td><strong>Bind Pose</strong></td><td><span class="pill pill-good">Available</span></td></tr>
+<tr><td><strong>Humanoid Structure (Heuristic)</strong></td><td><span class="pill pill-good">Likely</span></td></tr>
+<tr><td><strong>Textures</strong></td><td><span class="pill pill-good">Loaded</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Confirmed Structural Facts</h3>
+        <ul>
+          <li>Parsed valid glTF 2.0 JSON &quot;Superhero_Female_FullBody.gltf&quot; (31,656 bytes, generator: Khronos glTF Blender I/O v4.3.47).</li><li>Resolved binary buffer #0 &quot;Superhero_Female_FullBody.bin&quot; -&gt; &quot;Superhero_Female_FullBody.bin&quot; (990,808 bytes).</li><li>Material texture assignments verified (7 binding(s)): &quot;MI_Hair_2&quot;.baseColorTexture -&gt; &quot;T_Hair_2_BaseColor.png&quot; (loaded); &quot;MI_Hair_2&quot;.normalTexture -&gt; &quot;T_Hair_2_Normal.png&quot; (loaded); &quot;MI_Eyes&quot;.baseColorTexture -&gt; &quot;T_Eye_Brown.png&quot; (loaded); &quot;MI_Eyes&quot;.normalTexture -&gt; &quot;T_Eye_Normal.png&quot; (loaded); &quot;MI_Superhero_Female&quot;.baseColorTexture -&gt; &quot;T_Superhero_Female_Dark_BaseColor.png&quot; (loaded); &quot;MI_Superhero_Female&quot;.metallicRoughnessTexture -&gt; &quot;T_Superhero_Female_Roughness.png&quot; (loaded); &quot;MI_Superhero_Female&quot;.normalTexture -&gt; &quot;T_Superhero_Female_Normal.png&quot; (loaded).</li><li>Detected 1 glTF skin(s) and 1 post-load THREE.Skeleton instance(s) totaling 65 joint(s).</li><li>Skeleton &quot;Armature&quot;: 65 bones, root [root], max hierarchy depth 12, connected SkinnedMeshes: 3.</li><li>Verified 3 THREE.SkinnedMesh object(s) inspecting 8,844 skinned vertices (all joint indices within bounds and vertex weights normalized).</li><li>Verified 65 invertible 4x4 inverseBindMatrices (bind-pose skeleton span: 1.5496 units).</li><li>Texture check: 7 of 7 referenced image(s) loaded (Loaded).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Heuristic Findings (Pattern-Based)</h3>
+        <ul>
+          <li>Detected bone naming convention: Unreal Mannequin (pelvis / *_l / *_r convention) (Mixamo-style pattern: No).</li><li>Humanoid bone heuristic scan: 19 Found, 0 Possible match, 0 Ambiguous, 0 Missing out of 19 common humanoid slots -&gt; &quot;Likely&quot;.</li><li>Root bone is a dedicated ground-origin &quot;root&quot; joint above &quot;pelvis&quot; (typical Unreal Mannequin root-motion hierarchy; note Mixamo FBX animations often omit an extra ground root above Hips).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Validation Diagnostics</h2>
+    <div class="card"><ul><li><span class="pill pill-warn">WARNING</span> <strong>[TEXTURE_FILENAME_NEAR_MATCH]</strong> glTF references &quot;T_Eye_Normal_png.png&quot;, but the uploaded file is named &quot;T_Eye_Normal.png&quot; (differs only by a trailing format infix such as &quot;_png&quot;). The texture bytes were loaded via transparent near-match resolution; rename the file to exactly &quot;T_Eye_Normal_png.png&quot; for strict exact-path resolution. <em>(Confirmed fact)</em></li>
+<li><span class="pill pill-info">INFO</span> <strong>[UNUSUAL_OR_LEAF_BONE_NAMES]</strong> Skin #0 includes 12 helper/leaf joint(s) (e.g., &quot;index_04_leaf_l&quot; — Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.). <em>(Heuristic finding)</em></li></ul></div>
+
+    <h2>Material Texture Assignments</h2>
+    <div class="card"><div class="table-wrap"><table>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Slot</th>
+              <th>GLTF Image URI</th>
+              <th>Resolved File</th>
+              <th>Resolution</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                  <td><strong>MI_Hair_2</strong></td>
+                  <td><code>baseColorTexture</code></td>
+                  <td><code>T_Hair_2_BaseColor.png</code></td>
+                  <td><code>T_Hair_2_BaseColor.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Hair_2</strong></td>
+                  <td><code>normalTexture</code></td>
+                  <td><code>T_Hair_2_Normal.png</code></td>
+                  <td><code>T_Hair_2_Normal.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Eyes</strong></td>
+                  <td><code>baseColorTexture</code></td>
+                  <td><code>T_Eye_Brown.png</code></td>
+                  <td><code>T_Eye_Brown.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Eyes</strong></td>
+                  <td><code>normalTexture</code></td>
+                  <td><code>T_Eye_Normal_png.png</code></td>
+                  <td><code>T_Eye_Normal.png</code></td>
+                  <td><code>near_match</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Superhero_Female</strong></td>
+                  <td><code>baseColorTexture</code></td>
+                  <td><code>T_Superhero_Female_Dark_BaseColor.png</code></td>
+                  <td><code>T_Superhero_Female_Dark_BaseColor.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Superhero_Female</strong></td>
+                  <td><code>metallicRoughnessTexture</code></td>
+                  <td><code>T_Superhero_Female_Roughness.png</code></td>
+                  <td><code>T_Superhero_Female_Roughness.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>\n<tr>
+                  <td><strong>MI_Superhero_Female</strong></td>
+                  <td><code>normalTexture</code></td>
+                  <td><code>T_Superhero_Female_Normal.png</code></td>
+                  <td><code>T_Superhero_Female_Normal.png</code></td>
+                  <td><code>exact_path</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+          </tbody>
+        </table></div></div>
+
+    <h2>External &amp; Embedded Textures</h2>
+    <div class="card"><div class="table-wrap"><table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Image Name</th>
+              <th>GLTF URI</th>
+              <th>Resolved File</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                  <td>0</td>
+                  <td>T_Hair_2_Normal</td>
+                  <td><code>T_Hair_2_Normal.png</code></td>
+                  <td><code>T_Hair_2_Normal.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>1</td>
+                  <td>T_Hair_2_BaseColor</td>
+                  <td><code>T_Hair_2_BaseColor.png</code></td>
+                  <td><code>T_Hair_2_BaseColor.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>2</td>
+                  <td>T_Eye_Normal.png</td>
+                  <td><code>T_Eye_Normal_png.png</code></td>
+                  <td><code>T_Eye_Normal.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>3</td>
+                  <td>T_Eye_Brown</td>
+                  <td><code>T_Eye_Brown.png</code></td>
+                  <td><code>T_Eye_Brown.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>4</td>
+                  <td>T_Superhero_Female_Normal</td>
+                  <td><code>T_Superhero_Female_Normal.png</code></td>
+                  <td><code>T_Superhero_Female_Normal.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>5</td>
+                  <td>T_Superhero_Female_Dark_BaseColor</td>
+                  <td><code>T_Superhero_Female_Dark_BaseColor.png</code></td>
+                  <td><code>T_Superhero_Female_Dark_BaseColor.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+<tr>
+                  <td>6</td>
+                  <td>T_Superhero_Female_Roughness</td>
+                  <td><code>T_Superhero_Female_Roughness.png</code></td>
+                  <td><code>T_Superhero_Female_Roughness.png</code></td>
+                  <td><span class="pill pill-good">LOADED</span></td>
+                </tr>
+          </tbody>
+        </table></div></div>
+
+    <h2>Skinning &amp; Vertex Weight Validation</h2>
+    <div class="card"><div class="table-wrap"><table>
+          <thead>
+            <tr>
+              <th>Mesh / Node</th>
+              <th>Vertices</th>
+              <th>Skinned</th>
+              <th>Weight Sum Range</th>
+              <th>Unnormalized</th>
+              <th>Zero Weight</th>
+              <th>Out-of-Range Idx</th>
+              <th>Negative</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                  <td><strong>Eyebrows</strong> <span class="muted">(Eyebrows)</span></td>
+                  <td>912</td>
+                  <td>Yes</td>
+                  <td><code>1.0000 .. 1.0000</code></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><span class="pill pill-good">VALID</span></td>
+                </tr>
+<tr>
+                  <td><strong>Eyes</strong> <span class="muted">(Eyes)</span></td>
+                  <td>556</td>
+                  <td>Yes</td>
+                  <td><code>1.0000 .. 1.0000</code></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><span class="pill pill-good">VALID</span></td>
+                </tr>
+<tr>
+                  <td><strong>Superhero_Female</strong> <span class="muted">(Superhero_Female)</span></td>
+                  <td>7,376</td>
+                  <td>Yes</td>
+                  <td><code>1.0000 .. 1.0000</code></td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td><span class="pill pill-good">VALID</span></td>
+                </tr>
+          </tbody>
+        </table></div></div>
+
+    <h2>Humanoid Bone Structure Analysis (Heuristic — Unreal Mannequin (pelvis / *_l / *_r convention))</h2>
+    <div class="card table-wrap">
+      <p class="muted">Heuristic browser-side analysis based on bone naming conventions and parent-child topology only. This does NOT invoke Unity Editor AvatarBuilder and does NOT guarantee Unity Humanoid import or runtime animation retargeting compatibility.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Humanoid Slot</th>
+            <th>Group</th>
+            <th>Classification</th>
+            <th>Matched Bone</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody><tr>
+        <td><strong>Hips</strong></td>
+        <td>Torso &amp; Head</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>pelvis</code></td>
+        <td>Matched bone &quot;pelvis&quot; (joint #1, depth 1) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Spine</strong></td>
+        <td>Torso &amp; Head</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>spine_01</code></td>
+        <td>Matched bone &quot;spine_01&quot; (joint #2, depth 2) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Chest</strong></td>
+        <td>Torso &amp; Head</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>spine_02</code></td>
+        <td>Matched bone &quot;spine_02&quot; (joint #3, depth 3) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Neck</strong></td>
+        <td>Torso &amp; Head</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>neck_01</code></td>
+        <td>Matched bone &quot;neck_01&quot; (joint #5, depth 5) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Head</strong></td>
+        <td>Torso &amp; Head</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>Head</code></td>
+        <td>Matched bone &quot;Head&quot; (joint #6, depth 6) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Shoulder</strong></td>
+        <td>Left Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>clavicle_l</code></td>
+        <td>Matched bone &quot;clavicle_l&quot; (joint #7, depth 5) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Shoulder</strong></td>
+        <td>Right Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>clavicle_r</code></td>
+        <td>Matched bone &quot;clavicle_r&quot; (joint #31, depth 5) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Upper Arm</strong></td>
+        <td>Left Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>upperarm_l</code></td>
+        <td>Matched bone &quot;upperarm_l&quot; (joint #8, depth 6) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Upper Arm</strong></td>
+        <td>Right Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>upperarm_r</code></td>
+        <td>Matched bone &quot;upperarm_r&quot; (joint #32, depth 6) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Lower Arm</strong></td>
+        <td>Left Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>lowerarm_l</code></td>
+        <td>Matched bone &quot;lowerarm_l&quot; (joint #9, depth 7) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Lower Arm</strong></td>
+        <td>Right Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>lowerarm_r</code></td>
+        <td>Matched bone &quot;lowerarm_r&quot; (joint #33, depth 7) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Hand</strong></td>
+        <td>Left Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>hand_l</code></td>
+        <td>Matched bone &quot;hand_l&quot; (joint #10, depth 8) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Hand</strong></td>
+        <td>Right Arm</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>hand_r</code></td>
+        <td>Matched bone &quot;hand_r&quot; (joint #34, depth 8) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Upper Leg</strong></td>
+        <td>Left Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>thigh_l</code></td>
+        <td>Matched bone &quot;thigh_l&quot; (joint #55, depth 2) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Upper Leg</strong></td>
+        <td>Right Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>thigh_r</code></td>
+        <td>Matched bone &quot;thigh_r&quot; (joint #60, depth 2) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Lower Leg</strong></td>
+        <td>Left Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>calf_l</code></td>
+        <td>Matched bone &quot;calf_l&quot; (joint #56, depth 3) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Lower Leg</strong></td>
+        <td>Right Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>calf_r</code></td>
+        <td>Matched bone &quot;calf_r&quot; (joint #61, depth 3) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Left Foot</strong></td>
+        <td>Left Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>foot_l</code></td>
+        <td>Matched bone &quot;foot_l&quot; (joint #57, depth 4) with consistent hierarchy.</td>
+      </tr>
+<tr>
+        <td><strong>Right Foot</strong></td>
+        <td>Right Leg</td>
+        <td><span class="pill pill-good">Found</span></td>
+        <td><code>foot_r</code></td>
+        <td>Matched bone &quot;foot_r&quot; (joint #62, depth 4) with consistent hierarchy.</td>
+      </tr></tbody>
+      </table>
+    </div>
+
+    <h2>Skeleton &amp; Bone Hierarchy</h2>
+    <div class="card">
+              <h3>Skeleton: Armature (65 bones, max depth 12)</h3>
+              <p class="muted">Root bone(s): <code>root</code> · THREE.Skeleton instantiated: <strong>Yes</strong> · Connected SkinnedMeshes: <strong>3</strong></p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Joint #</th>
+                      <th>Bone Name &amp; Hierarchy</th>
+                      <th>Depth</th>
+                      <th>Parent Bone</th>
+                      <th>Rest Translation</th>
+                      <th>IBM</th>
+                    </tr>
+                  </thead>
+                  <tbody><tr>
+                <td>0</td>
+                <td style="padding-left:12px"><code>root</code> <span class="pill pill-info">ROOT</span></td>
+                <td>0</td>
+                <td><code>—</code></td>
+                <td><code>[0.000, 0.000, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>1</td>
+                <td style="padding-left:26px"><code>pelvis</code></td>
+                <td>1</td>
+                <td><code>root</code></td>
+                <td><code>[0.000, 0.046, 0.932]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>2</td>
+                <td style="padding-left:40px"><code>spine_01</code></td>
+                <td>2</td>
+                <td><code>pelvis</code></td>
+                <td><code>[0.000, 0.127, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>3</td>
+                <td style="padding-left:54px"><code>spine_02</code></td>
+                <td>3</td>
+                <td><code>spine_01</code></td>
+                <td><code>[-0.000, 0.110, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>4</td>
+                <td style="padding-left:68px"><code>spine_03</code></td>
+                <td>4</td>
+                <td><code>spine_02</code></td>
+                <td><code>[0.000, 0.126, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>5</td>
+                <td style="padding-left:82px"><code>neck_01</code></td>
+                <td>5</td>
+                <td><code>spine_03</code></td>
+                <td><code>[-0.000, 0.198, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>6</td>
+                <td style="padding-left:96px"><code>Head</code></td>
+                <td>6</td>
+                <td><code>neck_01</code></td>
+                <td><code>[-0.000, 0.071, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>7</td>
+                <td style="padding-left:82px"><code>clavicle_l</code></td>
+                <td>5</td>
+                <td><code>spine_03</code></td>
+                <td><code>[0.029, 0.134, 0.045]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>8</td>
+                <td style="padding-left:96px"><code>upperarm_l</code></td>
+                <td>6</td>
+                <td><code>clavicle_l</code></td>
+                <td><code>[-0.002, 0.141, -0.012]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>9</td>
+                <td style="padding-left:110px"><code>lowerarm_l</code></td>
+                <td>7</td>
+                <td><code>upperarm_l</code></td>
+                <td><code>[-0.000, 0.240, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>10</td>
+                <td style="padding-left:124px"><code>hand_l</code></td>
+                <td>8</td>
+                <td><code>lowerarm_l</code></td>
+                <td><code>[0.000, 0.249, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>11</td>
+                <td style="padding-left:138px"><code>index_01_l</code></td>
+                <td>9</td>
+                <td><code>hand_l</code></td>
+                <td><code>[0.004, 0.088, 0.036]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>12</td>
+                <td style="padding-left:152px"><code>index_02_l</code></td>
+                <td>10</td>
+                <td><code>index_01_l</code></td>
+                <td><code>[0.000, 0.032, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>13</td>
+                <td style="padding-left:166px"><code>index_03_l</code></td>
+                <td>11</td>
+                <td><code>index_02_l</code></td>
+                <td><code>[0.000, 0.027, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>14</td>
+                <td style="padding-left:180px"><code>index_04_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>index_03_l</code></td>
+                <td><code>[0.000, 0.024, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>15</td>
+                <td style="padding-left:138px"><code>middle_01_l</code></td>
+                <td>9</td>
+                <td><code>hand_l</code></td>
+                <td><code>[0.002, 0.086, 0.011]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>16</td>
+                <td style="padding-left:152px"><code>middle_02_l</code></td>
+                <td>10</td>
+                <td><code>middle_01_l</code></td>
+                <td><code>[0.000, 0.036, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>17</td>
+                <td style="padding-left:166px"><code>middle_03_l</code></td>
+                <td>11</td>
+                <td><code>middle_02_l</code></td>
+                <td><code>[-0.000, 0.029, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>18</td>
+                <td style="padding-left:180px"><code>middle_04_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>middle_03_l</code></td>
+                <td><code>[0.000, 0.030, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>19</td>
+                <td style="padding-left:138px"><code>pinky_01_l</code></td>
+                <td>9</td>
+                <td><code>hand_l</code></td>
+                <td><code>[0.004, 0.070, -0.034]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>20</td>
+                <td style="padding-left:152px"><code>pinky_02_l</code></td>
+                <td>10</td>
+                <td><code>pinky_01_l</code></td>
+                <td><code>[-0.000, 0.031, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>21</td>
+                <td style="padding-left:166px"><code>pinky_03_l</code></td>
+                <td>11</td>
+                <td><code>pinky_02_l</code></td>
+                <td><code>[-0.000, 0.027, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>22</td>
+                <td style="padding-left:180px"><code>pinky_04_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>pinky_03_l</code></td>
+                <td><code>[-0.000, 0.021, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>23</td>
+                <td style="padding-left:138px"><code>ring_01_l</code></td>
+                <td>9</td>
+                <td><code>hand_l</code></td>
+                <td><code>[0.002, 0.080, -0.014]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>24</td>
+                <td style="padding-left:152px"><code>ring_02_l</code></td>
+                <td>10</td>
+                <td><code>ring_01_l</code></td>
+                <td><code>[-0.000, 0.035, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>25</td>
+                <td style="padding-left:166px"><code>ring_03_l</code></td>
+                <td>11</td>
+                <td><code>ring_02_l</code></td>
+                <td><code>[0.000, 0.028, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>26</td>
+                <td style="padding-left:180px"><code>ring_04_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>ring_03_l</code></td>
+                <td><code>[0.000, 0.028, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>27</td>
+                <td style="padding-left:138px"><code>thumb_01_l</code></td>
+                <td>9</td>
+                <td><code>hand_l</code></td>
+                <td><code>[0.010, -0.003, 0.030]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>28</td>
+                <td style="padding-left:152px"><code>thumb_02_l</code></td>
+                <td>10</td>
+                <td><code>thumb_01_l</code></td>
+                <td><code>[0.000, 0.036, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>29</td>
+                <td style="padding-left:166px"><code>thumb_03_l</code></td>
+                <td>11</td>
+                <td><code>thumb_02_l</code></td>
+                <td><code>[0.000, 0.036, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>30</td>
+                <td style="padding-left:180px"><code>thumb_04_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>thumb_03_l</code></td>
+                <td><code>[-0.000, 0.031, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>31</td>
+                <td style="padding-left:82px"><code>clavicle_r</code></td>
+                <td>5</td>
+                <td><code>spine_03</code></td>
+                <td><code>[-0.029, 0.134, 0.045]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>32</td>
+                <td style="padding-left:96px"><code>upperarm_r</code></td>
+                <td>6</td>
+                <td><code>clavicle_r</code></td>
+                <td><code>[0.002, 0.141, -0.012]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>33</td>
+                <td style="padding-left:110px"><code>lowerarm_r</code></td>
+                <td>7</td>
+                <td><code>upperarm_r</code></td>
+                <td><code>[0.000, 0.240, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>34</td>
+                <td style="padding-left:124px"><code>hand_r</code></td>
+                <td>8</td>
+                <td><code>lowerarm_r</code></td>
+                <td><code>[-0.000, 0.249, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>35</td>
+                <td style="padding-left:138px"><code>index_01_r</code></td>
+                <td>9</td>
+                <td><code>hand_r</code></td>
+                <td><code>[-0.004, 0.088, 0.036]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>36</td>
+                <td style="padding-left:152px"><code>index_02_r</code></td>
+                <td>10</td>
+                <td><code>index_01_r</code></td>
+                <td><code>[-0.000, 0.032, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>37</td>
+                <td style="padding-left:166px"><code>index_03_r</code></td>
+                <td>11</td>
+                <td><code>index_02_r</code></td>
+                <td><code>[-0.000, 0.027, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>38</td>
+                <td style="padding-left:180px"><code>index_04_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>index_03_r</code></td>
+                <td><code>[-0.000, 0.024, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>39</td>
+                <td style="padding-left:138px"><code>middle_01_r</code></td>
+                <td>9</td>
+                <td><code>hand_r</code></td>
+                <td><code>[-0.002, 0.086, 0.011]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>40</td>
+                <td style="padding-left:152px"><code>middle_02_r</code></td>
+                <td>10</td>
+                <td><code>middle_01_r</code></td>
+                <td><code>[-0.000, 0.036, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>41</td>
+                <td style="padding-left:166px"><code>middle_03_r</code></td>
+                <td>11</td>
+                <td><code>middle_02_r</code></td>
+                <td><code>[0.000, 0.029, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>42</td>
+                <td style="padding-left:180px"><code>middle_04_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>middle_03_r</code></td>
+                <td><code>[-0.000, 0.030, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>43</td>
+                <td style="padding-left:138px"><code>pinky_01_r</code></td>
+                <td>9</td>
+                <td><code>hand_r</code></td>
+                <td><code>[-0.004, 0.070, -0.034]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>44</td>
+                <td style="padding-left:152px"><code>pinky_02_r</code></td>
+                <td>10</td>
+                <td><code>pinky_01_r</code></td>
+                <td><code>[0.000, 0.031, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>45</td>
+                <td style="padding-left:166px"><code>pinky_03_r</code></td>
+                <td>11</td>
+                <td><code>pinky_02_r</code></td>
+                <td><code>[0.000, 0.027, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>46</td>
+                <td style="padding-left:180px"><code>pinky_04_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>pinky_03_r</code></td>
+                <td><code>[0.000, 0.021, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>47</td>
+                <td style="padding-left:138px"><code>ring_01_r</code></td>
+                <td>9</td>
+                <td><code>hand_r</code></td>
+                <td><code>[-0.002, 0.080, -0.014]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>48</td>
+                <td style="padding-left:152px"><code>ring_02_r</code></td>
+                <td>10</td>
+                <td><code>ring_01_r</code></td>
+                <td><code>[0.000, 0.035, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>49</td>
+                <td style="padding-left:166px"><code>ring_03_r</code></td>
+                <td>11</td>
+                <td><code>ring_02_r</code></td>
+                <td><code>[-0.000, 0.028, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>50</td>
+                <td style="padding-left:180px"><code>ring_04_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>ring_03_r</code></td>
+                <td><code>[-0.000, 0.028, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>51</td>
+                <td style="padding-left:138px"><code>thumb_01_r</code></td>
+                <td>9</td>
+                <td><code>hand_r</code></td>
+                <td><code>[-0.010, -0.003, 0.030]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>52</td>
+                <td style="padding-left:152px"><code>thumb_02_r</code></td>
+                <td>10</td>
+                <td><code>thumb_01_r</code></td>
+                <td><code>[-0.000, 0.036, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>53</td>
+                <td style="padding-left:166px"><code>thumb_03_r</code></td>
+                <td>11</td>
+                <td><code>thumb_02_r</code></td>
+                <td><code>[-0.000, 0.036, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>54</td>
+                <td style="padding-left:180px"><code>thumb_04_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>12</td>
+                <td><code>thumb_03_r</code></td>
+                <td><code>[0.000, 0.031, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>55</td>
+                <td style="padding-left:40px"><code>thigh_l</code></td>
+                <td>2</td>
+                <td><code>pelvis</code></td>
+                <td><code>[0.111, 0.010, -0.009]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>56</td>
+                <td style="padding-left:54px"><code>calf_l</code></td>
+                <td>3</td>
+                <td><code>thigh_l</code></td>
+                <td><code>[-0.000, 0.410, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>57</td>
+                <td style="padding-left:68px"><code>foot_l</code></td>
+                <td>4</td>
+                <td><code>calf_l</code></td>
+                <td><code>[-0.000, 0.466, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>58</td>
+                <td style="padding-left:82px"><code>ball_l</code></td>
+                <td>5</td>
+                <td><code>foot_l</code></td>
+                <td><code>[0.000, 0.149, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>59</td>
+                <td style="padding-left:96px"><code>ball_leaf_l</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>6</td>
+                <td><code>ball_l</code></td>
+                <td><code>[0.000, 0.068, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>60</td>
+                <td style="padding-left:40px"><code>thigh_r</code></td>
+                <td>2</td>
+                <td><code>pelvis</code></td>
+                <td><code>[-0.111, 0.010, -0.009]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>61</td>
+                <td style="padding-left:54px"><code>calf_r</code></td>
+                <td>3</td>
+                <td><code>thigh_r</code></td>
+                <td><code>[0.000, 0.410, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>62</td>
+                <td style="padding-left:68px"><code>foot_r</code></td>
+                <td>4</td>
+                <td><code>calf_r</code></td>
+                <td><code>[0.000, 0.466, 0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>63</td>
+                <td style="padding-left:82px"><code>ball_r</code></td>
+                <td>5</td>
+                <td><code>foot_r</code></td>
+                <td><code>[-0.000, 0.149, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr>
+<tr>
+                <td>64</td>
+                <td style="padding-left:96px"><code>ball_leaf_r</code> <span class="pill pill-warn">LEAF / HELPER</span></td>
+                <td>6</td>
+                <td><code>ball_r</code></td>
+                <td><code>[0.000, 0.068, -0.000]</code></td>
+                <td>Invertible</td>
+              </tr></tbody>
+                </table>
+              </div>
+            </div>
+
+    <h2>Uploaded Package Manifest</h2>
+    <div class="card table-wrap">
+      <p class="muted">Companion license file &quot;License_Standard(1).txt&quot; verified (806 bytes, 17 non-empty lines). Kept private in local session.</p>
+      <table>
+        <thead><tr><th>File Name</th><th>Role</th><th>Size (Bytes)</th></tr></thead>
+        <tbody>
+          <tr><td><code>License_Standard(1).txt</code></td><td>licence</td><td>806</td></tr>
+<tr><td><code>Superhero_Female_FullBody.bin</code></td><td>bin</td><td>990,808</td></tr>
+<tr><td><code>Superhero_Female_FullBody.gltf</code></td><td>gltf</td><td>31,656</td></tr>
+<tr><td><code>T_Eye_Brown.png</code></td><td>texture</td><td>35,958</td></tr>
+<tr><td><code>T_Eye_Normal.png</code></td><td>texture</td><td>15,099</td></tr>
+<tr><td><code>T_Hair_2_BaseColor.png</code></td><td>texture</td><td>1,729,467</td></tr>
+<tr><td><code>T_Hair_2_BaseColor_png.png</code></td><td>texture</td><td>1,729,467</td></tr>
+<tr><td><code>T_Hair_2_Normal.png</code></td><td>texture</td><td>4,710,013</td></tr>
+<tr><td><code>T_Superhero_Female_Dark_BaseColor.png</code></td><td>texture</td><td>1,319,410</td></tr>
+<tr><td><code>T_Superhero_Female_Normal.png</code></td><td>texture</td><td>3,940,537</td></tr>
+<tr><td><code>T_Superhero_Female_Roughness.png</code></td><td>texture</td><td>3,277,022</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

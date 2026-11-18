@@ -1,0 +1,4319 @@
+{
+  "schemaVersion": "1.0.0",
+  "phase": "Phase 1 — Browser Structural Inspection Only",
+  "slot": "female",
+  "slotLabel": "Female Character",
+  "inspectedAtIso": "2026-11-18T09:49:29.694Z",
+  "primaryGltfFileName": "Superhero_Female_FullBody.gltf",
+  "gltfAssetMetadata": {
+    "version": "2.0",
+    "generator": "Khronos glTF Blender I/O v4.3.47",
+    "copyright": null,
+    "minVersion": null
+  },
+  "finalClassification": "RIGGED_AND_SKINNED",
+  "statuses": {
+    "skeleton": "Present",
+    "skinnedMesh": "Present",
+    "boneWeights": "Valid",
+    "boneHierarchy": "Valid",
+    "bindPose": "Available",
+    "humanoidStructure": "Likely",
+    "textures": "Loaded"
+  },
+  "uploadedFiles": [
+    {
+      "name": "License_Standard(1).txt",
+      "relativePath": "License_Standard(1).txt",
+      "sizeBytes": 806,
+      "role": "licence"
+    },
+    {
+      "name": "Superhero_Female_FullBody.bin",
+      "relativePath": "Superhero_Female_FullBody.bin",
+      "sizeBytes": 990808,
+      "role": "bin"
+    },
+    {
+      "name": "Superhero_Female_FullBody.gltf",
+      "relativePath": "Superhero_Female_FullBody.gltf",
+      "sizeBytes": 31656,
+      "role": "gltf"
+    },
+    {
+      "name": "T_Eye_Brown.png",
+      "relativePath": "T_Eye_Brown.png",
+      "sizeBytes": 35958,
+      "role": "texture"
+    },
+    {
+      "name": "T_Eye_Normal.png",
+      "relativePath": "T_Eye_Normal.png",
+      "sizeBytes": 15099,
+      "role": "texture"
+    },
+    {
+      "name": "T_Hair_2_BaseColor.png",
+      "relativePath": "T_Hair_2_BaseColor.png",
+      "sizeBytes": 1729467,
+      "role": "texture"
+    },
+    {
+      "name": "T_Hair_2_BaseColor_png.png",
+      "relativePath": "T_Hair_2_BaseColor_png.png",
+      "sizeBytes": 1729467,
+      "role": "texture"
+    },
+    {
+      "name": "T_Hair_2_Normal.png",
+      "relativePath": "T_Hair_2_Normal.png",
+      "sizeBytes": 4710013,
+      "role": "texture"
+    },
+    {
+      "name": "T_Superhero_Female_Dark_BaseColor.png",
+      "relativePath": "T_Superhero_Female_Dark_BaseColor.png",
+      "sizeBytes": 1319410,
+      "role": "texture"
+    },
+    {
+      "name": "T_Superhero_Female_Normal.png",
+      "relativePath": "T_Superhero_Female_Normal.png",
+      "sizeBytes": 3940537,
+      "role": "texture"
+    },
+    {
+      "name": "T_Superhero_Female_Roughness.png",
+      "relativePath": "T_Superhero_Female_Roughness.png",
+      "sizeBytes": 3277022,
+      "role": "texture"
+    }
+  ],
+  "licence": {
+    "present": true,
+    "fileName": "License_Standard(1).txt",
+    "sizeBytes": 806,
+    "lineCount": 17,
+    "summaryNote": "Companion license file \"License_Standard(1).txt\" verified (806 bytes, 17 non-empty lines). Kept private in local session."
+  },
+  "buffers": [
+    {
+      "bufferIndex": 0,
+      "uri": "Superhero_Female_FullBody.bin",
+      "isEmbeddedDataUri": false,
+      "declaredByteLength": 990808,
+      "actualByteLength": 990808,
+      "resolvedFileName": "Superhero_Female_FullBody.bin",
+      "resolutionMode": "exact_path",
+      "status": "valid",
+      "error": null
+    }
+  ],
+  "textures": [
+    {
+      "imageIndex": 0,
+      "name": "T_Hair_2_Normal",
+      "uri": "T_Hair_2_Normal.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Hair_2_Normal.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 4710013,
+      "dimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 1,
+      "name": "T_Hair_2_BaseColor",
+      "uri": "T_Hair_2_BaseColor.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Hair_2_BaseColor.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 1729467,
+      "dimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 2,
+      "name": "T_Eye_Normal.png",
+      "uri": "T_Eye_Normal_png.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Eye_Normal.png",
+      "resolutionMode": "near_match",
+      "sizeBytes": 15099,
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 3,
+      "name": "T_Eye_Brown",
+      "uri": "T_Eye_Brown.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Eye_Brown.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 35958,
+      "dimensions": {
+        "width": 256,
+        "height": 256
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 4,
+      "name": "T_Superhero_Female_Normal",
+      "uri": "T_Superhero_Female_Normal.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Superhero_Female_Normal.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 3940537,
+      "dimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 5,
+      "name": "T_Superhero_Female_Dark_BaseColor",
+      "uri": "T_Superhero_Female_Dark_BaseColor.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Superhero_Female_Dark_BaseColor.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 1319410,
+      "dimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "status": "loaded",
+      "error": null
+    },
+    {
+      "imageIndex": 6,
+      "name": "T_Superhero_Female_Roughness",
+      "uri": "T_Superhero_Female_Roughness.png",
+      "sourceKind": "external_uri",
+      "mimeType": "image/png",
+      "resolvedFileName": "T_Superhero_Female_Roughness.png",
+      "resolutionMode": "exact_path",
+      "sizeBytes": 3277022,
+      "dimensions": {
+        "width": 2048,
+        "height": 2048
+      },
+      "status": "loaded",
+      "error": null
+    }
+  ],
+  "materialTextureBindings": [
+    {
+      "materialIndex": 0,
+      "materialName": "MI_Hair_2",
+      "slot": "baseColorTexture",
+      "textureIndex": 1,
+      "imageIndex": 1,
+      "imageUri": "T_Hair_2_BaseColor.png",
+      "resolvedFileName": "T_Hair_2_BaseColor.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 0,
+      "materialName": "MI_Hair_2",
+      "slot": "normalTexture",
+      "textureIndex": 0,
+      "imageIndex": 0,
+      "imageUri": "T_Hair_2_Normal.png",
+      "resolvedFileName": "T_Hair_2_Normal.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 1,
+      "materialName": "MI_Eyes",
+      "slot": "baseColorTexture",
+      "textureIndex": 3,
+      "imageIndex": 3,
+      "imageUri": "T_Eye_Brown.png",
+      "resolvedFileName": "T_Eye_Brown.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 1,
+      "materialName": "MI_Eyes",
+      "slot": "normalTexture",
+      "textureIndex": 2,
+      "imageIndex": 2,
+      "imageUri": "T_Eye_Normal_png.png",
+      "resolvedFileName": "T_Eye_Normal.png",
+      "resolutionMode": "near_match",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 2,
+      "materialName": "MI_Superhero_Female",
+      "slot": "baseColorTexture",
+      "textureIndex": 5,
+      "imageIndex": 5,
+      "imageUri": "T_Superhero_Female_Dark_BaseColor.png",
+      "resolvedFileName": "T_Superhero_Female_Dark_BaseColor.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 2,
+      "materialName": "MI_Superhero_Female",
+      "slot": "metallicRoughnessTexture",
+      "textureIndex": 6,
+      "imageIndex": 6,
+      "imageUri": "T_Superhero_Female_Roughness.png",
+      "resolvedFileName": "T_Superhero_Female_Roughness.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    },
+    {
+      "materialIndex": 2,
+      "materialName": "MI_Superhero_Female",
+      "slot": "normalTexture",
+      "textureIndex": 4,
+      "imageIndex": 4,
+      "imageUri": "T_Superhero_Female_Normal.png",
+      "resolvedFileName": "T_Superhero_Female_Normal.png",
+      "resolutionMode": "exact_path",
+      "imageStatus": "loaded"
+    }
+  ],
+  "sceneSummary": {
+    "gltfSkinCount": 1,
+    "threeSkeletonCount": 1,
+    "threeSkinnedMeshCount": 3,
+    "threeStaticMeshCount": 0,
+    "totalSceneNodes": 70,
+    "allMeshesConnectedToSkeleton": true
+  },
+  "skeletons": [
+    {
+      "id": "skin-0",
+      "name": "Armature",
+      "gltfSkinIndex": 0,
+      "threeSkeletonDetected": true,
+      "totalBoneCount": 65,
+      "boneNames": [
+        "root",
+        "pelvis",
+        "spine_01",
+        "spine_02",
+        "spine_03",
+        "neck_01",
+        "Head",
+        "clavicle_l",
+        "upperarm_l",
+        "lowerarm_l",
+        "hand_l",
+        "index_01_l",
+        "index_02_l",
+        "index_03_l",
+        "index_04_leaf_l",
+        "middle_01_l",
+        "middle_02_l",
+        "middle_03_l",
+        "middle_04_leaf_l",
+        "pinky_01_l",
+        "pinky_02_l",
+        "pinky_03_l",
+        "pinky_04_leaf_l",
+        "ring_01_l",
+        "ring_02_l",
+        "ring_03_l",
+        "ring_04_leaf_l",
+        "thumb_01_l",
+        "thumb_02_l",
+        "thumb_03_l",
+        "thumb_04_leaf_l",
+        "clavicle_r",
+        "upperarm_r",
+        "lowerarm_r",
+        "hand_r",
+        "index_01_r",
+        "index_02_r",
+        "index_03_r",
+        "index_04_leaf_r",
+        "middle_01_r",
+        "middle_02_r",
+        "middle_03_r",
+        "middle_04_leaf_r",
+        "pinky_01_r",
+        "pinky_02_r",
+        "pinky_03_r",
+        "pinky_04_leaf_r",
+        "ring_01_r",
+        "ring_02_r",
+        "ring_03_r",
+        "ring_04_leaf_r",
+        "thumb_01_r",
+        "thumb_02_r",
+        "thumb_03_r",
+        "thumb_04_leaf_r",
+        "thigh_l",
+        "calf_l",
+        "foot_l",
+        "ball_l",
+        "ball_leaf_l",
+        "thigh_r",
+        "calf_r",
+        "foot_r",
+        "ball_r",
+        "ball_leaf_r"
+      ],
+      "rootBoneNames": [
+        "root"
+      ],
+      "explicitSkeletonRootNodeName": null,
+      "armatureContainerNodeName": "Armature",
+      "armatureContainerScale": null,
+      "maxDepth": 12,
+      "duplicateBoneNames": [],
+      "emptyBoneCount": 0,
+      "unusualBoneNames": [
+        {
+          "name": "index_04_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "middle_04_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "pinky_04_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "ring_04_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "thumb_04_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "index_04_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "middle_04_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "pinky_04_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "ring_04_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "thumb_04_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "ball_leaf_l",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        },
+        {
+          "name": "ball_leaf_r",
+          "reason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint."
+        }
+      ],
+      "hasMultipleRoots": false,
+      "hasCycleOrBrokenParent": false,
+      "connectedSkinnedMeshNames": [
+        "Eyebrows",
+        "Eyes",
+        "Superhero_Female"
+      ],
+      "bones": [
+        {
+          "jointIndex": 0,
+          "gltfNodeIndex": 64,
+          "name": "root",
+          "displayName": "root",
+          "parentJointIndex": null,
+          "parentName": null,
+          "childJointIndices": [
+            1
+          ],
+          "depth": 0,
+          "isRoot": true,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0,
+            0,
+            0
+          ],
+          "restRotation": [
+            -0.7071067690849304,
+            0,
+            0,
+            0.7071067690849304
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "jointIndex": 1,
+          "gltfNodeIndex": 63,
+          "name": "pelvis",
+          "displayName": "pelvis",
+          "parentJointIndex": 0,
+          "parentName": "root",
+          "childJointIndices": [
+            2,
+            55,
+            60
+          ],
+          "depth": 1,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0,
+            0.045700013637542725,
+            0.9318000078201294
+          ],
+          "restRotation": [
+            0.7879695892333984,
+            0,
+            0,
+            0.6157141923904419
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999998632337168,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0,
+            0.9317999931069205,
+            -0.04570002401884374
+          ]
+        },
+        {
+          "jointIndex": 2,
+          "gltfNodeIndex": 52,
+          "name": "spine_01",
+          "displayName": "spine_01",
+          "parentJointIndex": 1,
+          "parentName": "pelvis",
+          "childJointIndices": [
+            3
+          ],
+          "depth": 2,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0,
+            0.12655510008335114,
+            -9.313225746154785e-10
+          ],
+          "restRotation": [
+            -0.06393160670995712,
+            0.00004989771332475357,
+            -0.00000319658010994317,
+            0.9979543089866638
+          ],
+          "restScale": [
+            1,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999998271992859,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -5.125134459078967e-13,
+            1.0546000039114782,
+            -0.015100007620498871
+          ]
+        },
+        {
+          "jointIndex": 3,
+          "gltfNodeIndex": 51,
+          "name": "spine_02",
+          "displayName": "spine_02",
+          "parentJointIndex": 2,
+          "parentName": "spine_01",
+          "childJointIndices": [
+            4
+          ],
+          "depth": 3,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -4.263256414560601e-13,
+            0.11034487932920456,
+            8.381903171539307e-9
+          ],
+          "restRotation": [
+            -0.055728573352098465,
+            -0.00004992229150957428,
+            -0.0000027864282401424134,
+            0.998445987701416
+          ],
+          "restScale": [
+            1,
+            0.9999998211860657,
+            0.9999998807907104
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000000616992666,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0,
+            1.1641999507786833,
+            -0.002300001031145912
+          ]
+        },
+        {
+          "jointIndex": 4,
+          "gltfNodeIndex": 50,
+          "name": "spine_03",
+          "displayName": "spine_03",
+          "parentJointIndex": 3,
+          "parentName": "spine_02",
+          "childJointIndices": [
+            5,
+            7,
+            31
+          ],
+          "depth": 4,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            4.6735704609246064e-20,
+            0.12640145421028137,
+            3.4924596548080444e-10
+          ],
+          "restRotation": [
+            -0.10099761933088303,
+            4.5928396448426806e-14,
+            -4.5242200827702583e-13,
+            0.9948866963386536
+          ],
+          "restScale": [
+            1,
+            1,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000001088530581,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -1.149614021015846e-13,
+            1.2905999340800025,
+            -0.0017000166490727846
+          ]
+        },
+        {
+          "jointIndex": 5,
+          "gltfNodeIndex": 1,
+          "name": "neck_01",
+          "displayName": "neck_01",
+          "parentJointIndex": 4,
+          "parentName": "spine_03",
+          "childJointIndices": [
+            6
+          ],
+          "depth": 5,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.0141478263557337e-20,
+            0.19815585017204285,
+            2.60770320892334e-8
+          ],
+          "restRotation": [
+            0.3088374435901642,
+            8.337463586651673e-21,
+            -5.849849968646638e-21,
+            0.95111483335495
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000001721562413,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -1.1496141224306122e-13,
+            1.484899940074132,
+            -0.04060003264374804
+          ]
+        },
+        {
+          "jointIndex": 6,
+          "gltfNodeIndex": 0,
+          "name": "Head",
+          "displayName": "Head",
+          "parentJointIndex": 5,
+          "parentName": "neck_01",
+          "childJointIndices": [],
+          "depth": 6,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.5903435849255598e-27,
+            0.0711912140250206,
+            2.0489096641540527e-8
+          ],
+          "restRotation": [
+            -0.20467473566532135,
+            -4.759437705400649e-21,
+            1.2439442348830942e-21,
+            0.9788300395011902
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000001168304038,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -1.1496141224306283e-13,
+            1.5496000061240993,
+            -0.010900006057834711
+          ]
+        },
+        {
+          "jointIndex": 7,
+          "gltfNodeIndex": 25,
+          "name": "clavicle_l",
+          "displayName": "clavicle_l",
+          "parentJointIndex": 4,
+          "parentName": "spine_03",
+          "childJointIndices": [
+            8
+          ],
+          "depth": 5,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.02930000051856041,
+            0.13370320200920105,
+            0.0448194220662117
+          ],
+          "restRotation": [
+            -0.5471324324607849,
+            -0.3204275965690613,
+            -0.39127784967422485,
+            0.666988730430603
+          ],
+          "restScale": [
+            1,
+            0.9999999403953552,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002535225485,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.02929999867598496,
+            1.430499980744811,
+            0.01599999735760187
+          ]
+        },
+        {
+          "jointIndex": 8,
+          "gltfNodeIndex": 24,
+          "name": "upperarm_l",
+          "displayName": "upperarm_l",
+          "parentJointIndex": 7,
+          "parentName": "clavicle_l",
+          "childJointIndices": [
+            9
+          ],
+          "depth": 6,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.0016045584343373775,
+            0.1410660296678543,
+            -0.01228591613471508
+          ],
+          "restRotation": [
+            0.17232586443424225,
+            0.6858593225479126,
+            -0.1717943400144577,
+            0.68584805727005
+          ],
+          "restScale": [
+            1,
+            1,
+            1.0000001192092896
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002044778353,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.15160002015375182,
+            1.4180999077056653,
+            -0.05430001432664182
+          ]
+        },
+        {
+          "jointIndex": 9,
+          "gltfNodeIndex": 23,
+          "name": "lowerarm_l",
+          "displayName": "lowerarm_l",
+          "parentJointIndex": 8,
+          "parentName": "upperarm_l",
+          "childJointIndices": [
+            10
+          ],
+          "depth": 7,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -4.793889729626244e-8,
+            0.2403421401977539,
+            -4.220055416226387e-9
+          ],
+          "restRotation": [
+            0.023802155628800392,
+            0.00008208974031731486,
+            -0.0000018556972918304382,
+            0.9997166991233826
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002010783475,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.3918999759590341,
+            1.4180999649076278,
+            -0.058800025061877995
+          ]
+        },
+        {
+          "jointIndex": 10,
+          "gltfNodeIndex": 22,
+          "name": "hand_l",
+          "displayName": "hand_l",
+          "parentJointIndex": 9,
+          "parentName": "lowerarm_l",
+          "childJointIndices": [
+            11,
+            15,
+            19,
+            23,
+            27
+          ],
+          "depth": 8,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            1.532122695380167e-8,
+            0.24930401146411896,
+            5.277343007037416e-9
+          ],
+          "restRotation": [
+            -0.02237604185938835,
+            -0.000002264418526465306,
+            -3.032003448311116e-8,
+            0.9997496008872986
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000187179387,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.6411000087835063,
+            1.4180999118968438,
+            -0.05160002670651114
+          ]
+        },
+        {
+          "jointIndex": 11,
+          "gltfNodeIndex": 5,
+          "name": "index_01_l",
+          "displayName": "index_01_l",
+          "parentJointIndex": 10,
+          "parentName": "hand_l",
+          "childJointIndices": [
+            12
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.004199977032840252,
+            0.08823654055595398,
+            0.03620496019721031
+          ],
+          "restRotation": [
+            -0.0033091865479946136,
+            0.7071018815040588,
+            -0.003309202380478382,
+            0.7070961594581604
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000245472267,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7299000027713236,
+            1.4138999613321581,
+            -0.016799999305758973
+          ]
+        },
+        {
+          "jointIndex": 12,
+          "gltfNodeIndex": 4,
+          "name": "index_02_l",
+          "displayName": "index_02_l",
+          "parentJointIndex": 11,
+          "parentName": "index_01_l",
+          "childJointIndices": [
+            13
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            8.094502845779061e-11,
+            0.03171013668179512,
+            -6.863018597869086e-9
+          ],
+          "restRotation": [
+            1.8987577732332284e-8,
+            1.4024364247688936e-7,
+            -0.002140256343409419,
+            0.9999977350234985
+          ],
+          "restScale": [
+            0.9999999403953552,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002389428728,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7615999948149142,
+            1.41389993169364,
+            -0.017600001325002376
+          ]
+        },
+        {
+          "jointIndex": 13,
+          "gltfNodeIndex": 3,
+          "name": "index_03_l",
+          "displayName": "index_03_l",
+          "parentJointIndex": 12,
+          "parentName": "index_02_l",
+          "childJointIndices": [
+            14
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            4.420144250616431e-10,
+            0.027111778035759926,
+            -3.670398029953503e-8
+          ],
+          "restRotation": [
+            1.0023382124302316e-9,
+            7.603918037758783e-13,
+            -0.00013328436762094498,
+            1
+          ],
+          "restScale": [
+            0.9999999403953552,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002463482833,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.788699934374577,
+            1.413900049321429,
+            -0.018400000598214963
+          ]
+        },
+        {
+          "jointIndex": 14,
+          "gltfNodeIndex": 2,
+          "name": "index_04_leaf_l",
+          "displayName": "index_04_leaf_l",
+          "parentJointIndex": 13,
+          "parentName": "index_03_l",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            9.076757123693824e-10,
+            0.023510519415140152,
+            -3.8285477899080433e-8
+          ],
+          "restRotation": [
+            -8.381903171539307e-9,
+            1,
+            -1.5432005174599583e-14,
+            0.0000036517765238386346
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002452955712,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.812199966046426,
+            1.4138999672935424,
+            -0.019100000908880543
+          ]
+        },
+        {
+          "jointIndex": 15,
+          "gltfNodeIndex": 9,
+          "name": "middle_01_l",
+          "displayName": "middle_01_l",
+          "parentJointIndex": 10,
+          "parentName": "hand_l",
+          "childJointIndices": [
+            16
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.001899929717183113,
+            0.08634158223867416,
+            0.010671664960682392
+          ],
+          "restRotation": [
+            -0.007979890331625938,
+            0.7070646286010742,
+            -0.007979941554367542,
+            0.7070589065551758
+          ],
+          "restScale": [
+            1,
+            0.9999998807907104,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002264649683,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7276000409983518,
+            1.4162000943310156,
+            -0.0423000082830301
+          ]
+        },
+        {
+          "jointIndex": 16,
+          "gltfNodeIndex": 8,
+          "name": "middle_02_l",
+          "displayName": "middle_02_l",
+          "parentJointIndex": 15,
+          "parentName": "middle_01_l",
+          "childJointIndices": [
+            17
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            1.6816557035781443e-9,
+            0.03642695024609566,
+            1.0210540324351314e-7
+          ],
+          "restRotation": [
+            -2.949975197452659e-8,
+            1.402399334438087e-7,
+            0.0038676888216286898,
+            0.9999924898147583
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002071341294,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.764000054924687,
+            1.4162000250321622,
+            -0.043700008799095
+          ]
+        },
+        {
+          "jointIndex": 17,
+          "gltfNodeIndex": 7,
+          "name": "middle_03_l",
+          "displayName": "middle_03_l",
+          "parentJointIndex": 16,
+          "parentName": "middle_02_l",
+          "childJointIndices": [
+            18
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -4.32646629633382e-9,
+            0.02931377850472927,
+            3.287611605173879e-8
+          ],
+          "restRotation": [
+            2.420814304571195e-8,
+            1.4173854798182894e-11,
+            -0.0032189602497965097,
+            0.9999948143959045
+          ],
+          "restScale": [
+            0.9999998807907104,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002271493507,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7932999871224863,
+            1.4162001057821292,
+            -0.04460000428520206
+          ]
+        },
+        {
+          "jointIndex": 18,
+          "gltfNodeIndex": 6,
+          "name": "middle_04_leaf_l",
+          "displayName": "middle_04_leaf_l",
+          "parentJointIndex": 17,
+          "parentName": "middle_03_l",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            2.193701220676303e-9,
+            0.029620492830872536,
+            1.1362611473941797e-7
+          ],
+          "restRotation": [
+            2.0489096641540527e-8,
+            1,
+            6.335320587363621e-14,
+            0.0000036517765238386346
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002298617776,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.8229000184774645,
+            1.4162001146430885,
+            -0.045700005369174665
+          ]
+        },
+        {
+          "jointIndex": 19,
+          "gltfNodeIndex": 13,
+          "name": "pinky_01_l",
+          "displayName": "pinky_01_l",
+          "parentJointIndex": 10,
+          "parentName": "hand_l",
+          "childJointIndices": [
+            20
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.003799965837970376,
+            0.06994835287332535,
+            -0.03399413824081421
+          ],
+          "restRotation": [
+            -0.01044775452464819,
+            0.7070325016975403,
+            -0.010447824373841286,
+            0.7070267200469971
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999997615814209,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000604244522,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7104999632131362,
+            1.4142998987481812,
+            -0.08670001629041595
+          ]
+        },
+        {
+          "jointIndex": 20,
+          "gltfNodeIndex": 12,
+          "name": "pinky_02_l",
+          "displayName": "pinky_02_l",
+          "parentJointIndex": 19,
+          "parentName": "pinky_01_l",
+          "childJointIndices": [
+            21
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -2.967681211885065e-9,
+            0.03083186410367489,
+            -8.672896001371555e-8
+          ],
+          "restRotation": [
+            1.03155857189563e-8,
+            1.4017835781032773e-7,
+            -0.001705002854578197,
+            0.9999985694885254
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000632346446,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7413000297401617,
+            1.4142997789175442,
+            -0.08810001946986627
+          ]
+        },
+        {
+          "jointIndex": 21,
+          "gltfNodeIndex": 11,
+          "name": "pinky_03_l",
+          "displayName": "pinky_03_l",
+          "parentJointIndex": 20,
+          "parentName": "pinky_02_l",
+          "childJointIndices": [
+            22
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.318767317570746e-9,
+            0.026631725952029228,
+            -8.721048061488545e-8
+          ],
+          "restRotation": [
+            -2.1800540039862426e-8,
+            5.25581791629981e-12,
+            0.0028988486155867577,
+            0.9999958276748657
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000006988897618,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7679000588245541,
+            1.4142999317523262,
+            -0.08940001999120874
+          ]
+        },
+        {
+          "jointIndex": 22,
+          "gltfNodeIndex": 10,
+          "name": "pinky_04_leaf_l",
+          "displayName": "pinky_04_leaf_l",
+          "parentJointIndex": 21,
+          "parentName": "pinky_03_l",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            -1.317857822868973e-9,
+            0.020919334143400192,
+            -1.727942162688123e-7
+          ],
+          "restRotation": [
+            8.381903171539307e-9,
+            1,
+            5.647658583201112e-14,
+            0.00000365177675121231
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000700438009,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7888000051028281,
+            1.4142998783331828,
+            -0.09030001643959629
+          ]
+        },
+        {
+          "jointIndex": 23,
+          "gltfNodeIndex": 17,
+          "name": "ring_01_l",
+          "displayName": "ring_01_l",
+          "parentJointIndex": 10,
+          "parentName": "hand_l",
+          "childJointIndices": [
+            24
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.0021999571472406387,
+            0.08042963594198227,
+            -0.013825255446135998
+          ],
+          "restRotation": [
+            0.0025809321086853743,
+            0.7071049213409424,
+            0.0025809479411691427,
+            0.707099199295044
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999997615814209,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000005129704979,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7213000323043144,
+            1.415899854210976,
+            -0.06670001672910272
+          ]
+        },
+        {
+          "jointIndex": 24,
+          "gltfNodeIndex": 16,
+          "name": "ring_02_l",
+          "displayName": "ring_02_l",
+          "parentJointIndex": 23,
+          "parentName": "ring_01_l",
+          "childJointIndices": [
+            25
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -9.877112461254e-10,
+            0.035001225769519806,
+            -1.5782489981575054e-7
+          ],
+          "restRotation": [
+            -1.8197205520209536e-8,
+            1.4009778226409253e-7,
+            0.002474082401022315,
+            0.9999969601631165
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000004322859068,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7563000177674357,
+            1.4158998992353078,
+            -0.06700000942478851
+          ]
+        },
+        {
+          "jointIndex": 25,
+          "gltfNodeIndex": 15,
+          "name": "ring_03_l",
+          "displayName": "ring_03_l",
+          "parentJointIndex": 24,
+          "parentName": "ring_02_l",
+          "childJointIndices": [
+            26
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            7.703420124016702e-9,
+            0.027600184082984924,
+            -1.1280478418029816e-7
+          ],
+          "restRotation": [
+            2.6234243222234e-8,
+            4.3393351412124304e-11,
+            -0.0034884933847934008,
+            0.9999939203262329
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000003674713684,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7839000531101152,
+            1.4158999772959358,
+            -0.06710002150650402
+          ]
+        },
+        {
+          "jointIndex": 26,
+          "gltfNodeIndex": 14,
+          "name": "ring_04_leaf_l",
+          "displayName": "ring_04_leaf_l",
+          "parentJointIndex": 25,
+          "parentName": "ring_03_l",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            9.5042196335271e-10,
+            0.028301579877734184,
+            -3.474425369631717e-8
+          ],
+          "restRotation": [
+            2.7474015951156616e-8,
+            1,
+            1.0721373739979931e-13,
+            0.00000365177675121231
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000003685818168,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.812199992126502,
+            1.4158999055706716,
+            -0.06740001078032179
+          ]
+        },
+        {
+          "jointIndex": 27,
+          "gltfNodeIndex": 21,
+          "name": "thumb_01_l",
+          "displayName": "thumb_01_l",
+          "parentJointIndex": 10,
+          "parentName": "hand_l",
+          "childJointIndices": [
+            28
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.009999980218708515,
+            -0.0028757674153894186,
+            0.029958141967654228
+          ],
+          "restRotation": [
+            0.263997346162796,
+            0.9450139999389648,
+            0.1882738322019577,
+            0.04250776767730713
+          ],
+          "restScale": [
+            1,
+            1.0000004768371582,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999995011242561,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.6386999473175211,
+            1.408099929523239,
+            -0.02160001401297832
+          ]
+        },
+        {
+          "jointIndex": 28,
+          "gltfNodeIndex": 20,
+          "name": "thumb_02_l",
+          "displayName": "thumb_02_l",
+          "parentJointIndex": 27,
+          "parentName": "thumb_01_l",
+          "childJointIndices": [
+            29
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            1.453081495128572e-7,
+            0.03582108020782471,
+            -1.30385160446167e-8
+          ],
+          "restRotation": [
+            0.0019128327257931232,
+            0.00019216042710468173,
+            -0.0004484721284825355,
+            0.9999980330467224
+          ],
+          "restScale": [
+            1,
+            0.9999998211860657,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.999999536912972,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.6671998798143244,
+            1.390799845403459,
+            -0.008500016757541631
+          ]
+        },
+        {
+          "jointIndex": 29,
+          "gltfNodeIndex": 19,
+          "name": "thumb_03_l",
+          "displayName": "thumb_03_l",
+          "parentJointIndex": 28,
+          "parentName": "thumb_02_l",
+          "childJointIndices": [
+            30
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            2.2436142899096012e-7,
+            0.035620346665382385,
+            5.122274160385132e-9
+          ],
+          "restRotation": [
+            -0.0012816648231819272,
+            0.00005811178561998531,
+            0.0002541383437346667,
+            0.9999991655349731
+          ],
+          "restScale": [
+            1,
+            1,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999994665858192,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.6955999788089446,
+            1.3736000490049258,
+            0.004400009002920777
+          ]
+        },
+        {
+          "jointIndex": 30,
+          "gltfNodeIndex": 18,
+          "name": "thumb_04_leaf_l",
+          "displayName": "thumb_04_leaf_l",
+          "parentJointIndex": 29,
+          "parentName": "thumb_03_l",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            -1.2670352589339018e-7,
+            0.03127264976501465,
+            3.073364496231079e-8
+          ],
+          "restRotation": [
+            -1.2782692238033633e-8,
+            0.48539119958877563,
+            2.0375746601075662e-7,
+            0.8742970824241638
+          ],
+          "restScale": [
+            0.9999999403953552,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.999999519458843,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.7204999892228672,
+            1.3585000344033704,
+            0.015799939307547816
+          ]
+        },
+        {
+          "jointIndex": 31,
+          "gltfNodeIndex": 49,
+          "name": "clavicle_r",
+          "displayName": "clavicle_r",
+          "parentJointIndex": 4,
+          "parentName": "spine_03",
+          "childJointIndices": [
+            32
+          ],
+          "depth": 5,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.02930000051856041,
+            0.13370320200920105,
+            0.0448194220662117
+          ],
+          "restRotation": [
+            -0.5471324324607849,
+            0.3204275965690613,
+            0.39127784967422485,
+            0.666988730430603
+          ],
+          "restScale": [
+            1,
+            0.9999999403953552,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002535225485,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.02929999867598496,
+            1.430499980744811,
+            0.01599999735760187
+          ]
+        },
+        {
+          "jointIndex": 32,
+          "gltfNodeIndex": 48,
+          "name": "upperarm_r",
+          "displayName": "upperarm_r",
+          "parentJointIndex": 31,
+          "parentName": "clavicle_r",
+          "childJointIndices": [
+            33
+          ],
+          "depth": 6,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.0016045584343373775,
+            0.1410660296678543,
+            -0.01228591613471508
+          ],
+          "restRotation": [
+            0.17232586443424225,
+            -0.6858593225479126,
+            0.1717943400144577,
+            0.68584805727005
+          ],
+          "restScale": [
+            1,
+            1,
+            1.0000001192092896
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002044778353,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.15160002015375182,
+            1.4180999077056653,
+            -0.05430001432664182
+          ]
+        },
+        {
+          "jointIndex": 33,
+          "gltfNodeIndex": 47,
+          "name": "lowerarm_r",
+          "displayName": "lowerarm_r",
+          "parentJointIndex": 32,
+          "parentName": "upperarm_r",
+          "childJointIndices": [
+            34
+          ],
+          "depth": 7,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            4.793889729626244e-8,
+            0.2403421401977539,
+            -4.220055416226387e-9
+          ],
+          "restRotation": [
+            0.023802155628800392,
+            -0.00008208974031731486,
+            0.0000018556972918304382,
+            0.9997166991233826
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002010783475,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.3918999759590341,
+            1.4180999649076278,
+            -0.058800025061877995
+          ]
+        },
+        {
+          "jointIndex": 34,
+          "gltfNodeIndex": 46,
+          "name": "hand_r",
+          "displayName": "hand_r",
+          "parentJointIndex": 33,
+          "parentName": "lowerarm_r",
+          "childJointIndices": [
+            35,
+            39,
+            43,
+            47,
+            51
+          ],
+          "depth": 8,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.532122695380167e-8,
+            0.24930401146411896,
+            5.277343007037416e-9
+          ],
+          "restRotation": [
+            -0.02237604185938835,
+            0.000002264418526465306,
+            3.032003448311116e-8,
+            0.9997496008872986
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000187179387,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.6411000087835063,
+            1.4180999118968438,
+            -0.05160002670651114
+          ]
+        },
+        {
+          "jointIndex": 35,
+          "gltfNodeIndex": 29,
+          "name": "index_01_r",
+          "displayName": "index_01_r",
+          "parentJointIndex": 34,
+          "parentName": "hand_r",
+          "childJointIndices": [
+            36
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.004199977032840252,
+            0.08823654055595398,
+            0.03620496019721031
+          ],
+          "restRotation": [
+            -0.0033091865479946136,
+            -0.7071018815040588,
+            0.003309202380478382,
+            0.7070961594581604
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000245472267,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7299000027713236,
+            1.4138999613321581,
+            -0.016799999305758973
+          ]
+        },
+        {
+          "jointIndex": 36,
+          "gltfNodeIndex": 28,
+          "name": "index_02_r",
+          "displayName": "index_02_r",
+          "parentJointIndex": 35,
+          "parentName": "index_01_r",
+          "childJointIndices": [
+            37
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -8.094502845779061e-11,
+            0.03171013668179512,
+            -6.863018597869086e-9
+          ],
+          "restRotation": [
+            1.8987577732332284e-8,
+            -1.4024364247688936e-7,
+            0.002140256343409419,
+            0.9999977350234985
+          ],
+          "restScale": [
+            0.9999999403953552,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002389428728,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7615999948149142,
+            1.41389993169364,
+            -0.017600001325002376
+          ]
+        },
+        {
+          "jointIndex": 37,
+          "gltfNodeIndex": 27,
+          "name": "index_03_r",
+          "displayName": "index_03_r",
+          "parentJointIndex": 36,
+          "parentName": "index_02_r",
+          "childJointIndices": [
+            38
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -4.420144250616431e-10,
+            0.027111778035759926,
+            -3.670398029953503e-8
+          ],
+          "restRotation": [
+            1.0023382124302316e-9,
+            -7.603918037758783e-13,
+            0.00013328436762094498,
+            1
+          ],
+          "restScale": [
+            0.9999999403953552,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002463482833,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.788699934374577,
+            1.413900049321429,
+            -0.018400000598214963
+          ]
+        },
+        {
+          "jointIndex": 38,
+          "gltfNodeIndex": 26,
+          "name": "index_04_leaf_r",
+          "displayName": "index_04_leaf_r",
+          "parentJointIndex": 37,
+          "parentName": "index_03_r",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            -9.076757123693824e-10,
+            0.023510519415140152,
+            -3.8285477899080433e-8
+          ],
+          "restRotation": [
+            -8.381903171539307e-9,
+            -1,
+            1.5432005174599583e-14,
+            0.0000036517765238386346
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002452955712,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.812199966046426,
+            1.4138999672935424,
+            -0.019100000908880543
+          ]
+        },
+        {
+          "jointIndex": 39,
+          "gltfNodeIndex": 33,
+          "name": "middle_01_r",
+          "displayName": "middle_01_r",
+          "parentJointIndex": 34,
+          "parentName": "hand_r",
+          "childJointIndices": [
+            40
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.001899929717183113,
+            0.08634158223867416,
+            0.010671664960682392
+          ],
+          "restRotation": [
+            -0.007979890331625938,
+            -0.7070646286010742,
+            0.007979941554367542,
+            0.7070589065551758
+          ],
+          "restScale": [
+            1,
+            0.9999998807907104,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002264649683,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7276000409983518,
+            1.4162000943310156,
+            -0.0423000082830301
+          ]
+        },
+        {
+          "jointIndex": 40,
+          "gltfNodeIndex": 32,
+          "name": "middle_02_r",
+          "displayName": "middle_02_r",
+          "parentJointIndex": 39,
+          "parentName": "middle_01_r",
+          "childJointIndices": [
+            41
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.6816557035781443e-9,
+            0.03642695024609566,
+            1.0210540324351314e-7
+          ],
+          "restRotation": [
+            -2.949975197452659e-8,
+            -1.402399334438087e-7,
+            -0.0038676888216286898,
+            0.9999924898147583
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002071341294,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.764000054924687,
+            1.4162000250321622,
+            -0.043700008799095
+          ]
+        },
+        {
+          "jointIndex": 41,
+          "gltfNodeIndex": 31,
+          "name": "middle_03_r",
+          "displayName": "middle_03_r",
+          "parentJointIndex": 40,
+          "parentName": "middle_02_r",
+          "childJointIndices": [
+            42
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            4.32646629633382e-9,
+            0.02931377850472927,
+            3.287611605173879e-8
+          ],
+          "restRotation": [
+            2.420814304571195e-8,
+            -1.4173854798182894e-11,
+            0.0032189602497965097,
+            0.9999948143959045
+          ],
+          "restScale": [
+            0.9999998807907104,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002271493507,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7932999871224863,
+            1.4162001057821292,
+            -0.04460000428520206
+          ]
+        },
+        {
+          "jointIndex": 42,
+          "gltfNodeIndex": 30,
+          "name": "middle_04_leaf_r",
+          "displayName": "middle_04_leaf_r",
+          "parentJointIndex": 41,
+          "parentName": "middle_03_r",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            -2.193701220676303e-9,
+            0.029620492830872536,
+            1.1362611473941797e-7
+          ],
+          "restRotation": [
+            2.0489096641540527e-8,
+            -1,
+            -6.335320587363621e-14,
+            0.0000036517765238386346
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000002298617776,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.8229000184774645,
+            1.4162001146430885,
+            -0.045700005369174665
+          ]
+        },
+        {
+          "jointIndex": 43,
+          "gltfNodeIndex": 37,
+          "name": "pinky_01_r",
+          "displayName": "pinky_01_r",
+          "parentJointIndex": 34,
+          "parentName": "hand_r",
+          "childJointIndices": [
+            44
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.003799965837970376,
+            0.06994835287332535,
+            -0.03399413824081421
+          ],
+          "restRotation": [
+            -0.01044775452464819,
+            -0.7070325016975403,
+            0.010447824373841286,
+            0.7070267200469971
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999997615814209,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000604244522,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7104999632131362,
+            1.4142998987481812,
+            -0.08670001629041595
+          ]
+        },
+        {
+          "jointIndex": 44,
+          "gltfNodeIndex": 36,
+          "name": "pinky_02_r",
+          "displayName": "pinky_02_r",
+          "parentJointIndex": 43,
+          "parentName": "pinky_01_r",
+          "childJointIndices": [
+            45
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            2.967681211885065e-9,
+            0.03083186410367489,
+            -8.672896001371555e-8
+          ],
+          "restRotation": [
+            1.03155857189563e-8,
+            -1.4017835781032773e-7,
+            0.001705002854578197,
+            0.9999985694885254
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000632346446,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7413000297401617,
+            1.4142997789175442,
+            -0.08810001946986627
+          ]
+        },
+        {
+          "jointIndex": 45,
+          "gltfNodeIndex": 35,
+          "name": "pinky_03_r",
+          "displayName": "pinky_03_r",
+          "parentJointIndex": 44,
+          "parentName": "pinky_02_r",
+          "childJointIndices": [
+            46
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            1.318767317570746e-9,
+            0.026631725952029228,
+            -8.721048061488545e-8
+          ],
+          "restRotation": [
+            -2.1800540039862426e-8,
+            -5.25581791629981e-12,
+            -0.0028988486155867577,
+            0.9999958276748657
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000006988897618,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7679000588245541,
+            1.4142999317523262,
+            -0.08940001999120874
+          ]
+        },
+        {
+          "jointIndex": 46,
+          "gltfNodeIndex": 34,
+          "name": "pinky_04_leaf_r",
+          "displayName": "pinky_04_leaf_r",
+          "parentJointIndex": 45,
+          "parentName": "pinky_03_r",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            1.317857822868973e-9,
+            0.020919334143400192,
+            -1.727942162688123e-7
+          ],
+          "restRotation": [
+            8.381903171539307e-9,
+            -1,
+            -5.647658583201112e-14,
+            0.00000365177675121231
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.000000700438009,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7888000051028281,
+            1.4142998783331828,
+            -0.09030001643959629
+          ]
+        },
+        {
+          "jointIndex": 47,
+          "gltfNodeIndex": 41,
+          "name": "ring_01_r",
+          "displayName": "ring_01_r",
+          "parentJointIndex": 34,
+          "parentName": "hand_r",
+          "childJointIndices": [
+            48
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.0021999571472406387,
+            0.08042963594198227,
+            -0.013825255446135998
+          ],
+          "restRotation": [
+            0.0025809321086853743,
+            -0.7071049213409424,
+            -0.0025809479411691427,
+            0.707099199295044
+          ],
+          "restScale": [
+            0.9999999403953552,
+            0.9999997615814209,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000005129704979,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7213000323043144,
+            1.415899854210976,
+            -0.06670001672910272
+          ]
+        },
+        {
+          "jointIndex": 48,
+          "gltfNodeIndex": 40,
+          "name": "ring_02_r",
+          "displayName": "ring_02_r",
+          "parentJointIndex": 47,
+          "parentName": "ring_01_r",
+          "childJointIndices": [
+            49
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            9.877112461254e-10,
+            0.035001225769519806,
+            -1.5782489981575054e-7
+          ],
+          "restRotation": [
+            -1.8197205520209536e-8,
+            -1.4009778226409253e-7,
+            -0.002474082401022315,
+            0.9999969601631165
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000004322859068,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7563000177674357,
+            1.4158998992353078,
+            -0.06700000942478851
+          ]
+        },
+        {
+          "jointIndex": 49,
+          "gltfNodeIndex": 39,
+          "name": "ring_03_r",
+          "displayName": "ring_03_r",
+          "parentJointIndex": 48,
+          "parentName": "ring_02_r",
+          "childJointIndices": [
+            50
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -7.703420124016702e-9,
+            0.027600184082984924,
+            -1.1280478418029816e-7
+          ],
+          "restRotation": [
+            2.6234243222234e-8,
+            -4.3393351412124304e-11,
+            0.0034884933847934008,
+            0.9999939203262329
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000003674713684,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7839000531101152,
+            1.4158999772959358,
+            -0.06710002150650402
+          ]
+        },
+        {
+          "jointIndex": 50,
+          "gltfNodeIndex": 38,
+          "name": "ring_04_leaf_r",
+          "displayName": "ring_04_leaf_r",
+          "parentJointIndex": 49,
+          "parentName": "ring_03_r",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            -9.5042196335271e-10,
+            0.028301579877734184,
+            -3.474425369631717e-8
+          ],
+          "restRotation": [
+            2.7474015951156616e-8,
+            -1,
+            -1.0721373739979931e-13,
+            0.00000365177675121231
+          ],
+          "restScale": [
+            1,
+            1,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 1.0000003685818168,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.812199992126502,
+            1.4158999055706716,
+            -0.06740001078032179
+          ]
+        },
+        {
+          "jointIndex": 51,
+          "gltfNodeIndex": 45,
+          "name": "thumb_01_r",
+          "displayName": "thumb_01_r",
+          "parentJointIndex": 34,
+          "parentName": "hand_r",
+          "childJointIndices": [
+            52
+          ],
+          "depth": 9,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.009999980218708515,
+            -0.0028757674153894186,
+            0.029958141967654228
+          ],
+          "restRotation": [
+            0.263997346162796,
+            -0.9450139999389648,
+            -0.1882738322019577,
+            0.04250776767730713
+          ],
+          "restScale": [
+            1,
+            1.0000004768371582,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999995011242561,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.6386999473175211,
+            1.408099929523239,
+            -0.02160001401297832
+          ]
+        },
+        {
+          "jointIndex": 52,
+          "gltfNodeIndex": 44,
+          "name": "thumb_02_r",
+          "displayName": "thumb_02_r",
+          "parentJointIndex": 51,
+          "parentName": "thumb_01_r",
+          "childJointIndices": [
+            53
+          ],
+          "depth": 10,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.453081495128572e-7,
+            0.03582108020782471,
+            -1.30385160446167e-8
+          ],
+          "restRotation": [
+            0.001912830863147974,
+            -0.00019218510715290904,
+            0.0004484682867769152,
+            0.9999980330467224
+          ],
+          "restScale": [
+            1,
+            0.9999998211860657,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999995160037344,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.6671999280192024,
+            1.3907998635652083,
+            -0.008500025361341966
+          ]
+        },
+        {
+          "jointIndex": 53,
+          "gltfNodeIndex": 43,
+          "name": "thumb_03_r",
+          "displayName": "thumb_03_r",
+          "parentJointIndex": 52,
+          "parentName": "thumb_02_r",
+          "childJointIndices": [
+            54
+          ],
+          "depth": 11,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.0542134987190366e-7,
+            0.03562036156654358,
+            -8.847564458847046e-9
+          ],
+          "restRotation": [
+            -0.0012816853122785687,
+            -0.00005809385038446635,
+            -0.00025414914125576615,
+            0.9999991655349731
+          ],
+          "restScale": [
+            1.0000001192092896,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999994845958518,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.6955999661206727,
+            1.3736000562543673,
+            0.004400025520845932
+          ]
+        },
+        {
+          "jointIndex": 54,
+          "gltfNodeIndex": 42,
+          "name": "thumb_04_leaf_r",
+          "displayName": "thumb_04_leaf_r",
+          "parentJointIndex": 53,
+          "parentName": "thumb_03_r",
+          "childJointIndices": [],
+          "depth": 12,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            1.2622331269085407e-7,
+            0.031272709369659424,
+            3.073364496231079e-8
+          ],
+          "restRotation": [
+            -2.5565388028780944e-8,
+            -0.48539119958877563,
+            -1.9393742434203887e-7,
+            0.8742970824241638
+          ],
+          "restScale": [
+            0.9999998807907104,
+            0.9999999403953552,
+            0.9999999403953552
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.999999432077192,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.7205000283719792,
+            1.358500047991831,
+            0.015799917668691234
+          ]
+        },
+        {
+          "jointIndex": 55,
+          "gltfNodeIndex": 57,
+          "name": "thigh_l",
+          "displayName": "thigh_l",
+          "parentJointIndex": 1,
+          "parentName": "pelvis",
+          "childJointIndices": [
+            56
+          ],
+          "depth": 2,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            0.11140000075101852,
+            0.010460092686116695,
+            -0.008893024176359177
+          ],
+          "restRotation": [
+            0.9893749952316284,
+            0,
+            0,
+            0.1453862488269806
+          ],
+          "restScale": [
+            1,
+            1,
+            1.0000014305114746
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999984573773251,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.11140000075101851,
+            0.9440999800463018,
+            -0.051800005247306095
+          ]
+        },
+        {
+          "jointIndex": 56,
+          "gltfNodeIndex": 56,
+          "name": "calf_l",
+          "displayName": "calf_l",
+          "parentJointIndex": 55,
+          "parentName": "thigh_l",
+          "childJointIndices": [
+            57
+          ],
+          "depth": 3,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -7.450580596923828e-9,
+            0.4098641872406006,
+            1.3969838619232178e-9
+          ],
+          "restRotation": [
+            0.0712229460477829,
+            0,
+            0,
+            0.9974604249000549
+          ],
+          "restScale": [
+            1,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999985524061552,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.11140000075101851,
+            0.5346997965278886,
+            -0.032299995184177525
+          ]
+        },
+        {
+          "jointIndex": 57,
+          "gltfNodeIndex": 55,
+          "name": "foot_l",
+          "displayName": "foot_l",
+          "parentJointIndex": 56,
+          "parentName": "calf_l",
+          "childJointIndices": [
+            58
+          ],
+          "depth": 4,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -7.450580596923828e-9,
+            0.4661003053188324,
+            2.7939677238464355e-9
+          ],
+          "restRotation": [
+            -0.5978578329086304,
+            0,
+            0,
+            0.8016021847724915
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999982850388394,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.11140000075101852,
+            0.0706999567984675,
+            -0.07650000276200015
+          ]
+        },
+        {
+          "jointIndex": 58,
+          "gltfNodeIndex": 54,
+          "name": "ball_l",
+          "displayName": "ball_l",
+          "parentJointIndex": 57,
+          "parentName": "foot_l",
+          "childJointIndices": [
+            59
+          ],
+          "depth": 5,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            1.4901161193847656e-8,
+            0.14916980266571045,
+            -6.51925802230835e-9
+          ],
+          "restRotation": [
+            -0.00003296312570455484,
+            0.9816133975982666,
+            -0.1908797174692154,
+            0.00016951537691056728
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            0.9999998807907104
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999984503580558,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.11140000130390657,
+            0.014800031843142835,
+            0.061800013977128636
+          ]
+        },
+        {
+          "jointIndex": 59,
+          "gltfNodeIndex": 53,
+          "name": "ball_leaf_l",
+          "displayName": "ball_leaf_l",
+          "parentJointIndex": 58,
+          "parentName": "ball_l",
+          "childJointIndices": [],
+          "depth": 6,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            5.525180313270539e-10,
+            0.06809987872838974,
+            -1.204170985147357e-9
+          ],
+          "restRotation": [
+            0,
+            0.00017269056115765125,
+            5.421010862427522e-20,
+            1
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999982118608557,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            0.11140000075101852,
+            0.014800031571093985,
+            0.12989999510030875
+          ]
+        },
+        {
+          "jointIndex": 60,
+          "gltfNodeIndex": 62,
+          "name": "thigh_r",
+          "displayName": "thigh_r",
+          "parentJointIndex": 1,
+          "parentName": "pelvis",
+          "childJointIndices": [
+            61
+          ],
+          "depth": 2,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -0.11140000075101852,
+            0.010460092686116695,
+            -0.008893024176359177
+          ],
+          "restRotation": [
+            0.9893749952316284,
+            0,
+            0,
+            0.1453862488269806
+          ],
+          "restScale": [
+            1,
+            1,
+            1.0000014305114746
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999984573773251,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.11140000075101851,
+            0.9440999800463018,
+            -0.051800005247306095
+          ]
+        },
+        {
+          "jointIndex": 61,
+          "gltfNodeIndex": 61,
+          "name": "calf_r",
+          "displayName": "calf_r",
+          "parentJointIndex": 60,
+          "parentName": "thigh_r",
+          "childJointIndices": [
+            62
+          ],
+          "depth": 3,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            7.450580596923828e-9,
+            0.4098641872406006,
+            1.3969838619232178e-9
+          ],
+          "restRotation": [
+            0.0712229460477829,
+            0,
+            0,
+            0.9974604249000549
+          ],
+          "restScale": [
+            1,
+            0.9999999403953552,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999985524061552,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.11140000075101851,
+            0.5346997965278886,
+            -0.032299995184177525
+          ]
+        },
+        {
+          "jointIndex": 62,
+          "gltfNodeIndex": 60,
+          "name": "foot_r",
+          "displayName": "foot_r",
+          "parentJointIndex": 61,
+          "parentName": "calf_r",
+          "childJointIndices": [
+            63
+          ],
+          "depth": 4,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            7.450580596923828e-9,
+            0.4661003053188324,
+            2.7939677238464355e-9
+          ],
+          "restRotation": [
+            -0.5978578329086304,
+            0,
+            0,
+            0.8016021847724915
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999982850388394,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.11140000075101852,
+            0.0706999567984675,
+            -0.07650000276200015
+          ]
+        },
+        {
+          "jointIndex": 63,
+          "gltfNodeIndex": 59,
+          "name": "ball_r",
+          "displayName": "ball_r",
+          "parentJointIndex": 62,
+          "parentName": "foot_r",
+          "childJointIndices": [
+            64
+          ],
+          "depth": 5,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": false,
+          "unusualReason": null,
+          "restTranslation": [
+            -1.4901161193847656e-8,
+            0.14916980266571045,
+            -6.51925802230835e-9
+          ],
+          "restRotation": [
+            -0.00003296312570455484,
+            0.9816133975982666,
+            -0.1908797174692154,
+            0.00016951537691056728
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            0.9999998807907104
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999984503580558,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.11140000019799684,
+            0.014800032229985856,
+            0.06180001397748546
+          ]
+        },
+        {
+          "jointIndex": 64,
+          "gltfNodeIndex": 58,
+          "name": "ball_leaf_r",
+          "displayName": "ball_leaf_r",
+          "parentJointIndex": 63,
+          "parentName": "ball_r",
+          "childJointIndices": [],
+          "depth": 6,
+          "isRoot": false,
+          "isDuplicateName": false,
+          "isEmptyName": false,
+          "isUnusualName": true,
+          "unusualReason": "Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.",
+          "restTranslation": [
+            5.525180313270539e-10,
+            0.06809987872838974,
+            -1.5897967386990786e-9
+          ],
+          "restRotation": [
+            0,
+            0.00017269056115765125,
+            5.421010862427522e-20,
+            1
+          ],
+          "restScale": [
+            1,
+            1.0000001192092896,
+            1
+          ],
+          "hasUnitQuaternion": true,
+          "hasValidPositiveScale": true,
+          "inverseBindDeterminant": 0.9999982118608557,
+          "inverseBindInvertible": true,
+          "bindWorldPosition": [
+            -0.11140000075101852,
+            0.014800031571093985,
+            0.12989999510066574
+          ]
+        }
+      ],
+      "hierarchyTree": [
+        {
+          "jointIndex": 0,
+          "gltfNodeIndex": 64,
+          "name": "root",
+          "depth": 0,
+          "isRoot": true,
+          "isDuplicate": false,
+          "isUnusual": false,
+          "children": [
+            {
+              "jointIndex": 1,
+              "gltfNodeIndex": 63,
+              "name": "pelvis",
+              "depth": 1,
+              "isRoot": false,
+              "isDuplicate": false,
+              "isUnusual": false,
+              "children": [
+                {
+                  "jointIndex": 2,
+                  "gltfNodeIndex": 52,
+                  "name": "spine_01",
+                  "depth": 2,
+                  "isRoot": false,
+                  "isDuplicate": false,
+                  "isUnusual": false,
+                  "children": [
+                    {
+                      "jointIndex": 3,
+                      "gltfNodeIndex": 51,
+                      "name": "spine_02",
+                      "depth": 3,
+                      "isRoot": false,
+                      "isDuplicate": false,
+                      "isUnusual": false,
+                      "children": [
+                        {
+                          "jointIndex": 4,
+                          "gltfNodeIndex": 50,
+                          "name": "spine_03",
+                          "depth": 4,
+                          "isRoot": false,
+                          "isDuplicate": false,
+                          "isUnusual": false,
+                          "children": [
+                            {
+                              "jointIndex": 5,
+                              "gltfNodeIndex": 1,
+                              "name": "neck_01",
+                              "depth": 5,
+                              "isRoot": false,
+                              "isDuplicate": false,
+                              "isUnusual": false,
+                              "children": [
+                                {
+                                  "jointIndex": 6,
+                                  "gltfNodeIndex": 0,
+                                  "name": "Head",
+                                  "depth": 6,
+                                  "isRoot": false,
+                                  "isDuplicate": false,
+                                  "isUnusual": false,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "jointIndex": 7,
+                              "gltfNodeIndex": 25,
+                              "name": "clavicle_l",
+                              "depth": 5,
+                              "isRoot": false,
+                              "isDuplicate": false,
+                              "isUnusual": false,
+                              "children": [
+                                {
+                                  "jointIndex": 8,
+                                  "gltfNodeIndex": 24,
+                                  "name": "upperarm_l",
+                                  "depth": 6,
+                                  "isRoot": false,
+                                  "isDuplicate": false,
+                                  "isUnusual": false,
+                                  "children": [
+                                    {
+                                      "jointIndex": 9,
+                                      "gltfNodeIndex": 23,
+                                      "name": "lowerarm_l",
+                                      "depth": 7,
+                                      "isRoot": false,
+                                      "isDuplicate": false,
+                                      "isUnusual": false,
+                                      "children": [
+                                        {
+                                          "jointIndex": 10,
+                                          "gltfNodeIndex": 22,
+                                          "name": "hand_l",
+                                          "depth": 8,
+                                          "isRoot": false,
+                                          "isDuplicate": false,
+                                          "isUnusual": false,
+                                          "children": [
+                                            {
+                                              "jointIndex": 11,
+                                              "gltfNodeIndex": 5,
+                                              "name": "index_01_l",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 12,
+                                                  "gltfNodeIndex": 4,
+                                                  "name": "index_02_l",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 13,
+                                                      "gltfNodeIndex": 3,
+                                                      "name": "index_03_l",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 14,
+                                                          "gltfNodeIndex": 2,
+                                                          "name": "index_04_leaf_l",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 15,
+                                              "gltfNodeIndex": 9,
+                                              "name": "middle_01_l",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 16,
+                                                  "gltfNodeIndex": 8,
+                                                  "name": "middle_02_l",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 17,
+                                                      "gltfNodeIndex": 7,
+                                                      "name": "middle_03_l",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 18,
+                                                          "gltfNodeIndex": 6,
+                                                          "name": "middle_04_leaf_l",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 19,
+                                              "gltfNodeIndex": 13,
+                                              "name": "pinky_01_l",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 20,
+                                                  "gltfNodeIndex": 12,
+                                                  "name": "pinky_02_l",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 21,
+                                                      "gltfNodeIndex": 11,
+                                                      "name": "pinky_03_l",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 22,
+                                                          "gltfNodeIndex": 10,
+                                                          "name": "pinky_04_leaf_l",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 23,
+                                              "gltfNodeIndex": 17,
+                                              "name": "ring_01_l",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 24,
+                                                  "gltfNodeIndex": 16,
+                                                  "name": "ring_02_l",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 25,
+                                                      "gltfNodeIndex": 15,
+                                                      "name": "ring_03_l",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 26,
+                                                          "gltfNodeIndex": 14,
+                                                          "name": "ring_04_leaf_l",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 27,
+                                              "gltfNodeIndex": 21,
+                                              "name": "thumb_01_l",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 28,
+                                                  "gltfNodeIndex": 20,
+                                                  "name": "thumb_02_l",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 29,
+                                                      "gltfNodeIndex": 19,
+                                                      "name": "thumb_03_l",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 30,
+                                                          "gltfNodeIndex": 18,
+                                                          "name": "thumb_04_leaf_l",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "jointIndex": 31,
+                              "gltfNodeIndex": 49,
+                              "name": "clavicle_r",
+                              "depth": 5,
+                              "isRoot": false,
+                              "isDuplicate": false,
+                              "isUnusual": false,
+                              "children": [
+                                {
+                                  "jointIndex": 32,
+                                  "gltfNodeIndex": 48,
+                                  "name": "upperarm_r",
+                                  "depth": 6,
+                                  "isRoot": false,
+                                  "isDuplicate": false,
+                                  "isUnusual": false,
+                                  "children": [
+                                    {
+                                      "jointIndex": 33,
+                                      "gltfNodeIndex": 47,
+                                      "name": "lowerarm_r",
+                                      "depth": 7,
+                                      "isRoot": false,
+                                      "isDuplicate": false,
+                                      "isUnusual": false,
+                                      "children": [
+                                        {
+                                          "jointIndex": 34,
+                                          "gltfNodeIndex": 46,
+                                          "name": "hand_r",
+                                          "depth": 8,
+                                          "isRoot": false,
+                                          "isDuplicate": false,
+                                          "isUnusual": false,
+                                          "children": [
+                                            {
+                                              "jointIndex": 35,
+                                              "gltfNodeIndex": 29,
+                                              "name": "index_01_r",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 36,
+                                                  "gltfNodeIndex": 28,
+                                                  "name": "index_02_r",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 37,
+                                                      "gltfNodeIndex": 27,
+                                                      "name": "index_03_r",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 38,
+                                                          "gltfNodeIndex": 26,
+                                                          "name": "index_04_leaf_r",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 39,
+                                              "gltfNodeIndex": 33,
+                                              "name": "middle_01_r",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 40,
+                                                  "gltfNodeIndex": 32,
+                                                  "name": "middle_02_r",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 41,
+                                                      "gltfNodeIndex": 31,
+                                                      "name": "middle_03_r",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 42,
+                                                          "gltfNodeIndex": 30,
+                                                          "name": "middle_04_leaf_r",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 43,
+                                              "gltfNodeIndex": 37,
+                                              "name": "pinky_01_r",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 44,
+                                                  "gltfNodeIndex": 36,
+                                                  "name": "pinky_02_r",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 45,
+                                                      "gltfNodeIndex": 35,
+                                                      "name": "pinky_03_r",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 46,
+                                                          "gltfNodeIndex": 34,
+                                                          "name": "pinky_04_leaf_r",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 47,
+                                              "gltfNodeIndex": 41,
+                                              "name": "ring_01_r",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 48,
+                                                  "gltfNodeIndex": 40,
+                                                  "name": "ring_02_r",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 49,
+                                                      "gltfNodeIndex": 39,
+                                                      "name": "ring_03_r",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 50,
+                                                          "gltfNodeIndex": 38,
+                                                          "name": "ring_04_leaf_r",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "jointIndex": 51,
+                                              "gltfNodeIndex": 45,
+                                              "name": "thumb_01_r",
+                                              "depth": 9,
+                                              "isRoot": false,
+                                              "isDuplicate": false,
+                                              "isUnusual": false,
+                                              "children": [
+                                                {
+                                                  "jointIndex": 52,
+                                                  "gltfNodeIndex": 44,
+                                                  "name": "thumb_02_r",
+                                                  "depth": 10,
+                                                  "isRoot": false,
+                                                  "isDuplicate": false,
+                                                  "isUnusual": false,
+                                                  "children": [
+                                                    {
+                                                      "jointIndex": 53,
+                                                      "gltfNodeIndex": 43,
+                                                      "name": "thumb_03_r",
+                                                      "depth": 11,
+                                                      "isRoot": false,
+                                                      "isDuplicate": false,
+                                                      "isUnusual": false,
+                                                      "children": [
+                                                        {
+                                                          "jointIndex": 54,
+                                                          "gltfNodeIndex": 42,
+                                                          "name": "thumb_04_leaf_r",
+                                                          "depth": 12,
+                                                          "isRoot": false,
+                                                          "isDuplicate": false,
+                                                          "isUnusual": true,
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "jointIndex": 55,
+                  "gltfNodeIndex": 57,
+                  "name": "thigh_l",
+                  "depth": 2,
+                  "isRoot": false,
+                  "isDuplicate": false,
+                  "isUnusual": false,
+                  "children": [
+                    {
+                      "jointIndex": 56,
+                      "gltfNodeIndex": 56,
+                      "name": "calf_l",
+                      "depth": 3,
+                      "isRoot": false,
+                      "isDuplicate": false,
+                      "isUnusual": false,
+                      "children": [
+                        {
+                          "jointIndex": 57,
+                          "gltfNodeIndex": 55,
+                          "name": "foot_l",
+                          "depth": 4,
+                          "isRoot": false,
+                          "isDuplicate": false,
+                          "isUnusual": false,
+                          "children": [
+                            {
+                              "jointIndex": 58,
+                              "gltfNodeIndex": 54,
+                              "name": "ball_l",
+                              "depth": 5,
+                              "isRoot": false,
+                              "isDuplicate": false,
+                              "isUnusual": false,
+                              "children": [
+                                {
+                                  "jointIndex": 59,
+                                  "gltfNodeIndex": 53,
+                                  "name": "ball_leaf_l",
+                                  "depth": 6,
+                                  "isRoot": false,
+                                  "isDuplicate": false,
+                                  "isUnusual": true,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "jointIndex": 60,
+                  "gltfNodeIndex": 62,
+                  "name": "thigh_r",
+                  "depth": 2,
+                  "isRoot": false,
+                  "isDuplicate": false,
+                  "isUnusual": false,
+                  "children": [
+                    {
+                      "jointIndex": 61,
+                      "gltfNodeIndex": 61,
+                      "name": "calf_r",
+                      "depth": 3,
+                      "isRoot": false,
+                      "isDuplicate": false,
+                      "isUnusual": false,
+                      "children": [
+                        {
+                          "jointIndex": 62,
+                          "gltfNodeIndex": 60,
+                          "name": "foot_r",
+                          "depth": 4,
+                          "isRoot": false,
+                          "isDuplicate": false,
+                          "isUnusual": false,
+                          "children": [
+                            {
+                              "jointIndex": 63,
+                              "gltfNodeIndex": 59,
+                              "name": "ball_r",
+                              "depth": 5,
+                              "isRoot": false,
+                              "isDuplicate": false,
+                              "isUnusual": false,
+                              "children": [
+                                {
+                                  "jointIndex": 64,
+                                  "gltfNodeIndex": 58,
+                                  "name": "ball_leaf_r",
+                                  "depth": 6,
+                                  "isRoot": false,
+                                  "isDuplicate": false,
+                                  "isUnusual": true,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "skinning": {
+    "status": "Valid",
+    "totalMeshInstances": 3,
+    "skinnedMeshCount": 3,
+    "nonSkinnedMeshCount": 0,
+    "disconnectedSkinAttributeMeshCount": 0,
+    "meshAndSkeletonConsistent": true,
+    "totalSkinnedVerticesInspected": 8844,
+    "negativeWeightVertices": 0,
+    "nonFiniteWeightVertices": 0,
+    "zeroInfluenceVertices": 0,
+    "unnormalizedVertices": 0,
+    "outOfRangeJointVertices": 0,
+    "requiresWeightNormalization": false,
+    "primitives": [
+      {
+        "nodeName": "Eyebrows",
+        "meshName": "Eyebrows",
+        "gltfMeshIndex": 0,
+        "primitiveIndex": 0,
+        "vertexCount": 912,
+        "hasSkinReferenceOnNode": true,
+        "boundSkinIndex": 0,
+        "threeIsSkinnedMesh": true,
+        "threeConnectedToSkeleton": true,
+        "hasJointsAttribute": true,
+        "hasWeightsAttribute": true,
+        "jointsSetCount": 1,
+        "weightsSetCount": 1,
+        "jointsComponentTypes": [
+          "UNSIGNED_BYTE (5121)"
+        ],
+        "weightsComponentTypes": [
+          "FLOAT (5126)"
+        ],
+        "skeletonJointCount": 65,
+        "validVertexCount": 912,
+        "negativeWeightVertexCount": 0,
+        "nonFiniteWeightVertexCount": 0,
+        "zeroInfluenceVertexCount": 0,
+        "unnormalizedVertexCount": 0,
+        "outOfRangeIndexVertexCount": 0,
+        "maxObservedJointIndex": 6,
+        "minWeightSum": 1,
+        "maxWeightSum": 1,
+        "status": "valid",
+        "notes": []
+      },
+      {
+        "nodeName": "Eyes",
+        "meshName": "Eyes",
+        "gltfMeshIndex": 1,
+        "primitiveIndex": 0,
+        "vertexCount": 556,
+        "hasSkinReferenceOnNode": true,
+        "boundSkinIndex": 0,
+        "threeIsSkinnedMesh": true,
+        "threeConnectedToSkeleton": true,
+        "hasJointsAttribute": true,
+        "hasWeightsAttribute": true,
+        "jointsSetCount": 1,
+        "weightsSetCount": 1,
+        "jointsComponentTypes": [
+          "UNSIGNED_BYTE (5121)"
+        ],
+        "weightsComponentTypes": [
+          "FLOAT (5126)"
+        ],
+        "skeletonJointCount": 65,
+        "validVertexCount": 556,
+        "negativeWeightVertexCount": 0,
+        "nonFiniteWeightVertexCount": 0,
+        "zeroInfluenceVertexCount": 0,
+        "unnormalizedVertexCount": 0,
+        "outOfRangeIndexVertexCount": 0,
+        "maxObservedJointIndex": 6,
+        "minWeightSum": 1,
+        "maxWeightSum": 1,
+        "status": "valid",
+        "notes": []
+      },
+      {
+        "nodeName": "Superhero_Female",
+        "meshName": "Superhero_Female",
+        "gltfMeshIndex": 2,
+        "primitiveIndex": 0,
+        "vertexCount": 7376,
+        "hasSkinReferenceOnNode": true,
+        "boundSkinIndex": 0,
+        "threeIsSkinnedMesh": true,
+        "threeConnectedToSkeleton": true,
+        "hasJointsAttribute": true,
+        "hasWeightsAttribute": true,
+        "jointsSetCount": 1,
+        "weightsSetCount": 1,
+        "jointsComponentTypes": [
+          "UNSIGNED_BYTE (5121)"
+        ],
+        "weightsComponentTypes": [
+          "FLOAT (5126)"
+        ],
+        "skeletonJointCount": 65,
+        "validVertexCount": 7376,
+        "negativeWeightVertexCount": 0,
+        "nonFiniteWeightVertexCount": 0,
+        "zeroInfluenceVertexCount": 0,
+        "unnormalizedVertexCount": 0,
+        "outOfRangeIndexVertexCount": 0,
+        "maxObservedJointIndex": 63,
+        "minWeightSum": 0.999999864725396,
+        "maxWeightSum": 1.0000001383014023,
+        "status": "valid",
+        "notes": []
+      }
+    ]
+  },
+  "bindPose": {
+    "status": "Available",
+    "hasExplicitInverseBindMatrices": true,
+    "ibmAccessorCountMatchesJoints": true,
+    "totalMatricesChecked": 65,
+    "nonFiniteMatrixCount": 0,
+    "singularNonInvertibleMatrixCount": 0,
+    "negativeDeterminantMatrixCount": 0,
+    "invalidRestTransformBoneCount": 0,
+    "bindBoundsMin": [
+      -0.8229,
+      0,
+      -0.0903
+    ],
+    "bindBoundsMax": [
+      0.8229,
+      1.5496,
+      0.1299
+    ],
+    "estimatedRigHeight": 1.5496,
+    "detectedNamingConvention": "Unreal Mannequin (pelvis / *_l / *_r convention)",
+    "mixamoNamingDetected": false,
+    "notes": []
+  },
+  "humanoid": {
+    "status": "Likely",
+    "detectedNamingPattern": "Unreal Mannequin (pelvis / *_l / *_r convention)",
+    "mixamoStyleDetected": false,
+    "totalSlotsChecked": 19,
+    "foundCount": 19,
+    "possibleMatchCount": 0,
+    "ambiguousCount": 0,
+    "missingCount": 0,
+    "coreSlotsSatisfiedCount": 15,
+    "coreSlotsTotalCount": 15,
+    "hierarchyPlausible": true,
+    "slots": [
+      {
+        "key": "hips",
+        "label": "Hips",
+        "group": "Torso & Head",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "pelvis",
+        "matchedJointIndex": 1,
+        "candidateBoneNames": [
+          "pelvis"
+        ],
+        "reason": "Matched bone \"pelvis\" (joint #1, depth 1) with consistent hierarchy."
+      },
+      {
+        "key": "spine",
+        "label": "Spine",
+        "group": "Torso & Head",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "spine_01",
+        "matchedJointIndex": 2,
+        "candidateBoneNames": [
+          "spine_01"
+        ],
+        "reason": "Matched bone \"spine_01\" (joint #2, depth 2) with consistent hierarchy."
+      },
+      {
+        "key": "chest",
+        "label": "Chest",
+        "group": "Torso & Head",
+        "isCoreBipedalSlot": false,
+        "status": "Found",
+        "matchedBoneName": "spine_02",
+        "matchedJointIndex": 3,
+        "candidateBoneNames": [
+          "spine_02"
+        ],
+        "reason": "Matched bone \"spine_02\" (joint #3, depth 3) with consistent hierarchy."
+      },
+      {
+        "key": "neck",
+        "label": "Neck",
+        "group": "Torso & Head",
+        "isCoreBipedalSlot": false,
+        "status": "Found",
+        "matchedBoneName": "neck_01",
+        "matchedJointIndex": 5,
+        "candidateBoneNames": [
+          "neck_01"
+        ],
+        "reason": "Matched bone \"neck_01\" (joint #5, depth 5) with consistent hierarchy."
+      },
+      {
+        "key": "head",
+        "label": "Head",
+        "group": "Torso & Head",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "Head",
+        "matchedJointIndex": 6,
+        "candidateBoneNames": [
+          "Head"
+        ],
+        "reason": "Matched bone \"Head\" (joint #6, depth 6) with consistent hierarchy."
+      },
+      {
+        "key": "leftShoulder",
+        "label": "Left Shoulder",
+        "group": "Left Arm",
+        "isCoreBipedalSlot": false,
+        "status": "Found",
+        "matchedBoneName": "clavicle_l",
+        "matchedJointIndex": 7,
+        "candidateBoneNames": [
+          "clavicle_l"
+        ],
+        "reason": "Matched bone \"clavicle_l\" (joint #7, depth 5) with consistent hierarchy."
+      },
+      {
+        "key": "rightShoulder",
+        "label": "Right Shoulder",
+        "group": "Right Arm",
+        "isCoreBipedalSlot": false,
+        "status": "Found",
+        "matchedBoneName": "clavicle_r",
+        "matchedJointIndex": 31,
+        "candidateBoneNames": [
+          "clavicle_r"
+        ],
+        "reason": "Matched bone \"clavicle_r\" (joint #31, depth 5) with consistent hierarchy."
+      },
+      {
+        "key": "leftUpperArm",
+        "label": "Left Upper Arm",
+        "group": "Left Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "upperarm_l",
+        "matchedJointIndex": 8,
+        "candidateBoneNames": [
+          "upperarm_l"
+        ],
+        "reason": "Matched bone \"upperarm_l\" (joint #8, depth 6) with consistent hierarchy."
+      },
+      {
+        "key": "rightUpperArm",
+        "label": "Right Upper Arm",
+        "group": "Right Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "upperarm_r",
+        "matchedJointIndex": 32,
+        "candidateBoneNames": [
+          "upperarm_r"
+        ],
+        "reason": "Matched bone \"upperarm_r\" (joint #32, depth 6) with consistent hierarchy."
+      },
+      {
+        "key": "leftLowerArm",
+        "label": "Left Lower Arm",
+        "group": "Left Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "lowerarm_l",
+        "matchedJointIndex": 9,
+        "candidateBoneNames": [
+          "lowerarm_l"
+        ],
+        "reason": "Matched bone \"lowerarm_l\" (joint #9, depth 7) with consistent hierarchy."
+      },
+      {
+        "key": "rightLowerArm",
+        "label": "Right Lower Arm",
+        "group": "Right Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "lowerarm_r",
+        "matchedJointIndex": 33,
+        "candidateBoneNames": [
+          "lowerarm_r"
+        ],
+        "reason": "Matched bone \"lowerarm_r\" (joint #33, depth 7) with consistent hierarchy."
+      },
+      {
+        "key": "leftHand",
+        "label": "Left Hand",
+        "group": "Left Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "hand_l",
+        "matchedJointIndex": 10,
+        "candidateBoneNames": [
+          "hand_l"
+        ],
+        "reason": "Matched bone \"hand_l\" (joint #10, depth 8) with consistent hierarchy."
+      },
+      {
+        "key": "rightHand",
+        "label": "Right Hand",
+        "group": "Right Arm",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "hand_r",
+        "matchedJointIndex": 34,
+        "candidateBoneNames": [
+          "hand_r"
+        ],
+        "reason": "Matched bone \"hand_r\" (joint #34, depth 8) with consistent hierarchy."
+      },
+      {
+        "key": "leftUpperLeg",
+        "label": "Left Upper Leg",
+        "group": "Left Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "thigh_l",
+        "matchedJointIndex": 55,
+        "candidateBoneNames": [
+          "thigh_l"
+        ],
+        "reason": "Matched bone \"thigh_l\" (joint #55, depth 2) with consistent hierarchy."
+      },
+      {
+        "key": "rightUpperLeg",
+        "label": "Right Upper Leg",
+        "group": "Right Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "thigh_r",
+        "matchedJointIndex": 60,
+        "candidateBoneNames": [
+          "thigh_r"
+        ],
+        "reason": "Matched bone \"thigh_r\" (joint #60, depth 2) with consistent hierarchy."
+      },
+      {
+        "key": "leftLowerLeg",
+        "label": "Left Lower Leg",
+        "group": "Left Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "calf_l",
+        "matchedJointIndex": 56,
+        "candidateBoneNames": [
+          "calf_l"
+        ],
+        "reason": "Matched bone \"calf_l\" (joint #56, depth 3) with consistent hierarchy."
+      },
+      {
+        "key": "rightLowerLeg",
+        "label": "Right Lower Leg",
+        "group": "Right Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "calf_r",
+        "matchedJointIndex": 61,
+        "candidateBoneNames": [
+          "calf_r"
+        ],
+        "reason": "Matched bone \"calf_r\" (joint #61, depth 3) with consistent hierarchy."
+      },
+      {
+        "key": "leftFoot",
+        "label": "Left Foot",
+        "group": "Left Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "foot_l",
+        "matchedJointIndex": 57,
+        "candidateBoneNames": [
+          "foot_l"
+        ],
+        "reason": "Matched bone \"foot_l\" (joint #57, depth 4) with consistent hierarchy."
+      },
+      {
+        "key": "rightFoot",
+        "label": "Right Foot",
+        "group": "Right Leg",
+        "isCoreBipedalSlot": true,
+        "status": "Found",
+        "matchedBoneName": "foot_r",
+        "matchedJointIndex": 62,
+        "candidateBoneNames": [
+          "foot_r"
+        ],
+        "reason": "Matched bone \"foot_r\" (joint #62, depth 4) with consistent hierarchy."
+      }
+    ],
+    "heuristicDisclaimer": "Heuristic browser-side analysis based on bone naming conventions and parent-child topology only. This does NOT invoke Unity Editor AvatarBuilder and does NOT guarantee Unity Humanoid import or runtime animation retargeting compatibility."
+  },
+  "confirmedFacts": [
+    "Parsed valid glTF 2.0 JSON \"Superhero_Female_FullBody.gltf\" (31,656 bytes, generator: Khronos glTF Blender I/O v4.3.47).",
+    "Resolved binary buffer #0 \"Superhero_Female_FullBody.bin\" -> \"Superhero_Female_FullBody.bin\" (990,808 bytes).",
+    "Material texture assignments verified (7 binding(s)): \"MI_Hair_2\".baseColorTexture -> \"T_Hair_2_BaseColor.png\" (loaded); \"MI_Hair_2\".normalTexture -> \"T_Hair_2_Normal.png\" (loaded); \"MI_Eyes\".baseColorTexture -> \"T_Eye_Brown.png\" (loaded); \"MI_Eyes\".normalTexture -> \"T_Eye_Normal.png\" (loaded); \"MI_Superhero_Female\".baseColorTexture -> \"T_Superhero_Female_Dark_BaseColor.png\" (loaded); \"MI_Superhero_Female\".metallicRoughnessTexture -> \"T_Superhero_Female_Roughness.png\" (loaded); \"MI_Superhero_Female\".normalTexture -> \"T_Superhero_Female_Normal.png\" (loaded).",
+    "Detected 1 glTF skin(s) and 1 post-load THREE.Skeleton instance(s) totaling 65 joint(s).",
+    "Skeleton \"Armature\": 65 bones, root [root], max hierarchy depth 12, connected SkinnedMeshes: 3.",
+    "Verified 3 THREE.SkinnedMesh object(s) inspecting 8,844 skinned vertices (all joint indices within bounds and vertex weights normalized).",
+    "Verified 65 invertible 4x4 inverseBindMatrices (bind-pose skeleton span: 1.5496 units).",
+    "Texture check: 7 of 7 referenced image(s) loaded (Loaded)."
+  ],
+  "heuristicFindings": [
+    "Detected bone naming convention: Unreal Mannequin (pelvis / *_l / *_r convention) (Mixamo-style pattern: No).",
+    "Humanoid bone heuristic scan: 19 Found, 0 Possible match, 0 Ambiguous, 0 Missing out of 19 common humanoid slots -> \"Likely\".",
+    "Root bone is a dedicated ground-origin \"root\" joint above \"pelvis\" (typical Unreal Mannequin root-motion hierarchy; note Mixamo FBX animations often omit an extra ground root above Hips)."
+  ],
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "TEXTURE_FILENAME_NEAR_MATCH",
+      "title": "Texture Filename Differs From glTF URI (Near-Match Loaded)",
+      "message": "glTF references \"T_Eye_Normal_png.png\", but the uploaded file is named \"T_Eye_Normal.png\" (differs only by a trailing format infix such as \"_png\"). The texture bytes were loaded via transparent near-match resolution; rename the file to exactly \"T_Eye_Normal_png.png\" for strict exact-path resolution.",
+      "category": "textures",
+      "basis": "confirmed_fact"
+    },
+    {
+      "severity": "info",
+      "code": "UNUSUAL_OR_LEAF_BONE_NAMES",
+      "title": "Helper or Leaf Tip Joints Present in Skin",
+      "message": "Skin #0 includes 12 helper/leaf joint(s) (e.g., \"index_04_leaf_l\" — Blender glTF exporter leaf end-bone (*_leaf*); non-deforming tip joint.).",
+      "category": "hierarchy",
+      "basis": "heuristic"
+    }
+  ],
+  "limitationsNotice": [
+    "Phase 1 Browser Structural Inspection Only: animation playback, retargeting, and auto-rigging are intentionally out of scope.",
+    "This web application is NOT the Unity Editor and does NOT run Unity AvatarBuilder, Mecanim muscle setup, or Unity runtime verification.",
+    "Humanoid bone matches (\"Found\", \"Possible match\", \"Ambiguous\", \"Missing\") are heuristic analyses of bone names and hierarchy, not a guarantee of Unity Humanoid compatibility.",
+    "All uploaded files (.gltf, .bin, textures, licence.txt) are inspected locally in browser memory and are never modified, committed, or sent to external servers."
+  ]
+}
