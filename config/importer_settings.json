@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "unity_serialized_version": 22200,
+  "guid_namespace": "8f5c7b42-3a91-4d8e-b62c-91e7a04f52d1",
+  "preserve_existing_meta": true,
+  "update_clips_when_fbx_changes": true,
+  "clean_orphaned_meta": true,
+  "animation_import": {
+    "enabled": true,
+    "resample_curves": true,
+    "animation_compression": "Optimal",
+    "rotation_error": 0.5,
+    "position_error": 0.5,
+    "scale_error": 0.5,
+    "remove_constant_scale_curves": true,
+    "bake_simulation": false,
+    "import_constraints": false,
+    "import_animated_custom_properties": false,
+    "optimize_game_objects": false,
+    "animation_wrap_mode": 0
+  },
+  "mesh_import": {
+    "disable_for_animation_only": true,
+    "material_import_mode": "None",
+    "import_blend_shapes": false,
+    "import_visibility": false,
+    "import_cameras": false,
+    "import_lights": false,
+    "add_colliders": false,
+    "is_readable": false,
+    "generate_secondary_uv": false,
+    "mesh_compression": "Off",
+    "global_scale": 1.0,
+    "use_file_units": true,
+    "use_file_scale": true,
+    "bake_axis_conversion": false,
+    "sort_hierarchy_by_name": true,
+    "preserve_hierarchy": false,
+    "optimize_bones": true,
+    "skin_weights_mode": 0,
+    "max_bones_per_vertex": 4,
+    "min_bone_weight": 0.001,
+    "file_ids_generation": 2
+  },
+  "clip_defaults": {
+    "naming_strategy": "asset_stem_for_generic_single_take",
+    "strip_at_prefix": true,
+    "generic_take_names": [
+      "Take 001",
+      "Take 01",
+      "Default Take",
+      "mixamo.com",
+      "Scene",
+      "AnimStack::Take 001"
+    ],
+    "ignore_bind_pose_takes": [
+      "T-Pose",
+      "TPose",
+      "BindPose",
+      "Bind_Pose",
+      "RestPose",
+      "Armature|T-Pose",
+      "0_T-Pose"
+    ],
+    "loop_time": false,
+    "loop_pose": false,
+    "cycle_offset": 0.0,
+    "wrap_mode": 0,
+    "mirror": false,
+    "has_additive_reference_pose": false,
+    "additive_reference_pose_frame": 0.0,
+    "root_transform_rotation": {
+      "bake_into_pose": false,
+      "based_upon": "Original",
+      "offset": 0.0
+    },
+    "root_transform_position_y": {
+      "bake_into_pose": true,
+      "based_upon": "Original",
+      "offset": 0.0
+    },
+    "root_transform_position_xz": {
+      "bake_into_pose": false,
+      "based_upon": "Original"
+    },
+    "mask_type": "None",
+    "mask_source_guid": "",
+    "mask_source_file_id": 0
+  },
+  "rig_settings": {
+    "auto_detect": true,
+    "humanoid_confidence_threshold": 0.85,
+    "humanoid": {
+      "animation_type": "Humanoid",
+      "avatar_setup": "CreateFromThisModel",
+      "source_avatar_guid": "",
+      "source_avatar_file_id": 9000000,
+      "humanoid_oversampling": 1,
+      "auto_generate_avatar_mapping_if_unspecified": true,
+      "add_humanoid_extra_root_only_when_using_avatar": true,
+      "has_translation_dof": false,
+      "arm_twist": 0.5,
+      "fore_arm_twist": 0.5,
+      "upper_leg_twist": 0.5,
+      "leg_twist": 0.5,
+      "arm_stretch": 0.05,
+      "leg_stretch": 0.05,
+      "feet_spacing": 0.0
+    },
+    "generic": {
+      "animation_type": "Generic",
+      "avatar_setup": "CreateFromThisModel",
+      "root_motion_bone_name": ""
+    },
+    "unknown_rig_policy": "fallback_generic_with_warning"
+  }
+}
