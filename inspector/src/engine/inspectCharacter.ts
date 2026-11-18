@@ -27,6 +27,8 @@ import type {
   InspectionIssue,
   LicenceInfo,
   LoadedCharacterSession,
+  MaterialTextureBinding,
+  MaterialTextureSlot,
   MeshPrimitiveSkinningReport,
   SkeletonReport,
   SkeletonStatus,
@@ -186,6 +188,7 @@ function createEmptyFailureSession(
     licence,
     buffers,
     textures,
+    materialTextureBindings: [],
     sceneSummary: {
       gltfSkinCount: 0,
       threeSkeletonCount: 0,
@@ -930,6 +933,16 @@ export async function inspectCharacterBundle(
                 code: 'TEXTURE_RESOLVED_BY_BASENAME',
                 title: 'External Texture Matched by Filename',
                 message: `Texture "${imgDef.uri}" resolved to flat-selected file "${resolved.file.name}".`,
+                category: 'textures',
+                basis: 'confirmed_fact',
+              });
+            }
+            if (resolved.mode === 'near_match') {
+              issues.push({
+                severity: 'warning',
+                code: 'TEXTURE_FILENAME_NEAR_MATCH',
+                title: 'Texture Filename Differs From glTF URI (Near-Match Loaded)',
+                message: `glTF references "${imgDef.uri}", but the uploaded file is named "${resolved.file.name}" (differs only by a trailing format infix such as "_png"). The texture bytes were loaded via transparent near-match resolution; rename the file to exactly "${basenamePosix(imgDef.uri)}" for strict exact-path resolution.`,
                 category: 'textures',
                 basis: 'confirmed_fact',
               });
@@ -2110,6 +2123,94 @@ export async function inspectCharacterBundle(
     texturesStatus = 'Failed';
   }
 
+  // Material -> texture slot bindings (BaseColor / Normal / Roughness / Eye / Hair)
+  const materialTextureBindings: MaterialTextureBinding[] = [];
+  const textureByIndex = new Map(textureReports.map((t) => [t.imageIndex, t]));
+  const rawMaterials = gltfJson.materials ?? [];
+  const rawTextures = gltfJson.textures ?? [];
+  const slotDefs: Array<{ slot: MaterialTextureSlot; get: (m: Record<string, unknown>) => number | null }> = [
+    {
+      slot: 'baseColorTexture',
+      get: (m) => {
+        const pbr = (m.pbrMetallicRoughness ?? {}) as Record<string, unknown>;
+        const bct = pbr.baseColorTexture as { index?: number } | undefined;
+        return typeof bct?.index === 'number' ? bct.index : null;
+      },
+    },
+    {
+      slot: 'metallicRoughnessTexture',
+      get: (m) => {
+        const pbr = (m.pbrMetallicRoughness ?? {}) as Record<string, unknown>;
+        const mrt = pbr.metallicRoughnessTexture as { index?: number } | undefined;
+        return typeof mrt?.index === 'number' ? mrt.index : null;
+      },
+    },
+    {
+      slot: 'normalTexture',
+      get: (m) => {
+        const nt = m.normalTexture as { index?: number } | undefined;
+        return typeof nt?.index === 'number' ? nt.index : null;
+      },
+    },
+    {
+      slot: 'occlusionTexture',
+      get: (m) => {
+        const ot = m.occlusionTexture as { index?: number } | undefined;
+        return typeof ot?.index === 'number' ? ot.index : null;
+      },
+    },
+    {
+      slot: 'emissiveTexture',
+      get: (m) => {
+        const et = m.emissiveTexture as { index?: number } | undefined;
+        return typeof et?.index === 'number' ? et.index : null;
+      },
+    },
+  ];
+  for (let mIdx = 0; mIdx < rawMaterials.length; mIdx++) {
+    const mat = rawMaterials[mIdx] as Record<string, unknown>;
+    const matName = (mat.name as string | undefined) ?? `Material #${mIdx}`;
+    for (const def of slotDefs) {
+      const texIdx = def.get(mat);
+      if (texIdx === null) continue;
+      const texDef = rawTextures[texIdx] as { source?: number } | undefined;
+      const imgIdx = typeof texDef?.source === 'number' ? texDef.source : -1;
+      const texReport = textureByIndex.get(imgIdx);
+      materialTextureBindings.push({
+        materialIndex: mIdx,
+        materialName: matName,
+        slot: def.slot,
+        textureIndex: texIdx,
+        imageIndex: imgIdx,
+        imageUri: texReport?.uri ?? null,
+        resolvedFileName: texReport?.resolvedFileName ?? null,
+        resolutionMode: texReport?.resolutionMode ?? 'missing',
+        imageStatus: texReport?.status ?? 'unreferenced',
+      });
+    }
+  }
+  if (materialTextureBindings.length > 0) {
+    const summary = materialTextureBindings
+      .map((b) => `"${b.materialName}".${b.slot} -> "${b.resolvedFileName ?? b.imageUri ?? 'unresolved'}" (${b.imageStatus})`)
+      .join('; ');
+    confirmedFacts.push(
+      `Material texture assignments verified (${materialTextureBindings.length} binding(s)): ${summary}.`,
+    );
+  }
+  const unboundImages = textureReports.filter(
+    (t) => !materialTextureBindings.some((b) => b.imageIndex === t.imageIndex),
+  );
+  for (const t of unboundImages) {
+    issues.push({
+      severity: 'info',
+      code: 'UNBOUND_TEXTURE_IMAGE',
+      title: 'Texture Image Not Bound to Any Material Slot',
+      message: `Image #${t.imageIndex} ("${t.name}", status ${t.status}) is referenced by the glTF but is not assigned to any material texture slot (baseColor/normal/metallicRoughness/occlusion/emissive).`,
+      category: 'textures',
+      basis: 'confirmed_fact',
+    });
+  }
+
   // 7. Confirmed Facts vs Heuristic Findings & Final Classification
   if (skeletonStatus === 'Present') {
     const totalBones = skeletonReports.reduce((acc, s) => acc + s.totalBoneCount, 0);
@@ -2241,6 +2342,7 @@ export async function inspectCharacterBundle(
     licence,
     buffers: bufferReports,
     textures: textureReports,
+    materialTextureBindings,
     sceneSummary: {
       gltfSkinCount: rawSkins.length,
       threeSkeletonCount: uniqueThreeSkeletons.size,

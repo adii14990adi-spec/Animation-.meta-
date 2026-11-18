@@ -150,13 +150,30 @@ export function basenamePosix(p: string): string {
   return idx === -1 ? p : p.slice(idx + 1);
 }
 
+/**
+ * Strip a trailing image-format infix from a filename stem, e.g.
+ * "T_Hair_1_Normal_png" -> "T_Hair_1_Normal". Blender's glTF exporter
+ * sometimes appends the format ("_png") to the original stem, producing
+ * URIs like "T_Hair_1_Normal_png.png" while the uploaded file is named
+ * "T_Hair_1_Normal.png". This normalisation is ONLY used for the
+ * transparent near-match fallback and is always reported in the report.
+ */
+function stripFormatInfixStem(fileName: string): string {
+  const lower = fileName.toLowerCase();
+  const dotIdx = lower.lastIndexOf('.');
+  const stem = dotIdx === -1 ? lower : lower.slice(0, dotIdx);
+  const ext = dotIdx === -1 ? '' : lower.slice(dotIdx);
+  const stripped = stem.replace(/_(png|jpe?g|webp|bmp|gif|tga|dds|ktx2)$/i, '');
+  return stripped + ext;
+}
+
 export function resolveUploadedResource(
   uri: string,
   gltfDir: string,
   files: File[],
 ): {
   file: File | null;
-  mode: 'exact_path' | 'basename_fallback' | 'missing';
+  mode: 'exact_path' | 'basename_fallback' | 'near_match' | 'missing';
   ambiguousNames?: string[];
 } {
   const cleanUri = uri.split('?')[0].split('#')[0];
@@ -194,6 +211,24 @@ export function resolveUploadedResource(
       file: null,
       mode: 'missing',
       ambiguousNames: baseMatches.map((m) => getFileRelativePath(m)),
+    };
+  }
+
+  // Near-match fallback: same basename after stripping a trailing
+  // format infix ("_png" etc.) from the stem. Reported transparently
+  // as 'near_match' so filename discrepancies are never hidden.
+  const targetStem = stripFormatInfixStem(targetBase);
+  const nearMatches = files.filter(
+    (f) => stripFormatInfixStem(basenamePosix(getFileRelativePath(f)).toLowerCase()) === targetStem,
+  );
+  if (nearMatches.length === 1) {
+    return { file: nearMatches[0], mode: 'near_match' };
+  }
+  if (nearMatches.length > 1) {
+    return {
+      file: null,
+      mode: 'missing',
+      ambiguousNames: nearMatches.map((m) => getFileRelativePath(m)),
     };
   }
 

@@ -209,6 +209,29 @@ export default function ReportPanel({ report, onSelectBone }: Props) {
       ))}
 
       <section className="card">
+        <h4>🎨 Material texture assignments ({report.materialTextureBindings.length} bindings)</h4>
+        {report.materialTextureBindings.length === 0 ? <p className="muted">No material texture bindings found.</p> : (
+          <div className="table-wrap">
+            <table>
+              <thead><tr><th>Material</th><th>Slot</th><th>glTF image URI</th><th>Resolved file</th><th>Resolution</th><th>Status</th></tr></thead>
+              <tbody>
+                {report.materialTextureBindings.map((b, i) => (
+                  <tr key={i}>
+                    <td><strong>{b.materialName}</strong></td>
+                    <td><code>{b.slot}</code></td>
+                    <td><code>{b.imageUri ?? '—'}</code></td>
+                    <td><code>{b.resolvedFileName ?? '—'}</code></td>
+                    <td><code>{b.resolutionMode}</code></td>
+                    <td><span className={`pill ${b.imageStatus === 'loaded' ? 'pill-good' : 'pill-bad'}`}>{b.imageStatus.toUpperCase()}</span></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
+      <section className="card">
         <h4>🖼️ Textures &amp; buffers</h4>
         <div className="table-wrap">
           <table>

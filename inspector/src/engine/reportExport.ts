@@ -201,6 +201,36 @@ export function generateReadableHtmlReport(report: CharacterInspectionReport): s
           </tbody>
         </table></div>`;
 
+  const materialBindingsHtml =
+    report.materialTextureBindings.length === 0
+      ? '<p class="muted">No material texture bindings found.</p>'
+      : `<div class="table-wrap"><table>
+          <thead>
+            <tr>
+              <th>Material</th>
+              <th>Slot</th>
+              <th>GLTF Image URI</th>
+              <th>Resolved File</th>
+              <th>Resolution</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${report.materialTextureBindings
+              .map(
+                (b) => `<tr>
+                  <td><strong>${escapeHtml(b.materialName)}</strong></td>
+                  <td><code>${escapeHtml(b.slot)}</code></td>
+                  <td><code>${escapeHtml(b.imageUri ?? '—')}</code></td>
+                  <td><code>${escapeHtml(b.resolvedFileName ?? '—')}</code></td>
+                  <td><code>${escapeHtml(b.resolutionMode)}</code></td>
+                  <td><span class="pill ${b.imageStatus === 'loaded' ? 'pill-good' : 'pill-bad'}">${escapeHtml(b.imageStatus.toUpperCase())}</span></td>
+                </tr>`,
+              )
+              .join('\\n')}
+          </tbody>
+        </table></div>`;
+
   const issuesHtml =
     report.issues.length === 0
       ? '<p class="muted">No validation errors or warnings recorded.</p>'
@@ -344,6 +374,9 @@ export function generateReadableHtmlReport(report: CharacterInspectionReport): s
 
     <h2>Validation Diagnostics</h2>
     <div class="card">${issuesHtml}</div>
+
+    <h2>Material Texture Assignments</h2>
+    <div class="card">${materialBindingsHtml}</div>
 
     <h2>External &amp; Embedded Textures</h2>
     <div class="card">${textureRowsHtml}</div>

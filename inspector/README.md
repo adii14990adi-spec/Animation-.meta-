@@ -17,8 +17,12 @@ The uploaded bundles are served read-only under `./repo-characters/` (no binarie
 
 | Slot | Source |
 |---|---|
-| **Male Character** | `Character/Male/Superhero_Male_FullBody.gltf` + `.bin` + 3 PNGs + `License_Standard.txt` |
-| **Female Character** | `Character/Female/Superhero_Female_FullBody.gltf` + `.bin` + 3 PNGs + `License_Standard(1).txt` |
+| **Male Character** | `Character/Male/Superhero_Male_FullBody.gltf` + `.bin` + 8 PNGs + `License_Standard.txt` |
+| **Female Character** | `Character/Female/Superhero_Female_FullBody.gltf` + `.bin` + 8 PNGs + `License_Standard(1).txt` |
+
+Latest verified inspection (7/7 textures loaded for both slots, verified in a real browser):
+`inspector/reports/male-inspection-report.{json,html}` and
+`inspector/reports/female-inspection-report.{json,html}`.
 
 In dev, `vite.config.ts` (`repoCharactersPlugin`) serves `../Character/{Male,Female}` at
 `/repo-characters/`; in production builds the same files are copied into `dist/repo-characters/`
@@ -29,8 +33,14 @@ the exact same inspection path as a manual upload.
 
 Select **all files together**: `.gltf` + `.bin` + external textures (`.png/.jpg/.jpeg/.webp`) +
 optional `licence.txt` / `License*.txt`. The engine validates JSON, `.bin` existence/size,
-external texture resolution (exact path, then basename fallback), and load errors — it never
-assumes textures are embedded. **Files are inspected only in browser memory**: never modified,
+external texture resolution (exact path → basename fallback → transparent near-match), and load
+errors — it never assumes textures are embedded. Every material texture assignment is reported
+explicitly (`baseColorTexture`, `normalTexture`, `metallicRoughnessTexture`, `occlusionTexture`,
+`emissiveTexture`) per material, together with the glTF image URI, the file that satisfied it,
+the resolution mode (`exact_path` / `basename_fallback` / `near_match` / `embedded`) and the load
+status. Near-match resolutions (e.g. glTF asks for `T_Hair_1_Normal_png.png` while the uploaded
+file is `T_Hair_1_Normal.png`) still load, but are surfaced as `TEXTURE_FILENAME_NEAR_MATCH`
+warnings so a filename discrepancy is never silently hidden. **Files are inspected only in browser memory**: never modified,
 never committed, never sent to external services. Clear/Remove calls `session.dispose()`
 (revokes object URLs, disposes geometries/materials/textures).
 

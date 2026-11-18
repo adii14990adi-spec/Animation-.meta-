@@ -47,7 +47,7 @@ export interface BufferValidationItem {
   declaredByteLength: number;
   actualByteLength: number | null;
   resolvedFileName: string | null;
-  resolutionMode: 'exact_path' | 'basename_fallback' | 'embedded_data_uri' | 'missing';
+  resolutionMode: 'exact_path' | 'basename_fallback' | 'near_match' | 'embedded_data_uri' | 'missing';
   status: 'valid' | 'missing' | 'truncated' | 'invalid';
   error: string | null;
 }
@@ -59,11 +59,30 @@ export interface TextureValidationItem {
   sourceKind: 'external_uri' | 'embedded_data_uri' | 'buffer_view';
   mimeType: string | null;
   resolvedFileName: string | null;
-  resolutionMode: 'exact_path' | 'basename_fallback' | 'embedded' | 'missing';
+  resolutionMode: 'exact_path' | 'basename_fallback' | 'near_match' | 'embedded' | 'missing';
   sizeBytes: number | null;
   dimensions: { width: number; height: number } | null;
   status: 'loaded' | 'missing' | 'failed';
   error: string | null;
+}
+
+export type MaterialTextureSlot =
+  | 'baseColorTexture'
+  | 'metallicRoughnessTexture'
+  | 'normalTexture'
+  | 'occlusionTexture'
+  | 'emissiveTexture';
+
+export interface MaterialTextureBinding {
+  materialIndex: number;
+  materialName: string;
+  slot: MaterialTextureSlot;
+  textureIndex: number;
+  imageIndex: number;
+  imageUri: string | null;
+  resolvedFileName: string | null;
+  resolutionMode: 'exact_path' | 'basename_fallback' | 'near_match' | 'embedded' | 'missing';
+  imageStatus: 'loaded' | 'missing' | 'failed' | 'unreferenced';
 }
 
 export interface BoneHierarchyTreeNode {
@@ -283,6 +302,7 @@ export interface CharacterInspectionReport {
   licence: LicenceInfo;
   buffers: BufferValidationItem[];
   textures: TextureValidationItem[];
+  materialTextureBindings: MaterialTextureBinding[];
   sceneSummary: {
     gltfSkinCount: number;
     threeSkeletonCount: number;
