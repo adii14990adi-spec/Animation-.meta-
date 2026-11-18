@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "default_category": "Other",
+  "note": "Filename and take-name rules provide heuristic category suggestions for default clip import settings (e.g. loopTime/root bake). They do not prove visual motion behavior. Use asset_overrides for explicit per-asset control.",
+  "categories": {
+    "Idle": {
+      "priority": 40,
+      "patterns": [
+        "(?:^|[\\W_])idle(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])stand(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])wait(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])breathe?(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Sprint": {
+      "priority": 90,
+      "patterns": [
+        "(?:^|[\\W_])sprint(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])fast[_\\s-]?run(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])dash(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Crouch": {
+      "priority": 85,
+      "patterns": [
+        "(?:^|[\\W_])crouch(?:ing|ed)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])sneak(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])squat(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Walk": {
+      "priority": 50,
+      "patterns": [
+        "(?:^|[\\W_])walk(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])strafe[_\\s-]?walk(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])stroll(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Run": {
+      "priority": 55,
+      "patterns": [
+        "(?:^|[\\W_])run(?:ning)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])jog(?:ging)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])locomotion(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Jump": {
+      "priority": 80,
+      "patterns": [
+        "(?:^|[\\W_])jump(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])leap(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])hop(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])vault(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": false,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Fall": {
+      "priority": 75,
+      "patterns": [
+        "(?:^|[\\W_])fall(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])airborne(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])skydive(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])freefall(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "BodyOrientation",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "CenterOfMass"
+        }
+      }
+    },
+    "Reload": {
+      "priority": 95,
+      "patterns": [
+        "(?:^|[\\W_])reload(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])chamber(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])mag[_\\s-]?change(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Weapon Handling": {
+      "priority": 92,
+      "patterns": [
+        "(?:^|[\\W_])equip(?:ping)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])unequip(?:ping)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])holster(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])unholster(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])draw[_\\s-]?(?:weapon|gun|rifle|pistol)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])inspect[_\\s-]?weapon(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])weapon[_\\s-]?swap(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Shoot": {
+      "priority": 88,
+      "patterns": [
+        "(?:^|[\\W_])shoot(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])fire(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])firing(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])recoil(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])burst(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Aim": {
+      "priority": 70,
+      "patterns": [
+        "(?:^|[\\W_])aim(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])ads(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])ironsight(?:s)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])target(?:ing)?(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": true,
+        "loop_pose": true,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Melee": {
+      "priority": 86,
+      "patterns": [
+        "(?:^|[\\W_])melee(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])punch(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])kick(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])slash(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])stab(?:bing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])attack(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": false,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Hit Reaction": {
+      "priority": 94,
+      "patterns": [
+        "(?:^|[\\W_])hit[_\\s-]?react(?:ion)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])flinch(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])damage(?:d)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])hurt(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])stagger(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])impact(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": true,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": true,
+          "based_upon": "Feet",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": true,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Death": {
+      "priority": 96,
+      "patterns": [
+        "(?:^|[\\W_])death(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])die(?:d)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])dying(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])knock(?:ed)?[_\\s-]?down(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])defeat(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false,
+        "root_transform_rotation": {
+          "bake_into_pose": false,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_y": {
+          "bake_into_pose": false,
+          "based_upon": "Original",
+          "offset": 0.0
+        },
+        "root_transform_position_xz": {
+          "bake_into_pose": false,
+          "based_upon": "Original"
+        }
+      }
+    },
+    "Other": {
+      "priority": 0,
+      "patterns": [],
+      "clip_overrides": {}
+    }
+  },
+  "asset_overrides": {}
+}
