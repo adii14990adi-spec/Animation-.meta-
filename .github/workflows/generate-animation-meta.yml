@@ -146,7 +146,9 @@ jobs:
           set -euo pipefail
 
           # Stage ONLY .meta changes (new, updated, or removed orphaned .meta) inside animations/
-          git add -A -- ':(glob)animations/**/*.meta'
+          if [[ -n "$(find animations -name '*.meta' -print -quit 2>/dev/null)" ]] || [[ -n "$(git ls-files -- ':(glob)animations/**/*.meta')" ]]; then
+            git add -A -- ':(glob)animations/**/*.meta'
+          fi
 
           if git diff --cached --quiet; then
             echo "No .meta changes needed; skipping commit."

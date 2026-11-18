@@ -113,6 +113,9 @@
       "patterns": [
         "(?:^|[\\W_])run(?:ning)?(?:$|[\\W_0-9])",
         "(?:^|[\\W_])jog(?:ging)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])straf(?:e|ing)(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])swim(?:ming)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])skateboard(?:ing)?(?:$|[\\W_0-9])",
         "(?:^|[\\W_])locomotion(?:$|[\\W_0-9])"
       ],
       "clip_overrides": {
@@ -162,9 +165,10 @@
       }
     },
     "Fall": {
-      "priority": 75,
+      "priority": 82,
       "patterns": [
         "(?:^|[\\W_])fall(?:ing)?(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])jump[_\\s-]?loop(?:$|[\\W_0-9])",
         "(?:^|[\\W_])airborne(?:$|[\\W_0-9])",
         "(?:^|[\\W_])skydive(?:$|[\\W_0-9])",
         "(?:^|[\\W_])freefall(?:$|[\\W_0-9])"
@@ -221,6 +225,9 @@
         "(?:^|[\\W_])unequip(?:ping)?(?:$|[\\W_0-9])",
         "(?:^|[\\W_])holster(?:$|[\\W_0-9])",
         "(?:^|[\\W_])unholster(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])put[_\\s-]?back(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])grenade(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])toss(?:$|[\\W_0-9])",
         "(?:^|[\\W_])draw[_\\s-]?(?:weapon|gun|rifle|pistol)?(?:$|[\\W_0-9])",
         "(?:^|[\\W_])inspect[_\\s-]?weapon(?:$|[\\W_0-9])",
         "(?:^|[\\W_])weapon[_\\s-]?swap(?:$|[\\W_0-9])"
@@ -386,10 +393,38 @@
       }
     },
     "Other": {
-      "priority": 0,
-      "patterns": [],
-      "clip_overrides": {}
+      "priority": 91,
+      "patterns": [
+        "(?:^|[\\W_])to[_\\s-]?stop(?:$|[\\W_0-9])",
+        "(?:^|[\\W_])turn(?:ing)?[_\\s-]?(?:left|right|\\d+)(?:$|[\\W_0-9a-z])",
+        "(?:^|[\\W_])dive[_\\s-]?roll(?:$|[\\W_0-9])"
+      ],
+      "clip_overrides": {
+        "loop_time": false,
+        "loop_pose": false
+      }
     }
   },
-  "asset_overrides": {}
+  "asset_overrides": {
+    "animations/Prone Idle.fbx": {
+      "category": "Idle",
+      "loop_time": true,
+      "loop_pose": true,
+      "root_transform_position_y": {
+        "bake_into_pose": true,
+        "based_upon": "Original",
+        "offset": 0.0
+      }
+    },
+    "animations/Swimming.fbx": {
+      "category": "Run",
+      "loop_time": true,
+      "loop_pose": true,
+      "root_transform_position_y": {
+        "bake_into_pose": true,
+        "based_upon": "Original",
+        "offset": 0.0
+      }
+    }
+  }
 }

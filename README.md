@@ -362,7 +362,7 @@ When a critical validation check fails, the workflow exits non-zero **before** c
 | `DUPLICATE_GUID` | Two `.meta` files share the same 32-hex GUID (e.g., someone manually copied a `.meta` file). | Delete the copied `.meta` on the new asset and re-run `generate_meta.py` so it gets its own unique GUID. |
 | `GUID_INSTABILITY` | An existing asset's `.meta` GUID was modified relative to Git `HEAD`. | Restore the original GUID reported in the error message (`git checkout HEAD -- <file>.meta`). |
 | `INCOMPATIBLE_HUMANOID_RIG` | `.meta` sets `animationType: 3` (Humanoid) on a non-humanoid skeleton without an override. | Change `animationType` to `2` (Generic) or configure an explicit `rig_type` override in `config/animation_rules.json`. |
-| `UNSUPPORTED_ASSET_IN_ANIMATIONS` | Non-FBX file (e.g., `.blend`, `.obj`, `.png`) placed inside `animations/`. | Remove non-FBX files from `animations/`. |
+| `NON_FBX_META` | A `.meta` file inside `animations/` targets a non-FBX file (note: non-FBX files like `.glb` emit an `IGNORED_NON_FBX_FILE` warning and are skipped). | Remove non-FBX `.meta` files from `animations/`. |
 
 ---
 
