@@ -18,6 +18,7 @@ A standalone, production-ready GitHub Actions automation system that inspects up
 10. [How to Troubleshoot Errors](#10-how-to-troubleshoot-errors)
 11. [What Requires Unity Editor Validation](#11-what-requires-unity-editor-validation)
 12. [Git LFS Setup and Limitations](#12-git-lfs-setup-and-limitations)
+13. [Consuming the Metadata in the Main Unity Game Repository](#13-consuming-the-metadata-in-the-main-unity-game-repository)
 
 ---
 
@@ -418,3 +419,28 @@ git commit -m "chore: track FBX animation files with Git LFS"
 
 - GitHub Free accounts include limited monthly Git LFS storage and bandwidth; every CI checkout with `lfs: true` consumes LFS bandwidth proportional to fetched LFS blobs.
 - If LFS quota is exhausted or someone pushes an unpulled pointer, `analyze_fbx.py` immediately detects the pointer header (`GIT_LFS_POINTER`) and fails with a clear diagnostic rather than generating invalid metadata.
+
+---
+
+## 13. Consuming the metadata in the main Unity game repository
+
+The metadata here is only useful once it sits beside the FBX files in the game
+project (`adii14990adi-spec/Battle-royal-indian-edition-`,
+`unity-project/Assets/Animations/`). That hand-off is automated from the **game
+repository** side so this repository keeps a single responsibility:
+
+* a sync script copies `animations/<name>.fbx.meta` to
+  `unity-project/Assets/Animations/**/<name>.fbx.meta` **by exact FBX file
+  name**, never touches an `.fbx`, preserves the GUID already committed for an
+  asset, refuses to write on a duplicate GUID, and never overwrites metadata it
+  did not create;
+* a GitHub Actions workflow polls this repository daily and on demand and
+  proposes the result as a pull request on `chore/sync-animation-metadata` — it
+  never pushes to `main`.
+
+The ready-to-apply commit, the workflow and the pull-request text are kept in
+[`reports/animation-metadata-sync/`](reports/animation-metadata-sync/README.md).
+
+Nothing in this repository's own pipeline changes because of it: the `.meta`
+files generated here are still the source of truth, and the game repository's
+`MixamoImportSettings` rules still verify the importer settings after import.

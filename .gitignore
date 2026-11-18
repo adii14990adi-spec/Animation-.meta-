@@ -15,6 +15,11 @@ htmlcov/
 .cache/
 reports/*
 !reports/.gitkeep
+# Handoff packages for the Unity game repository are deliverables, not
+# transient run output: the automation token cannot push there, so the sync
+# commits travel as reviewable patches.
+!reports/animation-metadata-sync/
+!reports/animation-metadata-sync/**
 
 # Optional Unity Editor batch validation temporary staging
 .unity_validation_tmp/
