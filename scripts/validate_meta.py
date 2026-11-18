@@ -443,7 +443,7 @@ def validate_repository(
     failed_checks: list[dict[str, Any]] = []
     warnings: list[dict[str, Any]] = []
 
-    # Check for disallowed non-FBX files inside `animations/`
+    # Check for non-FBX files inside `animations/` (warn and ignore without modifying unrelated files)
     if anim_dir.exists():
         for cur_root, dirs, files in os.walk(anim_dir):
             dirs[:] = sorted(d for d in dirs if d not in EXCLUDED_SCAN_DIRS and not d.startswith("."))
@@ -452,13 +452,15 @@ def validate_repository(
                     continue
                 if not fname.lower().endswith(".fbx"):
                     bad_rel = normalize_rel_path(Path(cur_root) / fname, root)
-                    failed_checks.append(
+                    warnings.append(
                         {
-                            "code": "UNSUPPORTED_ASSET_IN_ANIMATIONS",
-                            "severity": "critical",
+                            "code": "IGNORED_NON_FBX_FILE",
+                            "severity": "warning",
                             "file": bad_rel,
-                            "message": f"Non-FBX file '{bad_rel}' found in animations/ directory (only .fbx animation assets are allowed).",
-                            "remediation": "Remove non-FBX files from animations/.",
+                            "message": (
+                                f"Non-FBX file '{bad_rel}' present in animations/ was ignored "
+                                "(pipeline only generates .meta for .fbx animation assets)."
+                            ),
                         }
                     )
 

@@ -241,10 +241,19 @@ def test_cli_entrypoints_and_nonexistent_unity_editor_error(tmp_path: Path) -> N
     assert generate_main(["--repo-root", str(ws), "--strict"]) == 0
     assert validate_main(["--repo-root", str(ws)]) == 0
 
-    # Non-FX file inside animations/ must cause validate CLI to exit 1
-    (ws / "animations" / "CharacterModel.obj").write_text("v 0 0 0\n", encoding="utf-8")
+    # Unrelated non-FBX file (e.g. .glb/.obj preview) emits a warning without blocking FBX .meta validation,
+    # whereas a non-FBX .meta inside animations/ fails validation critically.
+    (ws / "animations" / "showcase_all.glb").write_bytes(b"glTF")
+    rep_non_fbx = validate_repository(repo_root=ws)
+    assert rep_non_fbx["passed"] is True
+    assert any(w["code"] == "IGNORED_NON_FBX_FILE" for w in rep_non_fbx["warnings"])
+
+    (ws / "animations" / "showcase_all.glb.meta").write_text(
+        "fileFormatVersion: 2\nguid: 11111111111111111111111111111111\n", encoding="utf-8"
+    )
     assert validate_main(["--repo-root", str(ws)]) == 1
-    (ws / "animations" / "CharacterModel.obj").unlink()
+    (ws / "animations" / "showcase_all.glb.meta").unlink()
+    (ws / "animations" / "showcase_all.glb").unlink()
 
     # Explicitly specifying a missing Unity Editor binary must fail cleanly
     assert (
