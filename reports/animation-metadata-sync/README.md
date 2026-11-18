@@ -3,6 +3,11 @@
 Everything needed to land the animation-metadata sync in
 `adii14990adi-spec/Battle-royal-indian-edition-` as **one** reviewable commit.
 
+> **Status (2026-11-18):** the patch has been re-applied on a clean clone of the
+> target and all validators and verifications pass. Push and PR creation are
+> blocked by GitHub App installation scope — the exact permission to grant is in
+> [`APPLY-RESULT.md`](APPLY-RESULT.md).
+
 ## Why this is a patch and not a pushed branch
 
 The automation token available to this session can create branches and push to
